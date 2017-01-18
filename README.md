@@ -1,16 +1,15 @@
-##Dgame
+#Dgame
 
-***
 网址：http://www.regaliastar.com (还未进行建设，故该网址只是个空壳)
 
-##技术栈
+#技术栈
 
-#前端:
+##前端:
 * bootstrape(定义样式)
 * ajax(交互)
 * jquery(操作元素快捷简便)
 
-#后端:
+##后端:
 * nodejs
 * express(框架)
 * mongodb(数据库)
