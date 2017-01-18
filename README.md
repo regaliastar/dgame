@@ -1,34 +1,31 @@
 ##Dgame
-======
 
 ***
 网址：http://www.regaliastar.com (还未进行建设，故该网址只是个空壳)
 
 ##技术栈
 
-***
-
 #前端:
-*bootstrape(定义样式)
-*ajax(交互)
-*jquery(操作元素快捷简便)
+* bootstrape(定义样式)
+* ajax(交互)
+* jquery(操作元素快捷简便)
 
 #后端:
-*nodejs
-*express(框架)
-*mongodb(数据库)
-*socket.io
+* nodejs
+* express(框架)
+* mongodb(数据库)
+* socket.io
 
 ***
 
 ##各文件分区
-*models：用于存放封装好的类
-*public：静态文件，用于存放客户端能够得到的内容
-*routes：路由文件，用于管理用户的访问
-*views：视图文件，内置模板，用于提供网页视图
-*app.js：入口文件，类似于C++中的main函数，每个用户的请求必经过这个文件以分配到各个路由处理
-*package.json：配置文件，可无视之
-*README.md：这个就是你现在正在看的文件，无视之
+* models：用于存放封装好的类
+* public：静态文件，用于存放客户端能够得到的内容
+* routes：路由文件，用于管理用户的访问
+* views：视图文件，内置模板，用于提供网页视图
+* app.js：入口文件，类似于C++中的main函数，每个用户的请求必经过这个文件以分配到各个路由处理
+* package.json：配置文件，可无视之
+* README.md：这个就是你现在正在看的文件，无视之
 
 ## How to use
 1. Install nodejs, npm and mongodb
