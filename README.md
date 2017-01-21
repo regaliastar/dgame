@@ -22,20 +22,23 @@
 * public：静态文件，用于存放客户端能够得到的内容
 * routes：路由文件，用于管理用户的访问
 * views：视图文件，内置模板，用于提供网页视图
+* config：配置文件，保存了端口等信息
+* lib：二进制文件，用于存储数据库
+* middlewares：自己编写的中间件保存在这里，用于检查用户等操作
 * app.js：入口文件，类似于C++中的main函数，每个用户的请求必经过这个文件以分配到各个路由处理
 * package.json：配置文件，可无视之
 * README.md：这个就是你现在正在看的文件，无视之
 
 ## How to use
 1. Install nodejs, npm and mongodb
-   如何配置node环境？ http://jingyan.baidu.com/article/91f5db1b2bb6941c7f05e33c.html
+   (如何配置node环境？ http://jingyan.baidu.com/article/91f5db1b2bb6941c7f05e33c.html )
 2. At root directory, `npm install`, then `node app`
-3. Server set up at http://127.0.0.1/
+3. Server set up at http://127.0.0.1:2017/
 
 ## How to study
 1. 学习JavaScript，推荐《JavaScript高级编程》，讲解的很全面，可以当字典来用
 2. 学习jQuery，只学会基本用法就好，如：操作元素的增删，简单的渐隐渐出的动画
-3. 学习ajax(!improtant)，知道客户端与服务器如何异步操作
+3. 学习ajax(!improtant)，知道客户端与服务器如何异步操作，使用jQuery来实现
 4. 当前三点都基本掌握后，就可以进行nodejs的学习了，推荐入门教材：http://www.nodebeginner.org/index-zh-cn.html
 5. 学习Mongodb
 6. OK，现在已经可以独立搭建一个中小型网站了~
