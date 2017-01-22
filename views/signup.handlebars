@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Dgame~</title>
+	<meta name="description" content="dgame的注册页，目前还需施工...">
+	<script src="js/jquery-3.1.1.js"></script>
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+</head>
+<body>
+
+	<div class="container">
+		<form class="signup-form" method="post">
+			<div class="input-group col-lg-3 center ">
+				<input type="text" class=" form-control userId" name="userId" placeholder="昵称（例：kiana）" />
+				<input type="text" class=" form-control password" name="password" placeholder="密码，6-16个字符组成，区分大小写" />
+				<input type="text" class=" form-control tele" name="tele" placeholder="填写常用手机号" />
+				<span class="input-group-btn">
+					<input type="submit" id="button" class="btn btn-default" value="提交" />
+				</span>
+			</div>  <!-- /input-group -->
+			<div class="alert alert-dismisible">
+			<span style="display: none;" id="pw-wrong">密码不规范，请重新输入</span>
+			</div>
+		</form>
+	</div>
+
+</body>
+<script type="text/javascript" src="js/signup.js"></script>
+</html>
