@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>Dgame~</title>
+	<title>注册</title>
 	<meta name="description" content="dgame的注册页，目前还需施工...">
 	<script src="js/jquery-3.1.1.js"></script>
 	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
@@ -10,19 +10,26 @@
 <body>
 
 	<div class="container">
-		<form class="signup-form" method="post">
-			<div class="input-group col-lg-3 center ">
-				<input type="text" class=" form-control userId" name="userId" placeholder="昵称（例：kiana）" />
+		<form class="signup-form" method="post" action="#">
+			<div class="input-group col-lg-4 center ">
+				<input type="text" class=" form-control username" name="username" placeholder="昵称（例：kiana）" />
 				<input type="text" class=" form-control password" name="password" placeholder="密码，6-16个字符组成，区分大小写" />
 				<input type="text" class=" form-control tele" name="tele" placeholder="填写常用手机号" />
-				<span class="input-group-btn">
-					<input type="submit" id="button" class="btn btn-default" value="提交" />
-				</span>
+				<input type="text" class=" form-control identify" name="identify" placeholder="请输入手机验证码" disabled="true" />
+		
+				<input type="submit" id="button" class="btn btn-default" value="注册" />
+				
 			</div>  <!-- /input-group -->
-			<div class="alert alert-dismisible">
-			<span style="display: none;" id="pw-wrong">密码不规范，请重新输入</span>
-			</div>
+
 		</form>
+		<input type="button" id="button" class="btn btn-default getIdentify" value="免费获取验证码" />
+		<div class="alert alert-dismisible">
+			<span style="display: none;" id="un-wrong">用户名不规范，长度应1~10之间</span>
+			<span style="display: none;" id="pw-wrong">密码不规范，请重新输入</span>
+			<span style="display: none;" id="tele-wrong">手机号码不规范，请重新输入</span>
+			<span style="display: none;" id="iden-wrong">验证码不正确，请重新输入</span>
+			<span style="display: none;" id="waiting">正在处理，请等待...</span>
+		</div>
 	</div>
 
 </body>

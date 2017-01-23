@@ -1,5 +1,9 @@
 module.exports = {
   port: 2017,
- 
-  mongodb: 'mongodb://localhost:27017/dgame'
+  mongodb: 'mongodb://localhost:27017/dgame',
+  AppKey:'23616239',
+  //不定时重置密码，以防乱用
+  AppSecret:'关于这个密码请查看我的阿里大于',
+  sms_template_code:'SMS_44250002',
+  sms_free_sign_name:'dgame短信'
 };
