@@ -8,6 +8,14 @@ var handlebars = require('express3-handlebars').create();
 var config = require('./config/default');
 var pkg = require('./package');
 
+var mongoose = require('mongoose');
+mongoose.connect(config.mongodb);
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function (callback) {
+  console.log("数据库成功开启");
+});
+
 var app = express();
 
 //设置模板目录
@@ -26,6 +34,7 @@ app.use(express.static(path.join(__dirname,'public')));
 //解析路由
 routes(app);
 
+//捕获错误代码并返回错误界面
 app.use(function (err, req, res, next) {
   res.render('error', {
     error: err

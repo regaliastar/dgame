@@ -95,7 +95,7 @@ $(document).ready(function(){
 	    			$('#iden-wrong').slideDown();
 	    		}*/
 	    		switch(data){
-	    			case 'true':
+	    			case 'success':
 	    				$('#waiting').slideDown();
 	    				console.log(data+"---验证码已成功发送到服务器~");
 	    				break;

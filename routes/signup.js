@@ -1,7 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var config = require('./../config/default');
+var Userjs = require('./../models/users');
+var User = require('./../lib/mongo').User;
 var App = require('alidayu-node');
+var async = require('async');
 var app = new App(config.AppKey, config.AppSecret);
 //该code最好随机生成
 var code = '123456';
@@ -11,15 +14,7 @@ router.get('/',function(req,res,next){
 })
 
 router.post('/',function(req,res,next){
-	/*
-	if(req.body.code === code){
-		
 
-		res.send(true);
-	}else{
-		res.send(false);
-	}
-	*/
 	if(req.body.username.length>11 || req.body.username === ''){
 		res.send('username');
 	}else if(req.body.password.length<6 || req.body.password.length>16){
@@ -29,16 +24,37 @@ router.post('/',function(req,res,next){
 	}else if(req.body.code !== code){
 		res.send('code');
 	}else{
-		res.send('true');
-		//这里保存进数据库
+		var usersMsg = [];
+		//Userjs.createUser(req.body.username,req.body.password,req.body.tele);
+		async.series([function(callback){
+			
+			User.find({username:req.body.username},function(err,users){
+				if(!err){
+					users.map(function(user){
 
+						var row = {username:user.username,password:user.password,tele:user.tele};
+						usersMsg.push(row);
+						console.log("kiana's psssword:"+user.password);
+					})
+					callback(null,'one');
+				}
+			})
 
-	}
+		},function(callback){
+			console.log("msg里的password为："+usersMsg[0].password);
 
-	//将用户数据保存到数据库
-	console.log("username: "+req.body.username);
-	console.log("password: "+req.body.password);
-	console.log("tele: "+req.body.tele);
+		}],function(err,data){
+			if(err){
+				console.log('async error in signup/router.post happened!');
+			}
+		})
+		//Userjs.findUserByName(req,res);
+
+		//console.log("usersMsg.password:"+usersMsg[0].password);
+		res.send('success');
+		
+		
+}
 
 })
 
