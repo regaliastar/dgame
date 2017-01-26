@@ -20,6 +20,11 @@ $(document).ready(function(){
 			,1000) 
 	}
 
+	function showWrongMsg(msg){
+		document.getElementById('wrong-msg').innerHTML = msg;
+		$('#wrong-msg').slideDown();
+	}
+
 	//得到验证码
 	$('.getIdentify').on('click',function(evt){
 	    //手机号码检测
@@ -98,6 +103,7 @@ $(document).ready(function(){
 	    			case 'success':
 	    				$('#waiting').slideDown();
 	    				console.log(data+"---验证码已成功发送到服务器~");
+	    				location.href = 'http://localhost:2017/home';
 	    				break;
 	    			case 'username':
 	    				$('#un-wrong').slideDown();
@@ -111,6 +117,10 @@ $(document).ready(function(){
 	    			case 'code':
 	    				$('#iden-wrong').slideDown();
 	    				console.log("服务器响应iden-wrong");
+	    				break;
+	    			case 'tele-repeat':
+	    				console.log("tele-repeat");
+	    				showWrongMsg("该号码已被注册");
 	    				break;
 	    			default:
 	    				break;

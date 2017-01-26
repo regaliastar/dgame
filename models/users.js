@@ -5,10 +5,24 @@ var createUser = function(username,password,tele){
 	new User({
 		username:username,
 		password:password,
-		tele:tele,
+		tel:tele,
 		date:Date.now()
 	}).save();
 	console.log("createUser :"+username);
+}
+
+var removeUserBytel = function(tel){
+	User.find({tel:tel},function(err,users){
+		if(!err){
+			users.map(function(user){
+				console.log("用户 "+user.tel+"删除成功");
+				user.remove();
+			})
+
+		}else{
+			console.log("something wrong in removeUserBytel!");
+		}
+	})
 }
 
 var findUserByName = function(req,res){
@@ -41,4 +55,5 @@ var findUserByName = function(req,res){
 }
 
 exports.createUser = createUser;
+exports.removeUserBytel = removeUserBytel;
 exports.findUserByName = findUserByName;

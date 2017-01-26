@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var config = require('./../config/default');
 var Userjs = require('./../models/users');
+var Functions = require('./../models/functions');
 var User = require('./../lib/mongo').User;
 var App = require('alidayu-node');
 var async = require('async');
@@ -25,35 +26,37 @@ router.post('/',function(req,res,next){
 		res.send('code');
 	}else{
 		var usersMsg = [];
-		//Userjs.createUser(req.body.username,req.body.password,req.body.tele);
-		async.series([function(callback){
-			
-			User.find({username:req.body.username},function(err,users){
-				if(!err){
-					users.map(function(user){
 
-						var row = {username:user.username,password:user.password,tele:user.tele};
-						usersMsg.push(row);
-						console.log("kiana's psssword:"+user.password);
-					})
-					callback(null,'one');
+		async.series([function(callback){
+			/*
+			 *系统使用电话号码和密码唯一标志一个用户
+			 *如果数据库中该电话号码已被注册，则返回错误代码，提醒用户重新输入
+			 */
+			User.findOne({tel:req.body.tele},function(err,user){
+				if(!err){
+					//若该号码已被注册
+					if(!Functions.isEmptyObject(user)){		
+						console.log("该电话已被注册");
+						res.send("tele-repeat");
+					}else{
+						req.session.user = user;
+						callback(null,'one');
+					}
+
+				}else{
+					console.log("something wrong in User.find()!");
 				}
 			})
 
 		},function(callback){
-			console.log("msg里的password为："+usersMsg[0].password);
+			req.session.sign = true;
 
+			res.end('success');
 		}],function(err,data){
 			if(err){
 				console.log('async error in signup/router.post happened!');
 			}
 		})
-		//Userjs.findUserByName(req,res);
-
-		//console.log("usersMsg.password:"+usersMsg[0].password);
-		res.send('success');
-		
-		
 }
 
 })

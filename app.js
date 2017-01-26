@@ -25,8 +25,12 @@ app.engine('handlebars',handlebars.engine);
 app.set('view engine','handlebars');
 
 app.use(bodyParser());
-app.use(cookieParser('cookieSecret_saveinafile'));
-app.use(expressSession());
+
+app.use(cookieParser(config.cookieSecret));
+app.use(expressSession({
+	secret:config.sessionSecret,
+	cookie:{maxAge:config.sessionMaxAge}
+}));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname,'public')));
