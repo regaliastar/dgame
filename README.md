@@ -38,36 +38,36 @@
 
 ##功能及路由设计如下
 1. 注册
-	1.注册页：`GET /signup`
-	2.注册：`POST /signup`
-	3.短信验证：`POST /signup/identify`
+	1. 注册页：`GET /signup`
+	2. 注册：`POST /signup`
+	3. 短信验证：`POST /signup/identify`
 2. 登录
-	1.登录页：`GET /signin`
-	2.登录：`POST /signin`
+	1. 登录页：`GET /signin`
+	2. 登录：`POST /signin`
 3. 登出
-	1.登出：`GET /signout`
+	1. 登出：`GET /signout`
 4. 个人主页
-	1.个人主页：`GET /users/:userId`
+	1. 个人主页：`GET /users/:userId`
 5. 个人中心
-	1.个人中心页：`GET /site`
-	2.修改信息：`POST /site/setting`
+	1. 个人中心页：`GET /site`
+	2. 修改信息：`POST /site/setting`
 6. 搜索
-	1.搜索：`GET /search/:keyword=???`
+	1. 搜索：`GET /search/:keyword=???`
 7. 投稿
-	1.投稿页：`GET /submit`
-	2.投稿：`POST /submit`
+	1. 投稿页：`GET /submit`
+	2. 投稿：`POST /submit`
 8. 作品
-	1.作品页：`GET /:gameId`
+	1. 作品页：`GET /:gameId`
 	2.评论：`POST /:gameId/comment`
 9. 私信
-	1.私信：`POST /:mid`
+	1. 私信：`POST /:mid`
 10. 聊天室
-	1.聊天室页：`GET /chat/:roomId`
-	2.信息：`POST /chat/:roomId`
+	1. 聊天室页：`GET /chat/:roomId`
+	2. 信息：`POST /chat/:roomId`
 11. 官方推送
-	1.推送页：`GET /news/:newsId`
+	1. 推送页：`GET /news/:newsId`
 
-...
+  ...
 
 #### 注：
 
