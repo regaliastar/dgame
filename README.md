@@ -20,8 +20,9 @@
 
 ##进度
 * 完成注册部分的表单验证功能，使用短信注册，待添加写入数据库的操作；1/23
-* 实现将注册用户保存进数据库中，然而对于数据库异步操作很头疼，async是个好工具;uid.js还存在较大缺陷;验证功能，与数据库的交互基本能实现了；注(!important):数据库操作写在路由里不容易出错！下一步考虑实现登录功能；1/24
+* 实现将注册用户保存进数据库中，async是个好工具;uid.js还存在较大缺陷;验证功能，与数据库的交互基本能实现了；注(!important):数据库操作写在路由里不容易出错！下一步考虑实现登录功能；1/24
 * 实现登录功能及会话，下一步制作视图文件；1/26
+* 实现基本的模板制作，下一步设计个人主页，可修改个人信息；1/27
 
 ##各文件分区
 * models：用于存放封装好的类
@@ -32,8 +33,45 @@
 * lib：用于存储数据库
 * middlewares：自己编写的中间件保存在这里，用于检查用户等操作
 * app.js：入口文件，类似于C++中的main函数，每个用户的请求必经过这个文件以分配到各个路由处理
-* package.json：配置文件，可无视之
+* package.json：配置文件，记录了本项目所依赖的包等信息
 * README.md：这个就是你现在正在看的文件，无视之
+
+##功能及路由设计如下
+1. 注册
+	1.注册页：`GET /signup`
+	2.注册：`POST /signup`
+	3.短信验证：`POST /signup/identify`
+2. 登录
+	1.登录页：`GET /signin`
+	2.登录：`POST /signin`
+3. 登出
+	1.登出：`GET /signout`
+4. 个人主页
+	1.个人主页：`GET /users/:userId`
+5. 个人中心
+	1.个人中心页：`GET /site`
+	2.修改信息：`POST /site/setting`
+6. 搜索
+	1.搜索：`GET /search/:keyword=???`
+7. 投稿
+	1.投稿页：`GET /submit`
+	2.投稿：`POST /submit`
+8. 作品
+	1.作品页：`GET /:gameId`
+	2.评论：`POST /:gameId/comment`
+9. 私信
+	1.私信：`POST /:mid`
+10. 聊天室
+	1.聊天室页：`GET /chat/:roomId`
+	2.信息：`POST /chat/:roomId`
+11. 官方推送
+	1.推送页：`GET /news/:newsId`
+
+...
+
+#### 注：
+
+页面的多样性主要通过在渲染模板时从服务器得到，为方便易学起见，故采用弱逻辑性的handlebars
 
 ## How to use
 1. Install nodejs, npm and mongodb

@@ -1,28 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>Dgame~</title>
-	<meta name="description" content="dgame的注册页，目前还需施工...">
-	<script src="js/jquery-3.1.1.js"></script>
-	<script src="js/handlebars-v4.0.5.js"></script>
-	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
-
-</head>
-<body>
+{{> header}}
 	<div class="container">
-		
-		<form method="get" action="/signup">
-			<input type="submit" class="signup btn btn-default" value="注册">
-		</form>
-		<form method="get" action="/signin">
-			<input type="submit" class="signin btn btn-default" value="登录">
-		</form>
-		<form method="get" action="/signout">
-			<input type="submit" class="signin btn btn-default" value="登出">
-		</form>
-
+		{{#if sign}}
+		<h1>
+			hello,{{user.username}}
+		</h1>
+		{{/if}}
 	</div>
 </body>
 <script type="text/javascript" src="js/home.js"></script>
-</html>
+{{> footer}}

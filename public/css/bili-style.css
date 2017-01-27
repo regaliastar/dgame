@@ -1,0 +1,12 @@
+* html .ui-autocomplete {
+    width: 1px;
+}
+.ui-button {
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.1em;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    text-align: center;
+}

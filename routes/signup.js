@@ -39,6 +39,7 @@ router.post('/',function(req,res,next){
 						console.log("该电话已被注册");
 						res.send("tele-repeat");
 					}else{
+						req.session.sign = true;
 						req.session.user = user;
 						callback(null,'one');
 					}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Dgame~</title>
+	<meta name="description" content="dgame，目前还需施工...">
+	<script src="js/jquery-3.1.1.js"></script>
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bili-style.css">
+	<link rel="stylesheet" href="//static.hdslb.com/css/core-v5/page-core.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="//static.hdslb.com/css/index.css">
+	<link rel="stylesheet" type="text/css" href="http://static.hdslb.com/travel/static/css/biliIndexNav/i_div_travel.css">
+	<link rel="stylesheet" href="//static.hdslb.com/images/jquery-ui/custom/jquery-ui.css" type="text/css">
+	<style>
+		body { min-height: 1500px; } 
+	</style>
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Dgame~~~~~~~~</title>
+<meta name="description" content="dgame，目前还需施工...">
+<meta name="keywords" content="dependence game">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="shortcut icon" href="//static.hdslb.com/images/favicon.ico">
+
+<link rel="stylesheet" href="//static.hdslb.com/images/jquery-ui/custom/jquery-ui.css" type="text/css">
+<link rel="stylesheet" href="//static.hdslb.com/css/core-v5/page-core.css" type="text/css" />
+<script src="js/jquery-3.1.1.js"></script>
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+<script type="text/javascript" src="//s1.hdslb.com/bfs/static/cm/cm.seed.js?v=2017012715"></script><meta name="fragment" content="!">
+<link rel="stylesheet" type="text/css" href="//static.hdslb.com/css/index.css"  />
+
+<script type="text/javascript" src="/js/header.js"></script>
+<style> body { min-height: 1500px; } </style>
+</head>
+<body>
+	<div class="z_top_container">
+		<div class="z_top b-header-blur b-header-blur-black">
+			<div class="b-header-mask-wrp">
+				<div class="b-header-mask-bg" style="background-image: url("//i0.hdslb.com/bfs/archive/d018a3742c508cc379472735bf7d124cc7ae9f13.jpg");"></div>
+				<div class="b-header-mask"></div>
+			</div>
+			<div class="z_header">
+				<div class="z_top_nav">
+					<ul>
+						<li class="hbili">
+							<a class="i-link" href="/home">
+								<span>主站</span>
+							</a>
+						</li>
+						<li class="hbili">
+							<a class="i-link" href="#" title="others">其他</a>
+						</li>
+					</ul>
+				</div>
+				<div class="uns_box">
+					<ul id="user_list" class="menu">
+						{{#if sign}}
+						<li id="i_menu_profile_btn" class="u-i i_user" guest="no" i_menu="#i_menu_profile" style="display: list-item;">
+							<a class="i-link" href="#" target="_blank">
+								<img class="i_face" src="img/face/default.png">
+							</a>
+						</li>
+						<li id="i_menu_community_msg_btn" class="u-i" guest="no" i_menu="community_msg" style="display: list-item;">
+
+							<a class="i-link" href="#" target="_blank">消息</a>
+							<div id="message_num_total" class="num" style="display: none;">0</div>
+
+							<div id="community_msg" class="dyn_wnd" style="top: 42px; left: -29px; display: none;">
+								<div class="dyn_arrow"></div>
+								<div class="dyn_menu">
+									<div class="menu">
+										<ul>
+											<li>
+												<a href="#" target="_blank">
+													<i class="icons2 icons-reply"></i>
+													<span class="inner-type">回复我的</span>
+													<span id="reply_me" class="inner-num inner_notify_reply" style="">0</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" target="_blank">
+													<i class="icons2 icons-at"></i>
+													<span class="inner-type">  @我的  </span>
+													<span id="at_me" class="inner-num inner_notify_at" style="">0</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" target="_blank">
+													<i class="icons2 icons-love"></i>
+													<span class="inner-type">收到的赞</span>
+													<span id="praise_me" class="inner-num inner_notify_love" style="">0</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" target="_blank">
+													<i class="icons2 icons-system"></i>
+													<span class="inner-type">系统通知</span>
+													<span id="notify_me" class="inner-num inner_notify_message" style="">0</span>
+												</a>
+											</li>
+											<li>
+												<a href="#" target="_blank">
+													<i class="icons2 icons-message"></i>
+													<span class="inner-type">我的私信</span>
+													<span id="chat_me" class="inner-num inner_notify_message" style="">0</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						{{else}}
+						<li id="i_menu_login_reg" class="u-i" guest="yes" style="display: list-item;">
+							<a id="i_menu_login_btn" class="i-link login" href="/signin">
+								<span>登录</span>
+							</a>
+							<i class="s-line"></i>
+							<a id="i_menu_register_btn" class="i-link reg" href="/signup">
+								<span>注册</span>
+							</a>
+						</li>
+						{{/if}}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>

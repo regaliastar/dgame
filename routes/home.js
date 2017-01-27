@@ -3,7 +3,8 @@ var router = express.Router();
 
 router.get('/',function(req,res,next){
 	if(req.session.sign){
-		res.render('home',req.session.user);
+		var user = req.session.user;
+		res.render('home',{sign:true,user:user});
 	}else{
 		res.render('home');
 	}

@@ -18,8 +18,9 @@ router.post('/',function(req,res,next){
 		}else{
 			req.session.user = user;
 			req.session.sign = true;
-			res.end('success');
-
+			res.locals.sign = true;
+			console.log("用户"+req.body.tel+"登录成功");
+			res.send('success');
 		}
 	});
 })

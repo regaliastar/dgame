@@ -3,7 +3,7 @@ $(document).ready(function(){
 	$('.signin').on('click',function(evt){
 		var tel = $('.tele').val().trim();
 		var password = $('.password').val().trim();
-		evt.preventDefault();
+		
 		$.ajax({
 			type:'post',
 			url:'/signin',

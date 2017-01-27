@@ -4,7 +4,9 @@ var routes = require('./routes/index');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var expressSession = require('express-session');
-var handlebars = require('express3-handlebars').create();
+var handlebars = require('express3-handlebars').create({
+	partialsDir:"views/partials"
+});
 var config = require('./config/default');
 var pkg = require('./package');
 

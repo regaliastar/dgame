@@ -16,5 +16,6 @@ module.exports = {
 
   sessionSecret:'rbrubgsuldnjblaf4894161safafhbuj',
 
+  //表示一个小时的时间
   sessionMaxAge:1000*60*60
 };
