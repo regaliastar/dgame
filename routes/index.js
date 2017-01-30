@@ -11,6 +11,10 @@ module.exports = function (app) {
   app.use('/signin', require('./signin'));
   //登出
   app.use('/signout', require('./signout'));
+  //个人主页——用于展示给其他人看
+  app.use('/user',require('./user'));
+  //个人中心——用于用户自己完善、修改自己的信息，属于自己看的页面
+  app.use('/site',require('./site'));
   //投稿
   app.use('/submit', require('./submit'));
   //搜索

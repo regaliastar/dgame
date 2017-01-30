@@ -1,0 +1,132 @@
+{{> header}}
+
+{{> site-left}}
+	
+<form onsubmit="return false;">
+	<div class="security-right">
+		<div class="sr-t">
+			<span class="tit-b"></span>
+			<span class="acc-sec">我的信息</span>
+		</div>
+		<div class="sr-b">
+			<ul>
+				<li>
+					<div class="sb-info">
+						<p class="sbi-l" id="username">昵称：</p>
+						<div class="sbi-m">
+							<span>
+								<input class="user-id" name="uname" value="{{user.username}}" type="text">
+							</span>
+						</div>
+						<p class="sbi-r ">注：昵称不能超过十一个字</p>
+					</div>
+				</li>
+				<li>
+					<div class="sb-info">
+						<p class="sbi-l">年级：</p>
+						<div class="sbi-m">
+							<div class="control-btn-select">
+								<span id="gradeContent">{{user.grade}}</span>
+								<em></em>
+								<select id="gradeType" class="enumselect">
+									<option value="0" selected="selected">--请选择--</option>
+									<option value="1">2011级</option>
+									<option value="2">2012级</option>
+									<option value="3">2013级</option>
+									<option value="4">2014级</option>
+									<option value="5">2015级</option>
+									<option value="6">2016级</option>
+									<option value="7">2017级</option>
+									<option value="8">2018级</option>
+									<option value="9">2019级</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="sb-info">
+						<p class="sbi-l">所在学院：</p>
+						<div class="sbi-m">
+							<div class="control-btn-select">
+								<span id="collegeContent">{{user.college}}</span>
+								<em></em>
+								<select id="collegeType" class="enumselect" name="datingtype">
+									<option value="0" selected="selected">--请选择--</option>
+									<option value="1">艺术学院</option>
+									<option value="2">软件学院</option>
+									<option value="3">计算机学院</option>
+									<option value="4">外国语学院</option>
+									<option value="5">经济学院</option>
+									<option value="6">体育学院</option>
+									<option value="7">数学学院</option>
+									<option value="8">电子学院</option>
+									<option value="9">制造学院</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="sb-info">
+						<p class="sbi-l" id="description">我的签名：</p>
+						<div class="sbi-m">
+							<textarea id="" class="my-sign form-control" name="sign" cols="30" rows="3">{{user.description}}</textarea>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="sb-info">
+						
+					</div>
+				</li>
+				<li>
+					<div class="sb-info">
+						<p class="sbi-l" id="sex">性别：</p>
+						<span class="hidden" id="user-sex">{{user.sex}}</span>
+						<div class="sbi-m">
+							<ul id="sex_ul" class="sex">
+								<li id="male">男</li>
+								<li id="female">女</li>
+								<li id="secret">保密</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="sb-info">
+						<p class="sbi-l">交友目的：</p>
+						<div class="sbi-m">
+							<div class="control-btn-select">
+								<span id="aimContent">{{user.aim}}</span>
+								<em></em>
+								<select id="aimType" class="enumselect" name="aimType">
+									<option value="0" selected="selected">--请选择--</option>
+									<option value="1">共同兴趣</option>
+									<option value="2">求美工</option>
+									<option value="3">求程序员</option>
+									<option value="4">求策划</option>
+									<option value="5">玩伴</option>
+									<option value="6">求组队</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="sb-line"></div>
+		<input id="save" class="sb-save" value="保存" style="position: absolute;bottom:80px;display: block;" type="button">
+		<span id="successMsg" class="sb-save" style="display: none;">保存成功！</span>
+	</div>
+
+</form>
+
+</div>
+
+</body>
+<script type="text/javascript" src="js/setting.js"></script>
+
+<link id="css" rel="stylesheet" type="text/css" href="https://static-s.bilibili.com/account/css/zclc2.css?v=1.0.1"/>
+
+{{> footer}}

@@ -17,5 +17,9 @@ module.exports = {
   sessionSecret:'rbrubgsuldnjblaf4894161safafhbuj',
 
   //表示一个小时的时间
-  sessionMaxAge:1000*60*60
+  sessionMaxAge:1000*60*60,
+
+  //当前开发环境
+  ENV:'production'
+
 };

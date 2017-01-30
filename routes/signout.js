@@ -3,10 +3,12 @@ var router = express.Router();
 
 router.get('/',function(req,res,next){
 	req.session.destroy(function(err){
-		res.locals.sign = false;
-		res.redirect('/home');
+		if(err){
+			console.log("注销失败");
+		}
 	})
-	
+	res.locals.sign = false;
+	res.redirect('/home');
 })
 
 module.exports = router;

@@ -1,12 +1,67 @@
-* html .ui-autocomplete {
-    width: 1px;
+.security-left {
+	float: left;
+	height: 100%;
+	width: 150px;
 }
-.ui-button {
-    cursor: pointer;
-    display: inline-block;
-    margin-right: 0.1em;
-    overflow: visible;
-    padding: 0;
-    position: relative;
-    text-align: center;
+
+.security_content {
+	background: #fafafa none repeat scroll 0 0;
+	border: 1px solid #e1e2e5;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14);
+	height: 100%;
+	margin: 10px auto 100px;
+	overflow: hidden;
+	width: 1080px !important;
+}
+
+.security-left .sty-head {
+	border-bottom: 1px solid #ddd;
+	height: 140px;
+	position: relative !important;
+	width: 151px;
+}
+
+.security-right{
+	min-height: 832px!important;
+}
+
+.security-list li a .al-vip {
+	background: url(https://static-s.bilibili.com/account-pc/img/icons_m.png) -23px -975px no-repeat;
+}
+
+.security-list li a .al-vip.check-t {
+	background-position: -87px -975px;
+}
+
+.security-list li a .al-vipscore {
+	background: url(https://static-s.bilibili.com/account-pc/img/icons_m.png) -23px -1231px no-repeat;
+}
+
+.security-list li a .al-vipscore.check-t {
+	background-position: -87px -1231px;
+}
+
+.viptips {
+	display: none;
+	position: absolute;
+	top: 4px;
+	right: -8px;
+	width: 42px;
+	height: 16px;
+	border-radius: 20px;
+	z-index: 999;
+	background: url(https://static-s.bilibili.com/account-pc/img/guoqi.png) no-repeat;
+}
+
+.isnewvip {
+	display: none;
+	position: absolute;
+	top: 4px;
+	right: -8px;
+	width: 42px;
+	height: 16px;
+	border-radius: 20px;
+	z-index: 999;
+	background: url(https://static-s.bilibili.com/account-pc/img/icons_m.png) -144px -856px no-repeat;
 }

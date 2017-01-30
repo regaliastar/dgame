@@ -16,6 +16,7 @@ router.get('/',function(req,res,next){
 
 router.post('/',function(req,res,next){
 
+	//此处修改为使用正则表达式
 	if(req.body.username.length>11 || req.body.username === ''){
 		res.send('username');
 	}else if(req.body.password.length<6 || req.body.password.length>16){
@@ -50,9 +51,27 @@ router.post('/',function(req,res,next){
 			})
 
 		},function(callback){
-			req.session.sign = true;
+			/*
+			 *新建用户
+			 *只能传入三个参数，分别是：username,password,tel
+			 *创建的代码封装于models/users
+			 *
+			 */
 
-			res.end('success');
+			 Userjs.createUser(req.body.username,req.body.password,req.body.tele);
+			 callback(null,'two');
+		},function(callback){
+			setTimeout(function(){
+				User.findOne({tel:req.body.tele},function(err,user){
+			 	req.session.user = user;
+			 	req.session.sign = true;
+			 	req.session.save();
+			 	console.log("user in signup:"+user);
+			 	res.end('success');
+					//console.log("用户"+req.body.tel+"登录成功");
+			});
+			},1000)
+
 		}],function(err,data){
 			if(err){
 				console.log('async error in signup/router.post happened!');
