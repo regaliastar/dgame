@@ -11,7 +11,7 @@ var app = new App(config.AppKey, config.AppSecret);
 var code = '123456';
 
 router.get('/',function(req,res,next){
-	res.render('signup');
+	res.render('signup',{title:'注册 | Dgame'});
 })
 
 router.post('/',function(req,res,next){

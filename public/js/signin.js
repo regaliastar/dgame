@@ -3,6 +3,12 @@ $(document).ready(function(){
 	$('.signin').on('click',function(evt){
 		var tel = $('.tele').val().trim();
 		var password = $('.password').val().trim();
+		if(tel.length !== 11){
+			$('#pw-wrong').slideDown();
+			return false;
+		}
+
+		console.log('1');
 		
 		$.ajax({
 			type:'post',
@@ -17,7 +23,10 @@ $(document).ready(function(){
 					case 'success':
 						console.log("success~");
 						$('#waiting').slideDown();
-						location.href = 'http://localhost:2017/home';
+						setTimeout(function(){
+							location.href = 'http://localhost:2017/home';
+						},1000)
+						
 						break;
 					case 'pw-wrong':
 						$('#pw-wrong').slideDown();
@@ -31,6 +40,17 @@ $(document).ready(function(){
 				console.log("error...");
 			}
 		})
+
+		
+	})
+
+
+	$('.tele').focusin(function(){
+		$('#pw-wrong').slideUp();
+	})
+
+	$('.password').focusin(function(){
+		$('#pw-wrong').slideUp();
 	})
 
 })

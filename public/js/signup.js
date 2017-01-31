@@ -7,12 +7,14 @@ $(document).ready(function(){
 		
 		if (countdown === 0) { 
 			obj.removeAttribute("disabled");    
-			obj.value="免费获取验证码"; 
+			//obj.value="免费获取验证码"; 
+			obj.innerHTML = "免费获取验证码";
 			countdown = 60; 
 			return;
 		} else { 
 			obj.setAttribute("disabled", 'true'); 
-			obj.value="重新发送(" + countdown + ")"; 
+			//obj.value="重新发送(" + countdown + ")"; 
+			obj.innerHTML = "重新发送(" + countdown + ")";
 			countdown--;
 		} 
 		setTimeout(function() { 
@@ -31,7 +33,8 @@ $(document).ready(function(){
 	    tele = $('.tele').val().trim();
 	    if(tele.length !== 11){
 	    	evt.preventDefault();
-	    	$('#tele-wrong').slideDown();
+	    	//$('#tele-wrong').slideDown();
+	    	showWrongMsg('手机号有误');
 	    	return;
 	    }
 
@@ -53,19 +56,21 @@ $(document).ready(function(){
 
 	})
 
-	$('.signup-form').on('submit',function(evt){
+	$('.signup').on('click',function(evt){
 		//用户名检测
 		var username = $('.username').val().trim();
 		if(username.length>11 || username === ''){
 			evt.preventDefault();
-			$('#un-wrong').slideDown();
+			//$('#un-wrong').slideDown();
+			showWrongMsg('用户名不规范');
 			return;
 		}
 		//密码检测
 		var password = $('.password').val().trim();
 		if(password.length<6 || password.length>16){
 			evt.preventDefault();
-			$('#pw-wrong').slideDown();
+			//$('#pw-wrong').slideDown();
+			showWrongMsg('密码有误');
 			return;
 		}
 		
@@ -74,7 +79,8 @@ $(document).ready(function(){
 	    var code = $('.identify').val().trim(); 
 	    if(code === ''){
 	    	evt.preventDefault();
-	    	$('#iden-wrong').slideDown();
+	    	//$('#iden-wrong').slideDown();
+	    	showWrongMsg('验证码有误');
 	    	return;
 	    }
 
@@ -101,21 +107,26 @@ $(document).ready(function(){
 	    		}*/
 	    		switch(data){
 	    			case 'success':
-	    				$('#waiting').slideDown();
+	    				//$('#waiting').slideDown();
+	    				showWrongMsg('发送成功，请等待');
 	    				console.log(data+"---验证码已成功发送到服务器~");
 	    				location.href = 'http://localhost:2017/home';
 	    				break;
 	    			case 'username':
-	    				$('#un-wrong').slideDown();
+	    				//$('#un-wrong').slideDown();
+	    				showWrongMsg('用户名不规范');
 	    				break;
 	    			case 'password':
-	    				$('#pw-wrong').slideDowm();
+	    				//$('#pw-wrong').slideDowm();
+	    				showWrongMsg('密码有误');
 	    				break;
 	    			case 'tele':
-	    				$('#tele-wrong').slideDown();
+	    				//$('#tele-wrong').slideDown();
+	    				showWrongMsg('手机号有误');
 	    				break;
 	    			case 'code':
-	    				$('#iden-wrong').slideDown();
+	    				//$('#iden-wrong').slideDown();
+	    				showWrongMsg('验证码有误');
 	    				console.log("服务器响应iden-wrong");
 	    				break;
 	    			case 'tele-repeat':
@@ -138,19 +149,19 @@ $(document).ready(function(){
 
 
 	$('.username').focusin(function(){
-		$('#un-wrong').slideUp();
+		$('#wrong-msg').slideUp();
 	})
 
 	$('.password').focusin(function(){
-		$('#pw-wrong').slideUp();
+		$('#wrong-msg').slideUp();
 	})
 
 	$('.tele').focusin(function(){
-		$('#tele-wrong').slideUp();
+		$('#wrong-msg').slideUp();
 	})
 
 	$('.identify').focusin(function(){
-		$('#iden-wrong').slideUp();
+		$('#wrong-msg').slideUp();
 	})
 
 })

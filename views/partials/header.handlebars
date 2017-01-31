@@ -1,28 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- 
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>Dgame~</title>
-	<meta name="description" content="dgame，目前还需施工...">
-	<script src="js/jquery-3.1.1.js"></script>
-	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/bili-style.css">
-	<link rel="stylesheet" href="//static.hdslb.com/css/core-v5/page-core.css" type="text/css">
-	<link rel="stylesheet" type="text/css" href="//static.hdslb.com/css/index.css">
-	<link rel="stylesheet" type="text/css" href="http://static.hdslb.com/travel/static/css/biliIndexNav/i_div_travel.css">
-	<link rel="stylesheet" href="//static.hdslb.com/images/jquery-ui/custom/jquery-ui.css" type="text/css">
-	<style>
-		body { min-height: 1500px; } 
-	</style>
--->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Dgame~~~~~~~~</title>
+<title>Dgame~</title>
 <meta name="description" content="dgame，目前还需施工...">
 <meta name="keywords" content="dependence game">
 <meta name="renderer" content="webkit">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link rel="shortcut icon" href="//static.hdslb.com/images/favicon.ico">
+<link rel="short icon" type="image/x-icon" href="img/logo/Favicon.ico">
 
 <link rel="stylesheet" href="//static.hdslb.com/images/jquery-ui/custom/jquery-ui.css" type="text/css">
 <link rel="stylesheet" href="//static.hdslb.com/css/core-v5/page-core.css" type="text/css" />
@@ -30,7 +15,8 @@
 <script src="js/jquery-3.1.1.js"></script>
 <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
 
-<script type="text/javascript" src="//s1.hdslb.com/bfs/static/cm/cm.seed.js?v=2017012715"></script><meta name="fragment" content="!">
+<script type="text/javascript" src="//s1.hdslb.com/bfs/static/cm/cm.seed.js?v=2017012715"></script>
+<meta name="fragment" content="!">
 <link rel="stylesheet" type="text/css" href="//static.hdslb.com/css/index.css"  />
 
 <script type="text/javascript" src="/js/header.js"></script>
@@ -61,7 +47,8 @@
 						{{#if sign}}
 						<li id="i_menu_profile_btn" class="u-i i_user" guest="no" i_menu="#i_menu_profile" style="display: list-item;">
 							<a class="i-link" href="/user" target="_blank">
-								<img class="i_face" src="img/face/default.png">
+								<img class="i_face" src="img/face/{{user.avator}}">
+								<span id="user-avator" style="display: none;" value="{{user.avator}}"></span>
 							</a>
 						</li>
 						<li id="i_menu_community_msg_btn" class="u-i" guest="no" i_menu="community_msg" style="display: list-item;">

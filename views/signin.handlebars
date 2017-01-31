@@ -1,26 +1,44 @@
-{{> header}}
-	<div class="container">
-		
-			<div class="input-group col-lg-4 center ">
-				
-				<input type="text" class=" form-control tele" name="tele" placeholder="填写常用手机号" />
-				<input type="text" class=" form-control password" name="password" placeholder="密码，6-16个字符组成，区分大小写" />
-				
-				<input type="button" id="button" class="signin btn btn-default" value="登录" />
-				
-			</div>  <!-- /input-group -->
+{{> sign-header}}
 
-	
-	
-		<div class="alert alert-dismisible">
-			<span style="display: none;" id="wrong-msg"></span>
-		
-			<span style="display: none;" id="pw-wrong">密码不正确，请重新输入</span>
-
-			<span style="display: none;" id="waiting">正在处理，请等待...</span>
+	<div class="signup-form ">
+		<div class="signup-form__logo-box">
+			<div class="signup-form__logo"></div>
+			<div class="signup-form__catchphrase">让创作变得更有乐趣</div>
 		</div>
+		<div id="container-login">
+			<div data-reactroot="">
+				<span>
+					<form onsubmit="return false">
+						<div class="input-field-group">
+							<div class="input-field">
+								<input class="tele" placeholder="手机号码" autocapitalize="on" type="text">
+							</div>
+							<div class="input-field">
+								<input class="password" placeholder="密码" autocapitalize="off" type="password">
+							</div>
+						</div>
+						<ul class="error-msg-list">
+							<li id="pw-wrong" class="error-msg-list__item" style="display: none;">密码不正确，请重新输入</li>
+							<li id="waiting" class="error-msg-list__item" style="display: none;">正在登录，请稍等...</li>
+						</ul>
+						<li id="other-wrong"></li>
+						<button id="button" class="signin signup-form__submit">登录</button>
+						<a href="/signup" class="signup signup-form__submit">注册</a>
+						<div class="signup-form-nav">
+							<div class="left"></div>
+							<div class="right">
+								<a href="/reminder" target="_blank">忘记了</a>
+							</div>
+						</div>
+					</form>
+				</span>
+			</div>
+		</div>
+
 	</div>
 
+
 </body>
+<link rel="stylesheet" type="text/css" href="https://source.pixiv.net/accounts/assets/bundle.css?7db5c2b8f618166493c1" >
 <script type="text/javascript" src="js/signin.js"></script>
 {{> footer}}

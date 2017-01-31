@@ -1,28 +1,50 @@
-{{> header}}
-	<div class="container">
-		<form class="signup-form" method="post" action="#">
-			<div class="input-group col-lg-4 center ">
-				<input type="text" class=" form-control username" name="username" placeholder="昵称（例：kiana）" />
-				<input type="text" class=" form-control password" name="password" placeholder="密码，6-16个字符组成，区分大小写" />
-				<input type="text" class=" form-control tele" name="tele" placeholder="填写常用手机号" />
-				<input type="text" class=" form-control identify" name="identify" placeholder="请输入手机验证码" disabled="true" />
-		
-				<input type="submit" id="button" class="btn btn-default" value="注册" />
-				
-			</div>  <!-- /input-group -->
+{{> sign-header}}
 
-		</form>
-		<input type="button" id="button" class="btn btn-default getIdentify" value="免费获取验证码" />
-		<div class="alert alert-dismisible">
-			<span style="display: none;" id="wrong-msg"></span>
-			<span style="display: none;" id="un-wrong">用户名不规范，长度应1~10之间</span>
-			<span style="display: none;" id="pw-wrong">密码不规范，请重新输入</span>
-			<span style="display: none;" id="tele-wrong">手机号码不规范，请重新输入</span>
-			<span style="display: none;" id="iden-wrong">验证码不正确，请重新输入</span>
-			<span style="display: none;" id="waiting">正在处理，请等待...</span>
+	<div class="signup-form ">
+		<div class="signup-form__logo-box">
+			<div class="signup-form__logo"></div>
+			<div class="signup-form__catchphrase">让创作变得更有乐趣</div>
 		</div>
+		<div id="container-login">
+			<div data-reactroot="">
+				<span>
+					<form onsubmit="return false">
+						<div class="input-field-group">
+							<div class="input-field">
+								<input class="username" placeholder="昵称（例：kiana）" autocapitalize="on" type="text">
+							</div>
+							<div class="input-field">
+								<input class="password" placeholder="密码，6-16个字符组成，区分大小写" autocapitalize="off" type="password">
+							</div>
+							<div class="input-field">
+								<input class="tele" placeholder="填写常用手机号" autocapitalize="on" type="text">
+							</div>
+							<div class="input-field">
+								<input class="identify" placeholder="请输入手机验证码" disabled="true" autocapitalize="off" type="text">
+							</div>
+						</div>
+						<ul class="error-msg-list">
+							<li id="wrong-msg" class="error-msg-list__item" style="display: none;"></li>
+						</ul>
+						
+						<button id="signup" class="signup signup-form__submit">注册</button>
+						<button class="getIdentify signup-form__submit">获取验证码</button>
+						<div class="signup-form-nav">
+							<div class="left">
+								<a href="/signin">已有账号</a>
+							</div>
+							<div class="right">
+								<a href="/reminder" target="_blank">忘记了</a>
+							</div>
+						</div>
+					</form>
+				</span>
+			</div>
+		</div>
+
 	</div>
 
 </body>
+<link rel="stylesheet" type="text/css" href="https://source.pixiv.net/accounts/assets/bundle.css?7db5c2b8f618166493c1" >
 <script type="text/javascript" src="js/signup.js"></script>
 {{> footer}}
