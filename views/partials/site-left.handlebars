@@ -26,8 +26,7 @@
 
 <div class="security_content">
 
-
-<div class="security-left">
+	<div class="security-left">
 		<ul class="security-list">
 			<li class="f-list" style="cursor: default;">
 				<a class="first-level" href="#" style="color: #99a2aa;cursor: default;">个人中心</a>
@@ -42,20 +41,23 @@
 							</span>
 						</a>
 					</li>
+					<li style="display: none;">
+						<span id="selected-li">{{select}}</span>
+					</li>
 					<li>
-						<a id="site" class="bg-blue" href="#">
+						<a id="setting" href="/site">
 							<i class="al-info check-t"></i>
 							<span>我的信息</span>
 						</a>
 					</li>
 					<li>
-						<a id="face" href="/site/avator">
+						<a id="avatar" href="/site/avatar">
 							<i class="al-tx"></i>
 							<span>我的头像</span>
 						</a>
 					</li>
 					<li>
-						<a id="site" href="site/safe">
+						<a id="safe" href="/site/safe">
 							<i class="al-aq"></i>
 							<span>账号安全</span>
 						</a>
@@ -66,3 +68,10 @@
 			</li>
 		</ul>
 	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+
+		})
+	</script>

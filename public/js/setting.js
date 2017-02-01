@@ -38,6 +38,12 @@ $(document).ready(function(){
 		'5':'玩伴',
 		'6':'求组队'
 	};
+
+	var selected =  $('#selected-li').html();
+	if(selected){
+		$('#'+selected).addClass('bg-blue');
+	}				
+			
 	
 
 	var user_sex = $('#user-sex').html();

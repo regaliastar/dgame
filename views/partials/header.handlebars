@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="//static.hdslb.com/images/jquery-ui/custom/jquery-ui.css" type="text/css">
 <link rel="stylesheet" href="//static.hdslb.com/css/core-v5/page-core.css" type="text/css" />
 
-<script src="js/jquery-3.1.1.js"></script>
+<script src="../js/jquery-3.1.1.js"></script>
 <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
 
 <script type="text/javascript" src="//s1.hdslb.com/bfs/static/cm/cm.seed.js?v=2017012715"></script>
@@ -47,8 +47,8 @@
 						{{#if sign}}
 						<li id="i_menu_profile_btn" class="u-i i_user" guest="no" i_menu="#i_menu_profile" style="display: list-item;">
 							<a class="i-link" href="/user" target="_blank">
-								<img class="i_face" src="img/face/{{user.avator}}">
-								<span id="user-avator" style="display: none;" value="{{user.avator}}"></span>
+								<img class="i_face" src="../img/face/{{user.avatar}}">
+								<span id="user-avatar" style="display: none;">{{user.avatar}}</span>
 							</a>
 						</li>
 						<li id="i_menu_community_msg_btn" class="u-i" guest="no" i_menu="community_msg" style="display: list-item;">

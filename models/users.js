@@ -76,6 +76,23 @@ var updateUser = function(id,req){
 }
 exports.updateUser = updateUser;
 
+var updateAvatar = function(id,newAvatar,req){
+	User.update({_id:id},{avatar:newAvatar},{mutil:true},function(err,numberAffected,raw){
+		if(err){
+			console.log("something wrong in updateAvatar!");
+			return handleError(err);
+		}else{
+			User.findOne({_id:id},function(err,user){
+				req.session.user = user;
+				req.session.sign = true;
+				req.session.save();
+			})
+		}
+	})
+
+}
+exports.updateAvatar = updateAvatar;
+
 var findUserByName = function(req,res){
 	//User.createUser(req.body.username,req.body.password,req.body.tele);
 	var usersMsg = [];
