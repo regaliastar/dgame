@@ -19,6 +19,7 @@ router.get('/test',function(req,res,next){
 })
 
 router.post('/test',function(req,res,next){
+	/*
 	//生成multiparty对象，并配置上传目标路径
 	var form = new multiparty.Form({uploadDir: './public/img/face/'});
 	//上传完成后处理
@@ -28,7 +29,8 @@ router.post('/test',function(req,res,next){
 		if(err){
 			console.log('parse error: ' + err);
 		}else{
-			//console.log('parse files: ' + filesTmp);
+			console.log("原本的files："+files);
+			console.log('parse files: ' + filesTmp)
 
 			var uploadedPath = ''+files.myPhoto[0].path;
 			console.log("原文件名："+uploadedPath);
@@ -44,10 +46,29 @@ router.post('/test',function(req,res,next){
         			console.log("文件名："+myname);
         		}
        		});
+
    	    }
 
     	res.end("<h1>OK</h1>");
 	});
+*/
+
+if(req.body.imgData){
+	console.log('req.body.imgData进入了');
+	 var avatar = req.body.imgData.replace(/^data:image\/\w+;base64,/,'');
+	 var newName = './public/img/face/' + Date.now()+'_'+ '.jpg';
+	
+     var newBuff = new Buffer(avatar, 'base64');
+        fs.writeFile(newName, newBuff, 'binary', function (err) {
+            if (err){
+                return res.sendStatus(500);
+            }
+            res.sendStatus(200);
+        });
+    }else{
+        res.sendStatus(400);
+    }
+
 })
 
 module.exports = router;

@@ -58,8 +58,10 @@
 5. 个人中心
 	1. 个人中心页：`GET /site`
 	2. 修改信息：`POST /site/setting`
-	3. 设置头像：`POST /site/avator`
-	4. 安全中心：`POST /site/safe`
+	3. 头像页：`GET /site/avatar`
+	4. 设置头像：`POST /site/avatar`
+	5. 安全中心页：`GET /site/safe`
+	6. 安全中心：`POST /site/safe`
 6. 搜索
 	1. 搜索：`GET /search/:keyword=???`
 7. 投稿

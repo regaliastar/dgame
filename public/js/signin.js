@@ -25,7 +25,7 @@ $(document).ready(function(){
 						$('#waiting').slideDown();
 						setTimeout(function(){
 							location.href = 'http://localhost:2017/home';
-						},1000)
+						},800)
 						
 						break;
 					case 'pw-wrong':

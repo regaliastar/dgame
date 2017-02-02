@@ -6,7 +6,7 @@ $(document).ready(function(){
 	 */
 	var user_avatar = $('#user-avatar').html();
 	if(!user_avatar){
-		$('.i_face').attr('src','../img/face/default.png');
+		$('.i_face').attr('src','../img/face/default.jpg');
 	}
 
 	$('#i-msg').mouseover(function(){
