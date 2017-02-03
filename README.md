@@ -1,6 +1,8 @@
-#Dgame
+# <img src="public/img/logo/big-logo.ico" width="25"> Dgame
+<img src="public/img/logo/sign-logo.png" width="50%">
 
-网址：http://www.regaliastar.com (还未进行建设，故该网址只是个空壳)
+独立游戏分享制作平台
+网址：http://www.regaliastar.com
 
 #技术栈
 
@@ -27,6 +29,7 @@
 * 完善了注册与登录界面的UI；1/31
 * 使用mutilparty实现用户上传头像的功能；2/1
 * 使用imagecorpper头像裁剪，文件写入和删除；2/2
+* 部署到服务器；2/3
 
 ##各文件分区
 * models：用于存放封装好的类
