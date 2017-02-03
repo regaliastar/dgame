@@ -5,7 +5,12 @@ var Functions = require('./../models/functions');
 var router = express.Router();
 
 router.get('/',function(req,res,next){
-	res.render('signin',{title:'登录 | Dgame'});
+	if(!req.session.sign){
+		res.render('signin',{title:'登录 | Dgame'});
+	}else{
+		res.end('<h1>您已登录！请先注销</h1>');
+	}
+	
 })
 
 router.post('/',function(req,res,next){

@@ -27,11 +27,38 @@ $(document).ready(function(){
 		$('#wrong-msg').slideDown();
 	}
 
+	function isTel(Tel){
+		var re= /^1\d{10}$/;
+		if(re.test(Tel)){
+			return true;
+		}else{
+			return false;
+		}
+	}
+
+	function isUserName(str){
+		var re = /^[a-zA-z]\w{0,15}$/;
+		if(re.test(str)){
+			return true;
+		}else{
+			return false;
+		}          
+	}
+
+	function isPassword(password){
+		var re = /^[a-zA-Z\d]{6,16}$/;
+		if(re.test(password)){
+			return true;
+		}else{
+			return false;
+		}
+	}
+
 	//得到验证码
 	$('.getIdentify').on('click',function(evt){
 	    //手机号码检测
 	    tele = $('.tele').val().trim();
-	    if(tele.length !== 11){
+	    if(!isTel(tele)){
 	    	evt.preventDefault();
 	    	//$('#tele-wrong').slideDown();
 	    	showWrongMsg('手机号有误');
@@ -59,18 +86,18 @@ $(document).ready(function(){
 	$('.signup').on('click',function(evt){
 		//用户名检测
 		var username = $('.username').val().trim();
-		if(username.length>11 || username === ''){
+		if(!isUserName(username)){
 			evt.preventDefault();
 			//$('#un-wrong').slideDown();
-			showWrongMsg('用户名不规范');
+			showWrongMsg('用户名不规范,字母、数字、下划线组成，字母开头，1-16位');
 			return;
 		}
 		//密码检测
 		var password = $('.password').val().trim();
-		if(password.length<6 || password.length>16){
+		if(!isPassword(password)){
 			evt.preventDefault();
 			//$('#pw-wrong').slideDown();
-			showWrongMsg('密码有误');
+			showWrongMsg('密码由6-16位之间的数字或字母组成');
 			return;
 		}
 		

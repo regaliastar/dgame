@@ -15,18 +15,23 @@ router.get('/',function(req,res,next){
 })
 
 router.post('/',function(req,res,next){
-
-	//此处修改为使用正则表达式
-	if(req.body.username.length>11 || req.body.username === ''){
+	/*
+	 *为了防止恶意用户绕过前端检测，后端也需要检测一遍用户的输入
+	 *
+	 *使用正则表达式检测输入
+	 *
+	 *这里的密码部分目前选择明码保存，以后替换为使用hash加密，以增加安全性 !important
+	 *
+	 */
+	if(!Functions.isUserName(req.body.username)){
 		res.send('username');
-	}else if(req.body.password.length<6 || req.body.password.length>16){
+	}else if(!Functions.isPassword(req.body.password)){
 		res.send('password');
-	}else if(req.body.tele.length !== 11){
+	}else if(!Functions.isTel(req.body.tele)){
 		res.send('tele');
 	}else if(req.body.code !== code){
 		res.send('code');
 	}else{
-		var usersMsg = [];
 
 		async.series([function(callback){
 			/*
@@ -82,7 +87,14 @@ router.post('/',function(req,res,next){
 })
 
 router.post('/identify',function(req,res,next){
-	//这里让验证码强制等于123456，以后通过生成随机数来验证
+	/*
+	 *使用了阿里大于的短信服务，一条短信4.5分RMB
+	 *短信的AppScrect位于config配置文件中，在生产模式下不暴露密码，详情查看我的阿里大于获得密码
+	 *
+	 *这里让验证码强制等于123456，以后通过生成随机数来验证
+	 *
+	 */
+
 	//console.log("sendsms..."+"AppKey: "+config.AppKey+"AppSecret: "+config.AppSecret);
 	//console.log("手机号："+req.body.tele);
 	code = '123456';

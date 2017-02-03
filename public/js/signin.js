@@ -1,4 +1,13 @@
 $(document).ready(function(){
+	
+	function isTel(Tel){
+		var re= /^1\d{10}$/;
+		if(re.test(Tel)){
+			return true;
+		}else{
+			return false;
+		}
+	}
 
 	$('.signin').on('click',function(evt){
 		var tel = $('.tele').val().trim();

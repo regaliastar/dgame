@@ -14,10 +14,17 @@ router.get('/',function(req,res,next){
 	
 })
 
+/*
+ *测试专用
+ */
 router.get('/test',function(req,res,next){
 	res.render('test');
 })
 
+/*
+ *该路由用来测试还未完成的功能
+ *
+ */
 router.post('/test',function(req,res,next){
 	/*
 	//生成multiparty对象，并配置上传目标路径

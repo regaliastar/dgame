@@ -25,7 +25,6 @@ router.post('/setting',function(req,res,next){
 		//Userjs.printUserBytel(req.session.user.tel);
 	}
 	
-	//Userjs.updateUser(req.session.user.tel,req.body);
 	res.send(true);
 })
 
@@ -37,7 +36,7 @@ router.get('/avatar',function(req,res,next){
 		res.render('avatar',{sign:true,user:user,select:'avatar'});
 	}else{
 		//此处应该改为login-msg界面，但是为了方便调试，选择发送avator界面
-		res.render('avatar',{select:'avatar'});
+		res.render('login-msg');
 	}
 
 })
@@ -55,42 +54,16 @@ router.get('/avatar',function(req,res,next){
  *
  *文件的压缩裁剪等规范格式操作在客户端完成;
  *
+ *为了减少服务器的存储量，头像统一改为.jpg的后缀减少大小
+ *
  */
 router.post('/avatar',function(req,res,next){
-	//生成multiparty对象，并配置上传目标路径
+
 	if(req.session.sign && req.body.imgData){
 		/*
-		var form = new multiparty.Form({uploadDir: './public/img/face/'});
-		//上传完成后处理
-		form.parse(req, function(err, fields, files) {
-			var filesTmp = JSON.stringify(files,null,2);
-
-			if(err){
-				console.log('parse error: ' + err);
-				res.end("文件解析错误！");
-			}else{
-				//console.log('parse files: ' + filesTmp);
-
-				var uploadedPath = ''+files.myPhoto[0].path;
-				console.log("原文件名："+uploadedPath);
-				var dstPath = './public/img/face/' + Date.now()+files.myPhoto[0].originalFilename;
-        		//重命名为真实文件名
-        		fs.rename(uploadedPath, dstPath, function(err) {
-        			if(err){
-        				console.log('rename error: ' + err);
-        				res.end("文件重命名错误！");
-        			}else{
-        				console.log('rename ok');
-        				console.log("新文件名："+dstPath);
-        				var newAvatar = dstPath.split('/')[4];
-        				Userjs.updateAvatar(req.session.user._id,newAvatar,req);
-        				res.render('avatar',{select:'avatar',upload:true});
-        			}
-        		});
-        			
-       	 	}
-       	 });*/
-       	 
+         *为了与前端相适应，在上传图片时直接使用fs模块，故删除mutilparty模块
+         *
+		 */
 
        	 var avatar = req.body.imgData.replace(/^data:image\/\w+;base64,/,'');
        	 var newPath = './public/img/face/' + Date.now()+req.session.user._id+ '.jpg';
