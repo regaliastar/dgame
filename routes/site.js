@@ -13,7 +13,7 @@ router.get('/',function(req,res,next){
 		//console.log('GET /site user:'+user.username);
 		res.render('setting',{sign:true,user:user,select:'setting'});
 	}else{
-			res.render('login-msg');
+		res.render('setting',{sign:false});
 	}
 })
 
@@ -23,11 +23,15 @@ router.get('/',function(req,res,next){
  */
 router.post('/setting',function(req,res,next){
 	if(req.session.sign){
+            log.info('ID '+req.session.user._id+' 更新了个人信息');
 		Userjs.updateUser(req.session.user._id,req);
 		//Userjs.printUserBytel(req.session.user.tel);
-	}
+            res.send(true);
+	}else{
+            res.render('login-msg');
+      }
 	
-	res.send(true);
+	
 })
 
 router.get('/avatar',function(req,res,next){

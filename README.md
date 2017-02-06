@@ -90,10 +90,11 @@
 页面的多样性主要通过在渲染模板时从服务器得到，为方便易学起见，故采用弱逻辑性的handlebars
 
 ## How to use
-1. Install nodejs, npm and mongodb
+1. create logs folder in root dictionary
+2. Install nodejs, npm and mongodb
    (如何配置node环境？ http://jingyan.baidu.com/article/91f5db1b2bb6941c7f05e33c.html )
-2. At root directory, `npm install`, then `node app`
-3. Server set up at http://127.0.0.1:2017/
+3. At root directory, `npm install`, then `node app`
+4. Server set up at http://127.0.0.1:2017/
 
 ## How to study
 1. 学习JavaScript，推荐《JavaScript高级编程》，讲解的很全面，可以当字典来用

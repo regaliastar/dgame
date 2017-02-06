@@ -1,5 +1,13 @@
 $(document).ready(function(){
-	
+	function isUserName(str){
+		var re = /^[a-zA-z]\w{0,15}$/;
+		if(re.test(str)){
+			return true;
+		}else{
+			return false;
+		}          
+	}
+
 	var defaultGrade = $('#gradeContent').html()||'';
 	var Grades = {
 		'0':defaultGrade,
@@ -87,7 +95,7 @@ $(document).ready(function(){
 		var aim = $('#aimContent').html();
 
 		
-		if(username == '' || username.length>11){
+		if(!isUserName(username)){
 			$('html,body').animate({scrollTop:$('#username').offset().top}, 800);
 			return false;
 		}
