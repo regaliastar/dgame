@@ -9,6 +9,8 @@ var handlebars = require('express3-handlebars').create({
 });
 var config = require('./config/default');
 var pkg = require('./package');
+var log4js = require('./log');
+var log = require("./log").logger("signin");
 
 var mongoose = require('mongoose');
 mongoose.connect(config.mongodb);
@@ -19,6 +21,11 @@ db.once('open', function (callback) {
 });
 
 var app = express();
+
+//配置日志文件
+log4js.configure();
+//不需要在日志中输出url请求，则注释掉这段话
+//app.use(log4js.useLog());
 
 //设置模板目录
 app.set('views',path.join(__dirname,'views'));
@@ -42,6 +49,7 @@ routes(app);
 
 //捕获错误代码并返回错误界面
 app.use(function (err, req, res, next) {
+	log.error('error:'+err);
   res.render('error', {
     error: err
   });

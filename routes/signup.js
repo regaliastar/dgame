@@ -7,6 +7,9 @@ var User = require('./../lib/mongo').User;
 var App = require('alidayu-node');
 var async = require('async');
 var app = new App(config.AppKey, config.AppSecret);
+
+var log = require("./../log").logger("signup");
+
 //该code最好随机生成
 var code = '123456';
 
@@ -62,7 +65,7 @@ router.post('/',function(req,res,next){
 			 *创建的代码封装于models/users
 			 *
 			 */
-
+			 log.info('号码 '+req.body.tele+' 用户注册成功');
 			 Userjs.createUser(req.body.username,req.body.password,req.body.tele);
 			 callback(null,'two');
 		},function(callback){

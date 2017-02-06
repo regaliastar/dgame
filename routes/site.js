@@ -5,6 +5,8 @@ var Userjs = require('./../models/users');
 var util = require('util');
 var fs = require('fs');
 
+var log = require("./../log").logger("site");
+
 router.get('/',function(req,res,next){
 	if(req.session.sign){
 		var user = req.session.user;
@@ -87,13 +89,14 @@ router.post('/avatar',function(req,res,next){
        	 						throw err;
        	 					}else{
        	 						console.log('文件 '+oldAvatar+'删除成功');
+                                                log.info('图片 '+oldAvatar+'删除成功');
        	 					}
        	 				})
        	 			}else{
        	 				console.log('头像文件不存在');
        	 			}
        	 		})
-
+                        log.info('ID '+req.session.user._id+'更新了头像：'+newAvatar);
        	 		Userjs.updateAvatar(req.session.user._id,newAvatar,req);
        	 		res.end('success');
        	 	}

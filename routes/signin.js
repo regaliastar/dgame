@@ -4,6 +4,8 @@ var User = require('./../lib/mongo').User;
 var Functions = require('./../models/functions');
 var router = express.Router();
 
+var log = require("./../log").logger("signin");
+
 router.get('/',function(req,res,next){
 	if(!req.session.sign){
 		res.render('signin',{title:'登录 | Dgame'});
@@ -25,6 +27,8 @@ router.post('/',function(req,res,next){
 			req.session.sign = true;
 			req.session.save();
 			console.log("用户"+req.body.tel+"登录成功");
+			log.info("用户"+req.body.tel+"登录成功");
+
 			res.send('success');
 		}
 	});
