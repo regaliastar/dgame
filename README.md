@@ -28,7 +28,7 @@
 * 基本实现个人中心界面，还有诸如特长等元素待添加；完善了session会话；下一步提供上传头像的功能；1/30
 * 完善了注册与登录界面的UI；1/31
 * 使用mutilparty实现用户上传头像的功能；2/1
-* 使用imagecorpper头像裁剪，文件写入和删除；2/2
+* 使用imagecorpper头像裁剪；文件写入和删除；2/2
 * 部署到服务器；2/3
 * 部署日志文件；2/6
 
@@ -90,7 +90,7 @@
 页面的多样性主要通过在渲染模板时从服务器得到，为方便易学起见，故采用弱逻辑性的handlebars
 
 ## How to use
-1. create logs folder at root dictionary
+1. Create logs folder at root dictionary
 2. Install nodejs, npm and mongodb
    (如何配置node环境？ http://jingyan.baidu.com/article/91f5db1b2bb6941c7f05e33c.html )
 3. At root directory, `npm install`, then `node app`
