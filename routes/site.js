@@ -67,8 +67,8 @@ router.post('/avatar',function(req,res,next){
 
 	if(req.session.sign && req.body.imgData){
 		/*
-         *为了与前端相适应，在上传图片时直接使用fs模块，故删除mutilparty模块
-         *
+             *为了与前端相适应，在上传图片时直接使用fs模块，故删除mutilparty模块
+             *
 		 */
 
        	 var avatar = req.body.imgData.replace(/^data:image\/\w+;base64,/,'');

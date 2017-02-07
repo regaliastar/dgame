@@ -10,7 +10,7 @@ router.get('/',function(req,res,next){
 	if(!req.session.sign){
 		res.render('signin',{title:'登录 | Dgame'});
 	}else{
-		res.end('<h1>您已登录！请先注销</h1>');
+		res.render('login-msg');
 	}
 	
 })

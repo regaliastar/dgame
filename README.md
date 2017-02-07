@@ -90,7 +90,7 @@
 页面的多样性主要通过在渲染模板时从服务器得到，为方便易学起见，故采用弱逻辑性的handlebars
 
 ## How to use
-1. create logs folder in root dictionary
+1. create logs folder at root dictionary
 2. Install nodejs, npm and mongodb
    (如何配置node环境？ http://jingyan.baidu.com/article/91f5db1b2bb6941c7f05e33c.html )
 3. At root directory, `npm install`, then `node app`
