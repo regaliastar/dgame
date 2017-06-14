@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/regaliastar/dgame.git"
   },
-  "author": "dacteam",
+  "author": "regaliastar",
   "license": "ISC",
   "dependencies": {
    "async": "2.1.4",
@@ -28,7 +28,9 @@
    "multiparty": "4.1.3",
    "util": "0.10.3",
    "fs": "0.0.1",
-   "log4js": "1.1.0"
+   "log4js": "1.1.0",
+   "cheerio": "0.22.0",
+   "request": "2.79.0"
   },
   "bugs": {
     "url": "https://github.com/regaliastar/dgame/issues"

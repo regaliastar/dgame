@@ -10,7 +10,7 @@ var handlebars = require('express3-handlebars').create({
 var config = require('./config/default');
 var pkg = require('./package');
 var log4js = require('./log');
-var log = require("./log").logger("signin");
+var log = require("./log").logger("app");
 
 var mongoose = require('mongoose');
 mongoose.connect(config.mongodb);
