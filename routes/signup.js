@@ -44,7 +44,7 @@ router.post('/',function(req,res,next){
 			User.findOne({tel:req.body.tele},function(err,user){
 				if(!err){
 					//若该号码已被注册
-					if(!Functions.isEmptyObject(user)){		
+					if(!Functions.isEmptyObject(user)){
 						console.log("该电话已被注册");
 						res.send("tele-repeat");
 					}else{
