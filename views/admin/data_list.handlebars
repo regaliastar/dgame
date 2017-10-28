@@ -21,13 +21,13 @@
                             <td id="bt1">kiana </td>
                             <td id="bt1">13881853166</td>
                             <td id="bt1">2017-10-10T12:20:1Z</td>
-                            <td><a href="#" style="color:blue;display:inline-block;margin-left:20px">删除</a></td>
+                            <td><a href="#" style="color:blue;display:inline-block;margin-left:20px">详细 | 删除</a></td>
                         </tr>
                         <tr class="bt2">
                             <td id="bt2">himiko</td>
                             <td id="bt2">15208171708</td>
                             <td id="bt2">2017-10-14T16:12:55Z</td>
-                            <td><a href="#" style="color:blue;display:inline-block;margin-left:20px">删除</a></td>
+                            <td><a href="#" style="color:blue;display:inline-block;margin-left:20px">详细 | 删除</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -88,6 +88,21 @@ $('#insert_user_submit').on('click',function(){
     let txt_date = getFormatDate();
     let str = '<tr class='+"bt2"+'><td id='+"bt2"+'>'+txt_username+'</td><td id='+"bt2"+'>'+txt_tele+'</td><td id='+"bt2"+'>'+txt_date+'</td></tr>';
     $('#userTable').append(str);
+
+    $.ajax({
+        type:'post',
+        url:'/admin/insertUser',
+        data:{
+            tel:txt_tele,
+            password:txt_username
+        },
+        success:function(data){
+
+        },
+        error:function(err){
+            console.log("error...");
+        }
+    })
 })
 </script>
 
