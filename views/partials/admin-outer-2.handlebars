@@ -1,0 +1,32 @@
+<div id="right-column">
+			<strong class="h">当前用户</strong>
+			<div class="box" style="width:160px">
+				<div>用户名:admin</div>
+				<div><a href="#" id="logout"><b>退出登录</b></a></div>
+			</div>
+	    </div>
+		<div id="right-column">
+			<strong class="h">系统信息</strong>
+			<div class="box" style="width:160px">
+				<div>System:Windows_NT</div>
+				<div>Version:10.0.14393</div>
+				<div>C:\Program Files\nodejs\node.exe:7.1.0</div>
+				<div><a href="https://github.com/regaliastar/dgame" target="_blank"><b>GitHub</b></a></div>
+			</div>
+	    </div>
+	</div>
+	<div id="footer"></div>
+</div>
+<script type="text/javascript">
+	$('#shuju').on('click',function(evt){
+		$('#shuju_ul').hasClass('navhide') ? $('#shuju_ul').removeClass('navhide') : $('#shuju_ul').addClass('navhide');
+	});
+	$('#quyu').on('click',function(evt){
+		$('#quyu_ul').hasClass('navhide') ? $('#quyu_ul').removeClass('navhide') : $('#quyu_ul').addClass('navhide');
+	});
+	$('#guanliyuan').on('click',function(evt){
+		$('#guanliyuan_ul').hasClass('navhide') ? $('#guanliyuan_ul').removeClass('navhide') : $('#guanliyuan_ul').addClass('navhide');
+	});
+</script>
+</body>
+</html>

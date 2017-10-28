@@ -12,8 +12,8 @@ router.get('/',function(req,res,next){
 	}else{
 		res.render('login-msg');
 	}
-	
-})
+
+});
 
 router.post('/',function(req,res,next){
 
@@ -32,5 +32,5 @@ router.post('/',function(req,res,next){
 			res.send('success');
 		}
 	});
-})
+});
 module.exports = router;

@@ -1,0 +1,5 @@
+.content-wrapper {padding-left: 0px;max-width: 880px;}
+.content {width: 880px;margin-left: 0px;}
+@media screen and (max-width: 940px) {
+.content {width: 100%;margin-left: 0px;}
+}

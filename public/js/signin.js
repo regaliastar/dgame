@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	
+
 	function isTel(Tel){
 		var re= /^1\d{10}$/;
 		if(re.test(Tel)){
@@ -18,7 +18,7 @@ $(document).ready(function(){
 		}
 
 		console.log('1');
-		
+
 		$.ajax({
 			type:'post',
 			url:'/signin',
@@ -34,8 +34,8 @@ $(document).ready(function(){
 						$('#waiting').slideDown();
 						setTimeout(function(){
 							location.href = 'http://localhost:2017/home';
-						},800)
-						
+						},800);
+
 						break;
 					case 'pw-wrong':
 						$('#pw-wrong').slideDown();
@@ -50,7 +50,7 @@ $(document).ready(function(){
 			}
 		})
 
-		
+
 	})
 
 

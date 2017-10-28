@@ -1,11 +1,1829 @@
 {{> header}}
 	<div class="container">
-		{{#if sign}}
-		<h1>
-			hello,{{user.username}}
-		</h1>
-		{{/if}}
-		<a href="home/test">TEST</a>
+		
+	    <link rel="stylesheet" id="smartideo_css-css" href="/home/css/smartideo.css" type="text/css" media="screen">
+        <link rel="stylesheet" id="style-css" href="../public/home/css/style.css" type="text/css" media="screen">
+        <script src="../public/home/js/push.js"></script>
+		<script src="../public/home/js/hm.js"></script>
+		<script type="text/javascript" src="../public/home/js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="../public/home/js/shCore.js"></script>
+		<link type="text/css" rel="stylesheet" href="../public/home/css/shCoreDefault.css">
+		<style>a:hover,.main-nav .main-nav__item,.main-nav-nav >.menu-item > a,.second-nav .second-nav__login,.dropdown-list a:hover,.sub-menu a:hover,.pagination a,.aside-today .aside-today__title span,.aside-links .current a,.article a,.readnext h2,.icon-heart.active, .icon-star.active,.single-post-relate__title:hover,.single-post-comment__comments .commemt-main a.at_user,.category-topic__list a:hover,.sidebar-apps__download,.sidebar-tags__list a,.sidebar-tab__tabs a,.main-nav-nav >.menu-item > a:hover,.main-nav .main-nav__item:hover,.postmeta a{color:#08c1ff;}.second-nav .second-nav__login:hover,.account__list span,.dropdown-list .more a,.dropdown-list .dropdown__events .date.upcoming,.sub-menu .more a,.pagination a:hover,.aside-today .aside-today__title,.readnext h2:after,.single-post-comment__bottom .comment-submit-btn,.sidebar h3,.sidebar-apps__download:hover,.panel .submit,.second-nav .second-nav__login:hover,.scrolled .second-nav__login,.panel .submit:hover,.dropdown-list .more a:hover,.aside-tags .new,.logo a,.single-header__meta .payevent a,.article .paybutton,.usermenu li.active a,.btn-primary{background:#08c1ff;}.scrolled .second-nav__login,.second-nav .second-nav__login,.pagination a,.single-header__meta .payevent a,.article .paybutton{border:2px solid #08c1ff;}.main-nav .current:after{border-bottom:4px solid #08c1ff;}.main-nav .hasdropdown:before,.main-nav .main-nav-nav > .menu-item-has-children:before { border-top-color:#08c1ff;}.article blockquote{border-left:6px solid #08c1ff;}.sidebar-popular__list, .sidebar-sponsored__list,.sidebar-apps__list,.sidebar-tags__list,.sidebar-comments__list{border-top:1px solid #08c1ff;}.sidebar-apps__download,.sidebar-tags__list a,.btn-primary{border:1px solid #08c1ff;}.sidebar-tab__wrapper a{border-left:4px solid #08c1ff;}.apps, .cn-news,.apps:hover, .cn-news:hover {color: #08c1ff !important;}
+		@media screen and (min-width: 48.0625em) {.header-normal .logo a{background:#08c1ff;}}</style>
+		<link rel="stylesheet" href="../public/home/css/double.css" type="text/css" media="screen">       
+		<link rel="shortcut icon" href="http://source.indiegames.cn/wp-content/uploads/2014/12/fav2.png">
+        <script>window._mobantu = {login: 'http://www.indiegames.cn/wp-content/themes/Monews/login.php',name: '独游网',siteurl:'http://www.indiegames.cn',templateurl: 'http://www.indiegames.cn/wp-content/themes/Monews',nav: '0',totop: '300'}</script>
+		<style>.logo span {background-image: url("http://source.indiegames.cn/wp-content/uploads/2016/12/logo2.png");}</style>
+
+		
+        <div class="container row">
+    <div class="main">
+<script>
+	var data_3 = [];      
+	var event_stack_3 = [];
+	video_is_playing_3=false;
+	data_3["0"]=[];data_3["0"]["id"]="0";data_3["0"]["image_url"]="http://source.indiegames.cn/wp-content/uploads/2017/09/2065043082.jpg";data_3["0"]["description"]="";data_3["0"]["alt"]="";data_3["1"]=[];data_3["1"]["id"]="1";data_3["1"]["image_url"]="http://source.indiegames.cn/wp-content/uploads/2017/08/第十届独立游戏大赛.jpg";data_3["1"]["description"]="";data_3["1"]["alt"]="";data_3["2"]=[];data_3["2"]["id"]="2";data_3["2"]["image_url"]="http://source.indiegames.cn/wp-content/uploads/2017/08/首发宣大图1000x500.jpg";data_3["2"]["description"]="";data_3["2"]["alt"]="";data_3["3"]=[];data_3["3"]["id"]="3";data_3["3"]["image_url"]="http://source.indiegames.cn/wp-content/uploads/2016/12/2.png";data_3["3"]["description"]="";data_3["3"]["alt"]="";	
+	
+
+      var huge_it_trans_in_progress_3 = false;
+      var huge_it_transition_duration_3 = 800;
+      var huge_it_playInterval_3;
+      // Stop autoplay.
+      window.clearInterval(huge_it_playInterval_3);
+	  
+     var huge_it_current_key_3 = '';
+	 function huge_it_move_dots_3() {
+        var image_left = jQuery(".huge_it_slideshow_dots_active_3").position().left;
+        var image_right = jQuery(".huge_it_slideshow_dots_active_3").position().left + jQuery(".huge_it_slideshow_dots_active_3").outerWidth(true);
+       
+      }
+      function huge_it_testBrowser_cssTransitions_3() {
+        return huge_it_testDom_3('Transition');
+      }
+      function huge_it_testBrowser_cssTransforms3d_3() {
+        return huge_it_testDom_3('Perspective');
+      }
+      function huge_it_testDom_3(prop) {
+        // Browser vendor CSS prefixes.
+        var browserVendors = ['', '-webkit-', '-moz-', '-ms-', '-o-', '-khtml-'];
+        // Browser vendor DOM prefixes.
+        var domPrefixes = ['', 'Webkit', 'Moz', 'ms', 'O', 'Khtml'];
+        var i = domPrefixes.length;
+        while (i--) {
+          if (typeof document.body.style[domPrefixes[i] + prop] !== 'undefined') {
+            return true;
+          }
+        }
+        return false;
+      }
+		function huge_it_cube_3(tz, ntx, nty, nrx, nry, wrx, wry, current_image_class, next_image_class, direction) {
+		
+        /* If browser does not support 3d transforms/CSS transitions.*/
+        if (!huge_it_testBrowser_cssTransitions_3()) {
+			jQuery(".huge_it_slideshow_dots_3").removeClass("huge_it_slideshow_dots_active_3").addClass("huge_it_slideshow_dots_deactive_3");
+        jQuery("#huge_it_dots_" + huge_it_current_key_3 + "_3").removeClass("huge_it_slideshow_dots_deactive_3").addClass("huge_it_slideshow_dots_active_3");
+          return huge_it_fallback_3(current_image_class, next_image_class, direction);
+        }
+        if (!huge_it_testBrowser_cssTransforms3d_3()) {
+          return huge_it_fallback3d_3(current_image_class, next_image_class, direction);
+        }
+			//alert(current_image_class+' '+next_image_class);
+		  jQuery(current_image_class).css({'z-index': 'none'});
+          jQuery(next_image_class).css({'z-index' : 2});
+        huge_it_trans_in_progress_3 = true;
+        /* Set active thumbnail.*/
+		jQuery(".huge_it_slideshow_dots_3").removeClass("huge_it_slideshow_dots_active_3").addClass("huge_it_slideshow_dots_deactive_3");  
+		jQuery("#huge_it_dots_" + huge_it_current_key_3 + "_3").removeClass("huge_it_slideshow_dots_deactive_3").addClass("huge_it_slideshow_dots_active_3");
+        jQuery(".huge_it_slide_bg_3").css('perspective', 1000);
+        jQuery(current_image_class).css({
+          transform : 'translateZ(' + tz + 'px)',
+          backfaceVisibility : 'hidden'
+        });
+		
+		 jQuery(".huge_it_slideshow_image_wrap_3,.huge_it_slide_bg_3,.huge_it_slideshow_image_item_3,.huge_it_slideshow_image_second_item_3 ").css('overflow', 'visible');
+		
+        jQuery(next_image_class).css({
+          opacity : 1,
+          filter: 'Alpha(opacity=100)',
+          backfaceVisibility : 'hidden',
+          transform : 'translateY(' + nty + 'px) translateX(' + ntx + 'px) rotateY('+ nry +'deg) rotateX('+ nrx +'deg)'
+        });
+        jQuery(".huge_it_slider_3").css({
+          transform: 'translateZ(-' + tz + 'px)',
+          transformStyle: 'preserve-3d'
+        });
+        /* Execution steps.*/
+        setTimeout(function () {
+          jQuery(".huge_it_slider_3").css({
+            transition: 'all ' + huge_it_transition_duration_3 + 'ms ease-in-out',
+            transform: 'translateZ(-' + tz + 'px) rotateX('+ wrx +'deg) rotateY('+ wry +'deg)'
+          });
+        }, 20);
+        /* After transition.*/
+        jQuery(".huge_it_slider_3").one('webkitTransitionEnd transitionend otransitionend oTransitionEnd mstransitionend', jQuery.proxy(huge_it_after_trans));
+        function huge_it_after_trans() {
+          /*if (huge_it_from_focus_3) {
+            huge_it_from_focus_3 = false;
+            return;
+          }*/
+		  jQuery(".huge_it_slide_bg_3,.huge_it_slideshow_image_item_3,.huge_it_slideshow_image_second_item_3 ").css('overflow', 'hidden');
+		  jQuery(".huge_it_slide_bg_3").removeAttr('style');
+          jQuery(current_image_class).removeAttr('style');
+          jQuery(next_image_class).removeAttr('style');
+          jQuery(".huge_it_slider_3").removeAttr('style');
+		 // alert(current_image_class+' '+next_image_class);
+          jQuery(current_image_class).css({'opacity' : 0, filter: 'Alpha(opacity=0)', 'z-index': 1});
+          jQuery(next_image_class).css({'opacity' : 1, filter: 'Alpha(opacity=100)', 'z-index' : 2});
+         // huge_it_change_watermark_container_3();
+          huge_it_trans_in_progress_3 = false;
+          if (typeof event_stack_3 !== 'undefined' && event_stack_3.length > 0) {
+            key = event_stack_3[0].split("-");
+            event_stack_3.shift();
+            huge_it_change_image_3(key[0], key[1], data_3, true,false);
+          }
+        }
+      }
+      function huge_it_cubeH_3(current_image_class, next_image_class, direction) {
+        /* Set to half of image width.*/
+        var dimension = jQuery(current_image_class).width() / 2;
+        if (direction == 'right') {
+          huge_it_cube_3(dimension, dimension, 0, 0, 90, 0, -90, current_image_class, next_image_class, direction);
+        }
+        else if (direction == 'left') {
+          huge_it_cube_3(dimension, -dimension, 0, 0, -90, 0, 90, current_image_class, next_image_class, direction);
+        }
+      }
+      function huge_it_cubeV_3(current_image_class, next_image_class, direction) {
+        /* Set to half of image height.*/
+        var dimension = jQuery(current_image_class).height() / 2;
+        /* If next slide.*/
+        if (direction == 'right') {
+          huge_it_cube_3(dimension, 0, -dimension, 90, 0, -90, 0, current_image_class, next_image_class, direction);
+        }
+        else if (direction == 'left') {
+          huge_it_cube_3(dimension, 0, dimension, -90, 0, 90, 0, current_image_class, next_image_class, direction);
+        }
+      }
+      /* For browsers that does not support transitions.*/
+      function huge_it_fallback_3(current_image_class, next_image_class, direction) {
+        huge_it_fade_3(current_image_class, next_image_class, direction);
+      }
+      /* For browsers that support transitions, but not 3d transforms (only used if primary transition makes use of 3d-transforms).*/
+      function huge_it_fallback3d_3(current_image_class, next_image_class, direction) {
+        huge_it_sliceV_3(current_image_class, next_image_class, direction);
+      }
+      function huge_it_none_3(current_image_class, next_image_class, direction) {
+        jQuery(current_image_class).css({'opacity' : 0, 'z-index': 1});
+        jQuery(next_image_class).css({'opacity' : 1, 'z-index' : 2});
+
+        /* Set active thumbnail.*/
+        jQuery(".huge_it_slideshow_dots_3").removeClass("huge_it_slideshow_dots_active_3").addClass("huge_it_slideshow_dots_deactive_3");
+        jQuery("#huge_it_dots_" + huge_it_current_key_3 + "_3").removeClass("huge_it_slideshow_dots_deactive_3").addClass("huge_it_slideshow_dots_active_3");
+      }
+      function huge_it_fade_3(current_image_class, next_image_class, direction) {
+		if (huge_it_testBrowser_cssTransitions_3()) {
+			
+          jQuery(next_image_class).css('transition', 'opacity ' + huge_it_transition_duration_3 + 'ms linear');
+		  jQuery(current_image_class).css('transition', 'opacity ' + huge_it_transition_duration_3 + 'ms linear');
+          jQuery(current_image_class).css({'opacity' : 0, 'z-index': 1});
+          jQuery(next_image_class).css({'opacity' : 1, 'z-index' : 2});
+        }
+        else {
+		
+          jQuery(current_image_class).animate({'opacity' : 0, 'z-index' : 1}, huge_it_transition_duration_3);
+          jQuery(next_image_class).animate({
+              'opacity' : 1,
+              'z-index': 2
+            }, {
+              duration: huge_it_transition_duration_3,
+              complete: function () {return false;}
+            });
+          // For IE.
+          jQuery(current_image_class).fadeTo(huge_it_transition_duration_3, 0);
+          jQuery(next_image_class).fadeTo(huge_it_transition_duration_3, 1);
+        }
+
+		jQuery(".huge_it_slideshow_dots_3").removeClass("huge_it_slideshow_dots_active_3").addClass("huge_it_slideshow_dots_deactive_3");
+		jQuery("#huge_it_dots_" + huge_it_current_key_3 + "_3").removeClass("huge_it_slideshow_dots_deactive_3").addClass("huge_it_slideshow_dots_active_3");
+      }
+      function huge_it_grid_3(cols, rows, ro, tx, ty, sc, op, current_image_class, next_image_class, direction) {
+        /* If browser does not support CSS transitions.*/
+        if (!huge_it_testBrowser_cssTransitions_3()) {
+			jQuery(".huge_it_slideshow_dots_3").removeClass("huge_it_slideshow_dots_active_3").addClass("huge_it_slideshow_dots_deactive_3");
+        jQuery("#huge_it_dots_" + huge_it_current_key_3 + "_3").removeClass("huge_it_slideshow_dots_deactive_3").addClass("huge_it_slideshow_dots_active_3");
+          return huge_it_fallback_3(current_image_class, next_image_class, direction);
+		  
+        }
+        huge_it_trans_in_progress_3 = true;
+        /* Set active thumbnail.*/
+		jQuery(".huge_it_slideshow_dots_3").removeClass("huge_it_slideshow_dots_active_3").addClass("huge_it_slideshow_dots_deactive_3");
+        jQuery("#huge_it_dots_" + huge_it_current_key_3 + "_3").removeClass("huge_it_slideshow_dots_deactive_3").addClass("huge_it_slideshow_dots_active_3");
+        /* The time (in ms) added to/subtracted from the delay total for each new gridlet.*/
+        var count = (huge_it_transition_duration_3) / (cols + rows);
+        /* Gridlet creator (divisions of the image grid, positioned with background-images to replicate the look of an entire slide image when assembled)*/
+        function huge_it_gridlet(width, height, top, img_top, left, img_left, src, imgWidth, imgHeight, c, r) {
+          var delay = (c + r) * count;
+          /* Return a gridlet elem with styles for specific transition.*/
+          return jQuery('<div class="huge_it_gridlet_3" />').css({
+            width : width,
+            height : height,
+            top : top,
+            left : left,
+            backgroundImage : 'url("' + src + '")',
+            backgroundColor: jQuery(".huge_it_slideshow_image_wrap_3").css("background-color"),
+            /*backgroundColor: rgba(0, 0, 0, 0),*/
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition : img_left + 'px ' + img_top + 'px',
+            backgroundSize : imgWidth + 'px ' + imgHeight + 'px',
+            transition : 'all ' + huge_it_transition_duration_3 + 'ms ease-in-out ' + delay + 'ms',
+            transform : 'none'
+          });
+        }
+        /* Get the current slide's image.*/
+        var cur_img = jQuery(current_image_class).find('img');
+        /* Create a grid to hold the gridlets.*/
+        var grid = jQuery('<div />').addClass('huge_it_grid_3');
+        /* Prepend the grid to the next slide (i.e. so it's above the slide image).*/
+        jQuery(current_image_class).prepend(grid);
+        /* vars to calculate positioning/size of gridlets*/
+        var cont = jQuery(".huge_it_slide_bg_3");
+        var imgWidth = cur_img.width();
+        var imgHeight = cur_img.height();
+        var contWidth = cont.width(),
+            contHeight = cont.height(),
+            imgSrc = cur_img.attr('src'),/*.replace('/thumb', ''),*/
+            colWidth = Math.floor(contWidth / cols),
+            rowHeight = Math.floor(contHeight / rows),
+            colRemainder = contWidth - (cols * colWidth),
+            colAdd = Math.ceil(colRemainder / cols),
+            rowRemainder = contHeight - (rows * rowHeight),
+            rowAdd = Math.ceil(rowRemainder / rows),
+            leftDist = 0,
+            img_leftDist = (jQuery(".huge_it_slide_bg_3").width() - cur_img.width()) / 2;
+        /* tx/ty args can be passed as 'auto'/'min-auto' (meaning use slide width/height or negative slide width/height).*/
+        tx = tx === 'auto' ? contWidth : tx;
+        tx = tx === 'min-auto' ? - contWidth : tx;
+        ty = ty === 'auto' ? contHeight : ty;
+        ty = ty === 'min-auto' ? - contHeight : ty;
+        /* Loop through cols*/
+        for (var i = 0; i < cols; i++) {
+          var topDist = 0,
+              img_topDst = (jQuery(".huge_it_slide_bg_3").height() - cur_img.height()) / 2,
+              newColWidth = colWidth;
+          /* If imgWidth (px) does not divide cleanly into the specified number of cols, adjust individual col widths to create correct total.*/
+          if (colRemainder > 0) {
+            var add = colRemainder >= colAdd ? colAdd : colRemainder;
+            newColWidth += add;
+            colRemainder -= add;
+          }
+          /* Nested loop to create row gridlets for each col.*/
+          for (var j = 0; j < rows; j++)  {
+            var newRowHeight = rowHeight,
+                newRowRemainder = rowRemainder;
+            /* If contHeight (px) does not divide cleanly into the specified number of rows, adjust individual row heights to create correct total.*/
+            if (newRowRemainder > 0) {
+              add = newRowRemainder >= rowAdd ? rowAdd : rowRemainder;
+              newRowHeight += add;
+              newRowRemainder -= add;
+            }
+            /* Create & append gridlet to grid.*/
+            grid.append(huge_it_gridlet(newColWidth, newRowHeight, topDist, img_topDst, leftDist, img_leftDist, imgSrc, imgWidth, imgHeight, i, j));
+            topDist += newRowHeight;
+            img_topDst -= newRowHeight;
+          }
+          img_leftDist -= newColWidth;
+          leftDist += newColWidth;
+        }
+        /* Set event listener on last gridlet to finish transitioning.*/
+        var last_gridlet = grid.children().last();
+        /* Show grid & hide the image it replaces.*/
+        grid.show();
+        cur_img.css('opacity', 0);
+        /* Add identifying classes to corner gridlets (useful if applying border radius).*/
+        grid.children().first().addClass('rs-top-left');
+        grid.children().last().addClass('rs-bottom-right');
+        grid.children().eq(rows - 1).addClass('rs-bottom-left');
+        grid.children().eq(- rows).addClass('rs-top-right');
+        /* Execution steps.*/
+        setTimeout(function () {
+          grid.children().css({
+            opacity: op,
+            transform: 'rotate('+ ro +'deg) translateX('+ tx +'px) translateY('+ ty +'px) scale('+ sc +')'
+          });
+        }, 1);
+        jQuery(next_image_class).css('opacity', 1);
+        /* After transition.*/
+        jQuery(last_gridlet).one('webkitTransitionEnd transitionend otransitionend oTransitionEnd mstransitionend', jQuery.proxy(huge_it_after_trans));
+        function huge_it_after_trans() {
+          jQuery(current_image_class).css({'opacity' : 0, 'z-index': 1});
+          jQuery(next_image_class).css({'opacity' : 1, 'z-index' : 2});
+          cur_img.css('opacity', 1);
+          grid.remove();
+          huge_it_trans_in_progress_3 = false;
+          if (typeof event_stack_3 !== 'undefined' && event_stack_3.length > 0) {
+            key = event_stack_3[0].split("-");
+            event_stack_3.shift();
+            huge_it_change_image_3(key[0], key[1], data_3, true,false);
+          }
+        }
+      }
+      function huge_it_sliceH_3(current_image_class, next_image_class, direction) {
+        if (direction == 'right') {
+          var translateX = 'min-auto';
+        }
+        else if (direction == 'left') {
+          var translateX = 'auto';
+        }
+        huge_it_grid_3(1, 8, 0, translateX, 0, 1, 0, current_image_class, next_image_class, direction);
+      }
+      function huge_it_sliceV_3(current_image_class, next_image_class, direction) {
+        if (direction == 'right') {
+          var translateY = 'min-auto';
+        }
+        else if (direction == 'left') {
+          var translateY = 'auto';
+        }
+        huge_it_grid_3(10, 1, 0, 0, translateY, 1, 0, current_image_class, next_image_class, direction);
+      }
+      function huge_it_slideV_3(current_image_class, next_image_class, direction) {
+        if (direction == 'right') {
+          var translateY = 'auto';
+        }
+        else if (direction == 'left') {
+          var translateY = 'min-auto';
+        }
+        huge_it_grid_3(1, 1, 0, 0, translateY, 1, 1, current_image_class, next_image_class, direction);
+      }
+      function huge_it_slideH_3(current_image_class, next_image_class, direction) {
+        if (direction == 'right') {
+          var translateX = 'min-auto';
+        }
+        else if (direction == 'left') {
+          var translateX = 'auto';
+        }
+        huge_it_grid_3(1, 1, 0, translateX, 0, 1, 1, current_image_class, next_image_class, direction);
+      }
+      function huge_it_scaleOut_3(current_image_class, next_image_class, direction) {
+        huge_it_grid_3(1, 1, 0, 0, 0, 1.5, 0, current_image_class, next_image_class, direction);
+      }
+      function huge_it_scaleIn_3(current_image_class, next_image_class, direction) {
+        huge_it_grid_3(1, 1, 0, 0, 0, 0.5, 0, current_image_class, next_image_class, direction);
+      }
+      function huge_it_blockScale_3(current_image_class, next_image_class, direction) {
+        huge_it_grid_3(8, 6, 0, 0, 0, .6, 0, current_image_class, next_image_class, direction);
+      }
+      function huge_it_kaleidoscope_3(current_image_class, next_image_class, direction) {
+        huge_it_grid_3(10, 8, 0, 0, 0, 1, 0, current_image_class, next_image_class, direction);
+      }
+      function huge_it_fan_3(current_image_class, next_image_class, direction) {
+        if (direction == 'right') {
+          var rotate = 45;
+          var translateX = 100;
+        }
+        else if (direction == 'left') {
+          var rotate = -45;
+          var translateX = -100;
+        }
+        huge_it_grid_3(1, 10, rotate, translateX, 0, 1, 0, current_image_class, next_image_class, direction);
+      }
+      function huge_it_blindV_3(current_image_class, next_image_class, direction) {
+        huge_it_grid_3(1, 8, 0, 0, 0, .7, 0, current_image_class, next_image_class);
+      }
+      function huge_it_blindH_3(current_image_class, next_image_class, direction) {
+        huge_it_grid_3(10, 1, 0, 0, 0, .7, 0, current_image_class, next_image_class);
+      }
+      function huge_it_random_3(current_image_class, next_image_class, direction) {
+        var anims = ['sliceH', 'sliceV', 'slideH', 'slideV', 'scaleOut', 'scaleIn', 'blockScale', 'kaleidoscope', 'fan', 'blindH', 'blindV'];
+        /* Pick a random transition from the anims array.*/
+        this["huge_it_" + anims[Math.floor(Math.random() * anims.length)] + "_3"](current_image_class, next_image_class, direction);
+      }
+      
+      function iterator_3() {
+        var iterator = 1;
+
+        return iterator;
+     }
+	 
+     function huge_it_change_image_3(current_key, key, data_3, from_effect,clicked) {
+		
+        if (data_3[key]) {
+		
+			if(video_is_playing_3 && !clicked){
+				return false;
+			}
+         
+		 
+		 
+          if (!from_effect) {
+            // Change image key.
+            jQuery("#huge_it_current_image_key_3").val(key);
+             // if (current_key == '-2') { /* Dots.*/
+				current_key = jQuery(".huge_it_slideshow_dots_active_3").attr("data-image_key");
+			//  }
+          }
+
+          if (huge_it_trans_in_progress_3) {
+			//errorlogjQuery(".huge_it_slideshow_image_wrap_3").after(" --IN TRANSACTION-- <br />");
+            event_stack_3.push(current_key + '-' + key);
+            return;
+          }
+		  
+          var direction = 'right';
+          if (huge_it_current_key_3 > key) {
+            var direction = 'left';
+          }
+          else if (huge_it_current_key_3 == key) {
+            return false;
+          }
+         
+          // Set active thumbnail position.
+      
+          huge_it_current_key_3 = key;
+          //Change image id, title, description.
+          jQuery("#huge_it_slideshow_image_3").attr('data-image_id', data_3[key]["id"]);
+		  
+		  
+		  jQuery(".huge_it_slideshow_title_text_3").html(data_3[key]["alt"]);
+          jQuery(".huge_it_slideshow_description_text_3").html(data_3[key]["description"]);
+        
+		  var current_image_class = "#image_id_3_" + data_3[current_key]["id"];
+          var next_image_class = "#image_id_3_" + data_3[key]["id"];
+          
+		  
+		
+		 if(jQuery(current_image_class).find('.huge_it_video_frame_3').length>0) {
+			var streffect='random';
+			if(streffect=="cubeV" || streffect=="cubeH" || streffect=="none" || streffect=="fade"){
+				huge_it_random_3(current_image_class, next_image_class, direction);
+			}else{	
+				huge_it_fade_3(current_image_class, next_image_class, direction);
+			}	
+		  }else{	
+				huge_it_random_3(current_image_class, next_image_class, direction);
+		  }	
+		  
+		  
+		jQuery('.huge_it_slideshow_title_text_3').removeClass('none');
+		if(jQuery('.huge_it_slideshow_title_text_3').html()==""){jQuery('.huge_it_slideshow_title_text_3').addClass('none');}
+
+		jQuery('.huge_it_slideshow_description_text_3').removeClass('none');
+		if(jQuery('.huge_it_slideshow_description_text_3').html()==""){jQuery('.huge_it_slideshow_description_text_3').addClass('none');}
+	  
+		  
+		  
+		  jQuery(current_image_class).find('.huge_it_slideshow_title_text_3').addClass('none');
+		  jQuery(current_image_class).find('.huge_it_slideshow_description_text_3').addClass('none');
+		
+		
+
+		  
+		  //errorlogjQuery(".huge_it_slideshow_image_wrap_3").after("--cur-key="+current_key+" --cur-img-class="+current_image_class+" nxt-img-class="+next_image_class+"--");
+			 huge_it_move_dots_3();
+						window.clearInterval(huge_it_playInterval_3);
+			play_3();
+        }
+
+      }
+	  
+      function huge_it_popup_resize_3() {
+
+		var staticsliderwidth=880;
+		var sliderwidth=880;
+		
+		var bodyWidth=jQuery(window).width();
+        var parentWidth = jQuery(".huge_it_slideshow_image_wrap_3").parent().width();
+		//if responsive js late responsive.js @  take body size and not parent div
+		if(sliderwidth>parentWidth){sliderwidth=parentWidth;}
+		if(sliderwidth>bodyWidth){sliderwidth=bodyWidth;}
+		
+		var str=(440/staticsliderwidth);
+		
+		jQuery(".huge_it_slideshow_image_wrap_3").css({width: (sliderwidth)});
+		jQuery(".huge_it_slideshow_image_wrap_3").css({height: ((sliderwidth) * str)});
+		jQuery(".huge_it_slideshow_image_container_3").css({width: (sliderwidth)});
+		jQuery(".huge_it_slideshow_image_container_3").css({height: ((sliderwidth) * str)});
+			
+		if("middle"=="middle"){var titlemargintopminus=jQuery(".huge_it_slideshow_title_text_3").outerHeight()/2;}		
+		if("right"=="center"){var titlemarginleftminus=jQuery(".huge_it_slideshow_title_text_3").outerWidth()/2;}		
+		jQuery(".huge_it_slideshow_title_text_3").css({cssText: "margin-top:-" + titlemargintopminus + "px; margin-left:-"+titlemarginleftminus+"px;"});
+		
+		if("bottom"=="middle"){var descriptionmargintopminus=jQuery(".huge_it_slideshow_description_text_3").outerHeight()/2;}	
+		if("right"=="center"){var descriptionmarginleftminus=jQuery(".huge_it_slideshow_description_text_3").outerWidth()/2;}
+		jQuery(".huge_it_slideshow_description_text_3").css({cssText: "margin-top:-" + descriptionmargintopminus + "px; margin-left:-"+descriptionmarginleftminus+"px;"});
+		        jQuery("#huge_it_loading_image_3").css({display: "none"});
+                jQuery(".huge_it_slideshow_image_wrap1_3").css({display: "block"});
+				jQuery(".huge_it_slideshow_image_wrap_3").removeClass("nocolor");
+
+		
+		
+		if("resize"=="resize"){
+			jQuery(".huge_it_slideshow_image_3,  .huge_it_slideshow_image_container_3 img").css({
+				cssText: "width:" + sliderwidth + "px; height:" + ((sliderwidth) * str)	+"px;"
+			});
+		}else {
+			jQuery(".huge_it_slideshow_image_3,.huge_it_slideshow_image_item2_3").css({
+			cssText: "max-width: " + sliderwidth + "px !important; max-height: " + (sliderwidth * str) + "px !important;"
+		  });
+		}
+		
+		jQuery('.huge_it_video_frame_3').each(function (e) {
+          jQuery(this).width(sliderwidth);
+          jQuery(this).height(sliderwidth * str);
+        });
+      }
+      
+      jQuery(window).load(function () {
+		jQuery(window).resize(function() {
+			huge_it_popup_resize_3();
+		});
+		
+		jQuery('#huge_it_slideshow_left_3').on('click',function(){
+			huge_it_change_image_3(parseInt(jQuery('#huge_it_current_image_key_3').val()), (parseInt(jQuery('#huge_it_current_image_key_3').val()) - iterator_3()) >= 0 ? (parseInt(jQuery('#huge_it_current_image_key_3').val()) - iterator_3()) % data_3.length : data_3.length - 1, data_3,false,true);
+			return false;
+		});
+		
+		jQuery('#huge_it_slideshow_right_3').on('click',function(){
+			huge_it_change_image_3(parseInt(jQuery('#huge_it_current_image_key_3').val()), (parseInt(jQuery('#huge_it_current_image_key_3').val()) + iterator_3()) % data_3.length, data_3,false,true);
+			return false;
+		});
+		
+		huge_it_popup_resize_3();
+        /* Disable right click.*/
+        jQuery('div[id^="huge_it_container"]').bind("contextmenu", function () {
+          return false;
+        });
+        			
+		/*HOVER SLIDESHOW*/
+		jQuery("#huge_it_slideshow_image_container_3, .huge_it_slideshow_image_container_3, .huge_it_slideshow_dots_container_3,#huge_it_slideshow_right_3,#huge_it_slideshow_left_3").hover(function(){
+			//errorlogjQuery(".huge_it_slideshow_image_wrap_3").after(" -- hover -- <br /> ");
+			jQuery("#huge_it_slideshow_right_3").css({'display':'inline'});
+			jQuery("#huge_it_slideshow_left_3").css({'display':'inline'});
+		},function(){
+			jQuery("#huge_it_slideshow_right_3").css({'display':'none'});
+			jQuery("#huge_it_slideshow_left_3").css({'display':'none'});
+		});
+		var pausehover="on";
+		if(pausehover=="on"){
+			jQuery("#huge_it_slideshow_image_container_3, .huge_it_slideshow_image_container_3, .huge_it_slideshow_dots_container_3,#huge_it_slideshow_right_3,#huge_it_slideshow_left_3").hover(function(){
+				window.clearInterval(huge_it_playInterval_3);
+			},function(){
+				window.clearInterval(huge_it_playInterval_3);
+				play_3();
+			});		
+		}	
+          play_3();        
+      });
+
+      function play_3() {	   
+        /* Play.*/
+		//errorlogjQuery(".huge_it_slideshow_image_wrap_3").after(" -- paly  ---- ");
+        huge_it_playInterval_3 = setInterval(function () {
+			//errorlogjQuery(".huge_it_slideshow_image_wrap_3").after(" -- time left ---- ");
+          var iterator = 1;
+          huge_it_change_image_3(parseInt(jQuery('#huge_it_current_image_key_3').val()), (parseInt(jQuery('#huge_it_current_image_key_3').val()) + iterator) % data_3.length, data_3,false,false);
+        }, '5800');
+      }
+	  
+      jQuery(window).focus(function() {
+       /*event_stack_3 = [];*/
+        var i_3 = 0;
+        jQuery(".huge_it_slider_3").children("div").each(function () {
+          if (jQuery(this).css('opacity') == 1) {
+            jQuery("#huge_it_current_image_key_3").val(i_3);
+          }
+          i_3++;
+        });
+      });
+      jQuery(window).blur(function() {
+        event_stack_3 = [];
+        window.clearInterval(huge_it_playInterval_3);
+      });      
+    </script>
+
+	<div class="huge_it_slideshow_image_wrap_3" style="width: 880px; height: 440px;">
+			<div id="huge_it_loading_image_3" class="display" style="display: none;">
+			<img src="../public/home/img/body/loading5.gif" alt=""> </div>
+		<div class="huge_it_slideshow_image_wrap1_3 nodisplay" style="display: block;">
+	      		<!-- ##########################DOTS######################### -->
+        <div class="huge_it_slideshow_dots_container_3">
+			  <div class="huge_it_slideshow_dots_thumbnails_3">
+												<div id="huge_it_dots_0_3" class="huge_it_slideshow_dots_3 huge_it_slideshow_dots_deactive_3" onclick="if(jQuery(this).hasClass(&#39;huge_it_slideshow_dots_active_3&#39;)) { return false; } huge_it_change_image_3(parseInt(jQuery(&#39;#huge_it_current_image_key_3&#39;).val()), &#39;0&#39;, data_3,false,true);return false;" data-image_id="92" data-image_key="0"></div>
+															<div id="huge_it_dots_1_3" class="huge_it_slideshow_dots_3 huge_it_slideshow_dots_active_3" onclick="if(jQuery(this).hasClass(&#39;huge_it_slideshow_dots_active_3&#39;)) { return false; } huge_it_change_image_3(parseInt(jQuery(&#39;#huge_it_current_image_key_3&#39;).val()), &#39;1&#39;, data_3,false,true);return false;" data-image_id="90" data-image_key="1"></div>
+															<div id="huge_it_dots_2_3" class="huge_it_slideshow_dots_3 huge_it_slideshow_dots_deactive_3" onclick="if(jQuery(this).hasClass(&#39;huge_it_slideshow_dots_active_3&#39;)) { return false; } huge_it_change_image_3(parseInt(jQuery(&#39;#huge_it_current_image_key_3&#39;).val()), &#39;2&#39;, data_3,false,true);return false;" data-image_id="89" data-image_key="2"></div>
+															<div id="huge_it_dots_3_3" class="huge_it_slideshow_dots_3 huge_it_slideshow_dots_deactive_3" onclick="if(jQuery(this).hasClass(&#39;huge_it_slideshow_dots_active_3&#39;)) { return false; } huge_it_change_image_3(parseInt(jQuery(&#39;#huge_it_current_image_key_3&#39;).val()), &#39;3&#39;, data_3,false,true);return false;" data-image_id="86" data-image_key="3"></div>
+				</div>
+		</div>
+	  <!-- ##########################IMAGES######################### -->
+
+      <div id="huge_it_slideshow_image_container_3" class="huge_it_slideshow_image_container_3" style="width: 880px; height: 440px;">        
+        <div class="huge_it_slide_container_3">
+          <div class="huge_it_slide_bg_3">
+            <ul class="huge_it_slider_3">
+			  					  <li class="huge_it_slideshow_image_item_3" id="image_id_3_0" style="opacity: 0; z-index: 1;">      
+						<a href="http://www.indiegames.cn/news/7918.html" target="_blank">						<img id="huge_it_slideshow_image_3_0" class="huge_it_slideshow_image_3" src="../public/home/img/body/2065043082.jpg" alt="" data-image_id="92" style="width: 880px; height: 440px;">
+						</a>		
+						<div class="huge_it_slideshow_title_text_3 none" style="margin-top: -17.5px;"></div>
+						<div class="huge_it_slideshow_description_text_3 none" style=""></div>
+					  </li>
+					  					  <li class="huge_it_slideshow_image_second_item_3" id="image_id_3_1" style="opacity: 1; z-index: 2;">      
+						<a href="http://www.indiegames.cn/news/7796.html" target="_blank">						<img id="huge_it_slideshow_image_3_1" class="huge_it_slideshow_image_3" src="../public/home/img/body/第十届独立游戏大赛.jpg" alt="" data-image_id="90" style="width: 880px; height: 440px;">
+						</a>		
+						<div class="huge_it_slideshow_title_text_3 none" style="margin-top: -17.5px;"></div>
+						<div class="huge_it_slideshow_description_text_3 none" style=""></div>
+					  </li>
+					  					  <li class="huge_it_slideshow_image_second_item_3" id="image_id_3_2">      
+						<a href="http://store.steampowered.com/app/688360/Destiny_of_Blood/" target="_blank" class="external">						<img id="huge_it_slideshow_image_3_2" class="huge_it_slideshow_image_3" src="../public/home/img/body/首发宣大图1000x500.jpg" alt="" data-image_id="89" style="width: 880px; height: 440px;">
+						</a>		
+						<div class="huge_it_slideshow_title_text_3 none" style="margin-top: -17.5px;"></div>
+						<div class="huge_it_slideshow_description_text_3 none" style=""></div>
+					  </li>
+					  					  <li class="huge_it_slideshow_image_second_item_3" id="image_id_3_3">      
+						<a href="http://www.indiegames.cn/match" target="_blank">						<img id="huge_it_slideshow_image_3_3" class="huge_it_slideshow_image_3" src="../public/home/img/body/2.png" alt="" data-image_id="86" style="width: 880px; height: 440px;">
+						</a>		
+						<div class="huge_it_slideshow_title_text_3 none" style="margin-top: -17.5px;"></div>
+						<div class="huge_it_slideshow_description_text_3 none" style=""></div>
+					  </li>
+					              </ul>
+          </div>
+		  <input type="hidden" id="huge_it_current_image_key_3" value="1">
+        </div>
+      </div>
+	</div>
+</div>
+	  
+    
+	
+    <div class="content" id="lastest">
+
+        <div class="content-wrapper">
+
+
+<!--组队信息轮播展示 begin-->
+
+
+<div id="match_carousel">
+
+  		<ul>
+			<li><a href="http://www.indiegames.cn/match/index.php?id=315" target="_blank"><p class="img">&nbsp;</p><p class="name">Sakuya:</p><p class="intro_a">本人专业美工，有游戏策划经验。对项目有初步构思，关键字为2D回合制欧美rpg，内容题..&nbsp;</p><p class="contact">联系方式:QQ455525337</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=314" target="_blank"><p class="img">&nbsp;</p><p class="name">July:</p><p class="intro_a">4年Unity主程序，希望空闲时间抱团做真正好玩的游戏..&nbsp;</p><p class="contact">联系方式:39348695</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=313" target="_blank"><p class="img">&nbsp;</p><p class="name">However:</p><p class="intro_a">求懂帧同步的技术合伙人，薪资分成可谈..&nbsp;</p><p class="contact">联系方式:微信 727775142</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=312" target="_blank"><p class="img">&nbsp;</p><p class="name">jerryzhang3:</p><p class="intro_a">1.有职业游戏策划2.我有七年创业经验，把握美工与整体3. 产品架构..&nbsp;</p><p class="contact">联系方式:1059816286@qq.com</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=311" target="_blank"><p class="img">&nbsp;</p><p class="name">游戏音乐:</p><p class="intro_a">游戏音乐设计及制作。项目音频前期不设计好，配合游戏开发流程，直接甩给外包就够了？土y..&nbsp;</p><p class="contact">联系方式:277242997@qq.com</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=309" target="_blank"><p class="img">&nbsp;</p><p class="name">坚持原创:</p><p class="intro_a">目前自己做过一些h5小游戏，不过由于不会美术，希望能够有一美工同好一起创造出像像素鸟..&nbsp;</p><p class="contact">联系方式:QQ：550794054</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=308" target="_blank"><p class="img">&nbsp;</p><p class="name">玖宝:</p><p class="intro_a">部分作品http://www.zcool.com.cn/u/13750595..&nbsp;</p><p class="contact">联系方式:1055046802(QQ)</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=306" target="_blank"><p class="img">&nbsp;</p><p class="name">量子哥:</p><p class="intro_a">坐标深圳，Unity独立游戏研发，求贤2D/3D美术设计牛人，有策划经验更佳，成就你..&nbsp;</p><p class="contact">联系方式:QQ:3542898652</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=305" target="_blank"><p class="img">&nbsp;</p><p class="name">However:</p><p class="intro_a">求懂帧同步的技术人员入伙，分成优厚..&nbsp;</p><p class="contact">联系方式:微信 727775142</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=304" target="_blank"><p class="img">&nbsp;</p><p class="name">独立策略游戏开发:</p><p class="intro_a">本人有丰富的程序开发经验，能搞定程序方面所有问题，但苦于没有美术伙伴一起配合。私以为..&nbsp;</p><p class="contact">联系方式:扣Q：314389696</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=303" target="_blank"><p class="img">&nbsp;</p><p class="name">Exile:</p><p class="intro_a">一个在职原画，偏写实偏日韩皆可，美式不擅长。想找自己有兴趣同时也比较注重角色的头像立..&nbsp;</p><p class="contact">联系方式:2874376430</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=302" target="_blank"><p class="img">&nbsp;</p><p class="name">独立游戏开发者:</p><p class="intro_a">本人掌握Unity3D引擎，掌握C#语言，掌握3Dmax建模，包括场景及建筑，掌握U..&nbsp;</p><p class="contact">联系方式:QQ398592821</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=301" target="_blank"><p class="img">&nbsp;</p><p class="name">核客游戏:</p><p class="intro_a">深圳核客游戏招聘 cocos2d-X &amp; U3D 开发工程师地点：深..&nbsp;</p><p class="contact">联系方式:2094411687</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=300" target="_blank"><p class="img">&nbsp;</p><p class="name">土豆哥:</p><p class="intro_a">ios上架多个小游戏，主要用cocos开发，希望找到志同道全的合作伙伴..&nbsp;</p><p class="contact">联系方式:24326242@QQ.com</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=299" target="_blank"><p class="img">&nbsp;</p><p class="name">冷笑黑妖:</p><p class="intro_a">本人策划，寻程序员合作小游戏。我的首部作品《寇莎梅特》已登陆STEA..&nbsp;</p><p class="contact">联系方式:247606641</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=297" target="_blank"><p class="img">&nbsp;</p><p class="name">独游合伙创作:</p><p class="intro_a">坐标长沙市，寻找极简风格的UI美术设计师合伙人。..&nbsp;</p><p class="contact">联系方式:416314243</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=296" target="_blank"><p class="img">&nbsp;</p><p class="name">青春梦想:</p><p class="intro_a">Unity+服务器主程，寻美术，房卡斗地主项目，可分成..&nbsp;</p><p class="contact">联系方式:411585608</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=295" target="_blank"><p class="img">&nbsp;</p><p class="name">However:</p><p class="intro_a">本人Unity前端，在弄一款太空飞船战略手游，打算找 服务器程序和策划以下是..&nbsp;</p><p class="contact">联系方式:微信 727775142</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=293" target="_blank"><p class="img">&nbsp;</p><p class="name">颜子墨:</p><p class="intro_a">有个AR社交游戏产品原型求程序程序、技术、代开发公司都可以交流QQ：..&nbsp;</p><p class="contact">联系方式:421868814</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=292" target="_blank"><p class="img">&nbsp;</p><p class="name">やまねこ:</p><p class="intro_a">http://bbs.indiegames.cn/game/1001招募一名..&nbsp;</p><p class="contact">联系方式:qq1460950119</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=291" target="_blank"><p class="img">&nbsp;</p><p class="name">冬川:</p><p class="intro_a">主策划 有初步投资可转线下 寻U3D程序..&nbsp;</p><p class="contact">联系方式:QQ565139069</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=290" target="_blank"><p class="img">&nbsp;</p><p class="name">srinya:</p><p class="intro_a">独立游制作，招ui美工，欧风架空题材..&nbsp;</p><p class="contact">联系方式:578896115</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=289" target="_blank"><p class="img">&nbsp;</p><p class="name">寂寞的四季豆:</p><p class="intro_a">终极无敌强力雇佣兵：自己写过java me小游戏，用cocos写过游戏dem..&nbsp;</p><p class="contact">联系方式:839137621@qq.com</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=288" target="_blank"><p class="img">&nbsp;</p><p class="name">阿哲:</p><p class="intro_a">寻找有梦想的人一起做出好玩的游戏，有后台开发经验，正在自学unity..&nbsp;</p><p class="contact">联系方式:517006811</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=287" target="_blank"><p class="img">&nbsp;</p><p class="name">跟我发财游戏工作室:</p><p class="intro_a">寻程序 3D美术 做一个走（zhuan）心（qian）的游戏..&nbsp;</p><p class="contact">联系方式:343358129</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=286" target="_blank"><p class="img">&nbsp;</p><p class="name">Tony:</p><p class="intro_a">4年大厂策划，数值系统UIUE都hold的住，想参与独立游戏开发提升能力。兼职，欢迎..&nbsp;</p><p class="contact">联系方式:30909046</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=285" target="_blank"><p class="img">&nbsp;</p><p class="name">石乐智:</p><p class="intro_a">一年cocos客户端经验，slg项目（抄COK的那种），目前在做U3D ARPG项目..&nbsp;</p><p class="contact">联系方式:729871951</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=284" target="_blank"><p class="img">&nbsp;</p><p class="name">Frank:</p><p class="intro_a">专业游戏音频，会程序和美术 喜欢比较复杂深沉，挖掘人性并且给人启发的策划文案，欢迎有..&nbsp;</p><p class="contact">联系方式:55477252</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=283" target="_blank"><p class="img">&nbsp;</p><p class="name">石上三年:</p><p class="intro_a">目前已有产品在香港和台湾iOS霸榜，qq298583624，..&nbsp;</p><p class="contact">联系方式:298583624</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=282" target="_blank"><p class="img">&nbsp;</p><p class="name">键盘喵:</p><p class="intro_a">Unity游戏工作室组队多年游戏程序经验，Steam已上线VR游戏《Ente..&nbsp;</p><p class="contact">联系方式:QQ：3279342172</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=281" target="_blank"><p class="img">&nbsp;</p><p class="name">白无墨:</p><p class="intro_a">本人8年游戏策划经验，已经到了一个瓶颈期，回望初心，想设计自己想做的游戏。现寻一名可..&nbsp;</p><p class="contact">联系方式:232421196</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=280" target="_blank"><p class="img">&nbsp;</p><p class="name">Bandai NAMCO:</p><p class="intro_a">日本的音楽學院作曲専業畢業，目前在國內某龍頭廠做遊戯配楽。従小玩日本主機遊戯長大，所..&nbsp;</p><p class="contact">联系方式:chengchohei@gmail.com</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=279" target="_blank"><p class="img">&nbsp;</p><p class="name">小默:</p><p class="intro_a">我们面前有原画美术，一个程序，游戏音乐，剧情策划。寻求像素美术，2d动画，程序一起实..&nbsp;</p><p class="contact">联系方式:20989982</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=277" target="_blank"><p class="img">&nbsp;</p><p class="name">怀念街机(武侠):</p><p class="intro_a">寻求志同道合朋友制作横版过关游戏（清版过关，街机风格，武侠风格）无论是你程序..&nbsp;</p><p class="contact">联系方式:QQ2628511723  微信13028061702</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=276" target="_blank"><p class="img">&nbsp;</p><p class="name">wings:</p><p class="intro_a">15年资深程序，2007年独立开发网页游戏《大海贼时代》持续运营5年总计吸引34万人..&nbsp;</p><p class="contact">联系方式:102108483</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=275" target="_blank"><p class="img">&nbsp;</p><p class="name">李白:</p><p class="intro_a">我们是一个全职独立游戏开发团队。有策划和程序。希望找些同城的独有爱好..&nbsp;</p><p class="contact">联系方式:qq：3122897033</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=274" target="_blank"><p class="img">&nbsp;</p><p class="name">1106:</p><p class="intro_a">三个能力有限的大学生小团队，由于没有经验，想和各位有兴趣的朋友交流一下。..&nbsp;</p><p class="contact">联系方式:1041964993@qq.com</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=272" target="_blank"><p class="img">&nbsp;</p><p class="name">Sakuya:</p><p class="intro_a">本人专业美工，有游戏策划经验。对项目有初步构思，关键字为2D回合制欧美rpg，内容题..&nbsp;</p><p class="contact">联系方式:QQ455525337</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=271" target="_blank"><p class="img">&nbsp;</p><p class="name">FrankVi:</p><p class="intro_a">2款MMORPG项目经验2款休闲竞技项目经验,目前在职,想找个兼职,赚点外快!..&nbsp;</p><p class="contact">联系方式:575163384@qq.com</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=270" target="_blank"><p class="img">&nbsp;</p><p class="name">初级造梦师:</p><p class="intro_a">需要一个美术，擅长UI，原画..&nbsp;</p><p class="contact">联系方式:1018720872</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=269" target="_blank"><p class="img">&nbsp;</p><p class="name">ZianSound 音乐工作室:</p><p class="intro_a">工作室成员均为国内知名音乐学院毕业，曾在上海北京大型录音棚有过工作经验，擅长TVC电..&nbsp;</p><p class="contact">联系方式:zian_sound@hotmail.com</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=268" target="_blank"><p class="img">&nbsp;</p><p class="name">幽浮:</p><p class="intro_a">我们在制作一款像素风格的SRPG，类似火纹系列，开发平台为虚幻引擎4，我们已经有可以..&nbsp;</p><p class="contact">联系方式:QQ184781483</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=267" target="_blank"><p class="img">&nbsp;</p><p class="name">淡定:</p><p class="intro_a">目前成员相对稳定，客户端3名，服务器2名，策划2名，UI1人，特效1人，动画2人，人..&nbsp;</p><p class="contact">联系方式:425143638</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=266" target="_blank"><p class="img">&nbsp;</p><p class="name">谢白的游戏制作:</p><p class="intro_a">本人除了不会画画之外,其他业余都会一点.两种合作方式:1.通过阿里到..&nbsp;</p><p class="contact">联系方式:305265083</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=265" target="_blank"><p class="img">&nbsp;</p><p class="name">大墨迹:</p><p class="intro_a">5年手游经验，2年在线教育经验目前在某金融公司任职产品经理..&nbsp;</p><p class="contact">联系方式:2891645228</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=263" target="_blank"><p class="img">&nbsp;</p><p class="name">WTT:</p><p class="intro_a">本人有多年MMORPG商业游戏成功经验，旅美4年，参与多款欧美游戏研发，现回国组建团..&nbsp;</p><p class="contact">联系方式:QQ 516870898</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=261" target="_blank"><p class="img">&nbsp;</p><p class="name">Rookie:</p><p class="intro_a">程序员出身，热爱单机游戏，现在掌握u3d和算法知识，我真的很热爱游戏，钱不重要，我想..&nbsp;</p><p class="contact">联系方式:842796453，电话18320361247</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=259" target="_blank"><p class="img">&nbsp;</p><p class="name">山月:</p><p class="intro_a">刚毕业想做个小手游，想认识点大佬学习一下，案子可共享。..&nbsp;</p><p class="contact">联系方式:370051112</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=258" target="_blank"><p class="img">&nbsp;</p><p class="name">Way:</p><p class="intro_a">2D欧美卡通风格，大触学徒都可工作室地点北京市朝阳区798附近需要全..&nbsp;</p><p class="contact">联系方式:加群169948241</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=257" target="_blank"><p class="img">&nbsp;</p><p class="name">作死狂魔:</p><p class="intro_a">大学生策划，受启发准备做一个经营类游戏，出于热爱没有资金，希望能有同样热爱游戏的朋友..&nbsp;</p><p class="contact">联系方式:QQ：381580886</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=256" target="_blank"><p class="img">&nbsp;</p><p class="name">蒙塔:</p><p class="intro_a">热爱游戏开发，自学一年有余，对网站架设也比较精通，PS平面设计也可以，希望遇到更多的..&nbsp;</p><p class="contact">联系方式:QQ:284812164</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=255" target="_blank"><p class="img">&nbsp;</p><p class="name">srinya:</p><p class="intro_a">一个新人制作者，平时上班，慢悠悠的制作着独立文字游戏，欢迎一起交流制作经验的作者们，..&nbsp;</p><p class="contact">联系方式:578896115</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=254" target="_blank"><p class="img">&nbsp;</p><p class="name">北十字星:</p><p class="intro_a">已在IOS上发布过10+款解谜游戏（密室逃脱豪华版系列）现在想自己做更好玩，更成功的..&nbsp;</p><p class="contact">联系方式:1036608787</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=253" target="_blank"><p class="img">&nbsp;</p><p class="name">ls9512:</p><p class="intro_a">10年编程经验，3年游戏编程经验，1年unity经验，在职unity主程序，..&nbsp;</p><p class="contact">联系方式:ls9512@vip.qq.com</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=252" target="_blank"><p class="img">&nbsp;</p><p class="name">sols:</p><p class="intro_a">擅长Unity&amp;C#，曾制作过2D横版动作游戏有Shader基础，喜欢设计A..&nbsp;</p><p class="contact">联系方式:QQ：975268322</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=251" target="_blank"><p class="img">&nbsp;</p><p class="name">ksana:</p><p class="intro_a">发起人策划出身，9年行业经验，5年腾讯自研工作室。曾参与《斗战神》等大型游戏的设计和..&nbsp;</p><p class="contact">联系方式:qq 5097254</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=249" target="_blank"><p class="img">&nbsp;</p><p class="name">bunny:</p><p class="intro_a">熟练掌握c++ java c#编程语言，三年的cocos2dx及相关工具使用经验 ，..&nbsp;</p><p class="contact">联系方式:3126693843</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=248" target="_blank"><p class="img">&nbsp;</p><p class="name">mby:</p><p class="intro_a">steam平台单机RPG战棋游戏开发，多线故事，队员养成，善恶声望影响主线支线结局；..&nbsp;</p><p class="contact">联系方式: qq549471820</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=247" target="_blank"><p class="img">&nbsp;</p><p class="name">DreamSkull:</p><p class="intro_a">热爱ACGN文化，日漫美漫都看。个人最擅长创作美式风格，懂美术，了解游戏的世界观设计..&nbsp;</p><p class="contact">联系方式:微信:dreamskull-7</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=246" target="_blank"><p class="img">&nbsp;</p><p class="name">symeon:</p><p class="intro_a">找个靠谱的服务端程序，开发一款工作量中等的网络游戏。半道要撤的勿扰...&nbsp;</p><p class="contact">联系方式:7170803</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=245" target="_blank"><p class="img">&nbsp;</p><p class="name">丙大丙:</p><p class="intro_a">梦想还是要有的，不然和咸鱼有啥区别。目的：制作关于我们绘本的..&nbsp;</p><p class="contact">联系方式:494987719</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=244" target="_blank"><p class="img">&nbsp;</p><p class="name">阿古:</p><p class="intro_a">05年入行资深美术，做过管理，讲师，外包QA。擅长原画，3D和3D动作。自学C++，..&nbsp;</p><p class="contact">联系方式:邮箱：gongloda@163.com QQ:1711057</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=243" target="_blank"><p class="img">&nbsp;</p><p class="name">小买卖:</p><p class="intro_a">目前珠海最大的网游公司在职  原画 场景 地编都懂 期待独立游戏团队 强力程序..&nbsp;</p><p class="contact">联系方式:204461270</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=242" target="_blank"><p class="img">&nbsp;</p><p class="name">陈开:</p><p class="intro_a">电视游戏射击游戏已有资金..&nbsp;</p><p class="contact">联系方式:39116175</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=241" target="_blank"><p class="img">&nbsp;</p><p class="name">闭眼就天黑:</p><p class="intro_a">2D程序员 求服务端，最好是java或者nodejs，本人客户端，cocos2dx，..&nbsp;</p><p class="contact">联系方式:153394579</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=240" target="_blank"><p class="img">&nbsp;</p><p class="name">DOUTUI:</p><p class="intro_a">美术~前端~策划都有  有小额投资~前期开发中~..&nbsp;</p><p class="contact">联系方式:qq 892717343</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=239" target="_blank"><p class="img">&nbsp;</p><p class="name">Raker:</p><p class="intro_a">大学狗一只，使用UE4引擎，目标做一款日系Arpg，目前世界观等一些细节已经做好，缺..&nbsp;</p><p class="contact">联系方式:623175274</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=238" target="_blank"><p class="img">&nbsp;</p><p class="name">独行:</p><p class="intro_a">本人一直想做网络游戏，通过坚持，掌握了一定的服务器技术，现在有一款网游已上线，服务器..&nbsp;</p><p class="contact">联系方式:qq1766977676</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=235" target="_blank"><p class="img">&nbsp;</p><p class="name">汇诚:</p><p class="intro_a">高中校园AVG 有程序、缺画师..&nbsp;</p><p class="contact">联系方式:3138274291</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=234" target="_blank"><p class="img">&nbsp;</p><p class="name">夙夜:</p><p class="intro_a">尤其喜欢RPG的小 策划一枚，原在网易工作，现在家全职休息学习~点美术和U3D技能点..&nbsp;</p><p class="contact">联系方式:793313136</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=233" target="_blank"><p class="img">&nbsp;</p><p class="name">西外西:</p><p class="intro_a">3年动画3DMAX   unity找基友组队搞事情..&nbsp;</p><p class="contact">联系方式:qq：897505153</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=232" target="_blank"><p class="img">&nbsp;</p><p class="name">葡萄人:</p><p class="intro_a">在读大学生，会使用unity（小型网络没问题），unreal engine4(了解基..&nbsp;</p><p class="contact">联系方式:1312753769</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=230" target="_blank"><p class="img">&nbsp;</p><p class="name">3D美术，有主美经验。:</p><p class="intro_a">3D美术，精通游戏研发流程..&nbsp;</p><p class="contact">联系方式:494987719</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=229" target="_blank"><p class="img">&nbsp;</p><p class="name">入墨妖华:</p><p class="intro_a">目前在家做全职游美外包，时间充裕，想结识点独立游戏制作的大大求大腿。..&nbsp;</p><p class="contact">联系方式:QQ：250816730</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=228" target="_blank"><p class="img">&nbsp;</p><p class="name">零:</p><p class="intro_a">我们现在正在准备做一个类似开罗游戏的经营玩法的独立游戏。目前我们已经策划和美..&nbsp;</p><p class="contact">联系方式:1403187747</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=227" target="_blank"><p class="img">&nbsp;</p><p class="name">老青:</p><p class="intro_a">独立游戏程序员策划已就位，求靠谱的程序员..&nbsp;</p><p class="contact">联系方式:552300197</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=226" target="_blank"><p class="img">&nbsp;</p><p class="name">使徒袭来:</p><p class="intro_a">多人联机合作防守类联机合作生存类砍杀动作类..&nbsp;</p><p class="contact">联系方式:519825780</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=225" target="_blank"><p class="img">&nbsp;</p><p class="name">Ivan:</p><p class="intro_a">擅长Unity的3d游戏，原是网站后台、汽车电子、嵌入式等行业的程序员，有过项目管理..&nbsp;</p><p class="contact">联系方式:739193838</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=224" target="_blank"><p class="img">&nbsp;</p><p class="name">小资了没:</p><p class="intro_a">本人有6年的策划经验，大学也是学的计算机专业，现在自己在开发一款文字剧情推理游戏，剧..&nbsp;</p><p class="contact">联系方式:273659706</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=222" target="_blank"><p class="img">&nbsp;</p><p class="name">yanshi:</p><p class="intro_a">暂定steam，寻求一美术来将想法成像若干unity3D进行设计构架..&nbsp;</p><p class="contact">联系方式:549471820</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=220" target="_blank"><p class="img">&nbsp;</p><p class="name">荷伊:</p><p class="intro_a">老翻译一名，在小手游公司做过很多年日文本地化和日服手机游戏运营。在史克威尔艾尼克斯中..&nbsp;</p><p class="contact">联系方式:12973092@qq.com</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=219" target="_blank"><p class="img">&nbsp;</p><p class="name">IkeShyZz:</p><p class="intro_a">使用cocos2d-js 四年的客户端。。..&nbsp;</p><p class="contact">联系方式:123469732@qq.com</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=217" target="_blank"><p class="img">&nbsp;</p><p class="name">芝士:</p><p class="intro_a">之前长期给RM游戏做素材的像素美工，想求约稿..&nbsp;</p><p class="contact">联系方式:2694708612</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=215" target="_blank"><p class="img">&nbsp;</p><p class="name">VNFI:</p><p class="intro_a">2D像素动作类+科幻（软科幻）题材类等美国科幻黄金时期作品&lt;..&nbsp;</p><p class="contact">联系方式:微信 ANTILIYA  QQ 1127947436</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=213" target="_blank"><p class="img">&nbsp;</p><p class="name">毛毛:</p><p class="intro_a">多年服务器研发经验..&nbsp;</p><p class="contact">联系方式:new7877@live.cn</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=212" target="_blank"><p class="img">&nbsp;</p><p class="name">懿:</p><p class="intro_a">ps ui初级部分作品http://www.zcool.com.cn..&nbsp;</p><p class="contact">联系方式:596990819</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=211" target="_blank"><p class="img">&nbsp;</p><p class="name">游小熊:</p><p class="intro_a">Unity3D,时间很少，做不了大游戏..&nbsp;</p><p class="contact">联系方式:lvxiongyi@126.com</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=210" target="_blank"><p class="img">&nbsp;</p><p class="name">潇湘暮雨:</p><p class="intro_a">本科计算机专业大三在读,对游戏设计和开发有着强烈兴趣和欲望,自学Unity两年左右,..&nbsp;</p><p class="contact">联系方式:QQ1725382289</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=209" target="_blank"><p class="img">&nbsp;</p><p class="name">大师兄:</p><p class="intro_a">期待合作..&nbsp;</p><p class="contact">联系方式:2325767512</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=208" target="_blank"><p class="img">&nbsp;</p><p class="name">Xvnis:</p><p class="intro_a">本人会用虚幻4，会写程序，半吊子美工，还是大学生，找队友..&nbsp;</p><p class="contact">联系方式:QQ：405537581</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=207" target="_blank"><p class="img">&nbsp;</p><p class="name">组队一块开发游戏:</p><p class="intro_a">组队一块开发游戏最好是附近的人会画画，会策划QQ945462..&nbsp;</p><p class="contact">联系方式:945462638</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=206" target="_blank"><p class="img">&nbsp;</p><p class="name">小龙:</p><p class="intro_a">大连青果科技,已有作品海宝大作战游戏，准备新开坑,地下探险组队PK类游戏，找美术大大..&nbsp;</p><p class="contact">联系方式:2351434174</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=205" target="_blank"><p class="img">&nbsp;</p><p class="name">沉默的阿虚:</p><p class="intro_a">我们希望你是能手，更希望你有游戏开发的热情，不论你是设计，程序，美术。具体信息细说。..&nbsp;</p><p class="contact">联系方式:57586156</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=204" target="_blank"><p class="img">&nbsp;</p><p class="name">扫地工:</p><p class="intro_a">cocos..&nbsp;</p><p class="contact">联系方式:912225546</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=203" target="_blank"><p class="img">&nbsp;</p><p class="name">Sconi:</p><p class="intro_a">U3D，C#,Zbrush,Maya,PS,FLstudio.热爱游戏开发。..&nbsp;</p><p class="contact">联系方式:6417161</p></a></li><li><a href="http://www.indiegames.cn/match/index.php?id=202" target="_blank"><p class="img">&nbsp;</p><p class="name">东邪:</p><p class="intro_a">产品方向定了，美术不用你做大量苦力。我们希望你是一个设计者。..&nbsp;</p><p class="contact">联系方式:57586156</p></a></li>		<li style="margin-top: 0px;"><a href="http://www.indiegames.cn/match/index.php?id=319" target="_blank"><p class="img">&nbsp;</p><p class="name">重庆豆豆龙网络科技:</p><p class="intro_a">正在寻找投资、发行、厉害的u3d、美术合伙人..&nbsp;</p><p class="contact">联系方式:1522415420</p></a></li><li style="margin-top: 0px;"><a href="http://www.indiegames.cn/match/index.php?id=318" target="_blank"><p class="img">&nbsp;</p><p class="name">奇袭嗷:</p><p class="intro_a">在职2d/3d动作美术，原画部分擅长机械设定（画小姐姐比较凑合），熟悉unity的动..&nbsp;</p><p class="contact">联系方式:383813684</p></a></li><li style="margin-top: 0px;"><a href="http://www.indiegames.cn/match/index.php?id=317" target="_blank"><p class="img">&nbsp;</p><p class="name">leo:</p><p class="intro_a">1年UE4 会C++ 会一点图形图像..&nbsp;</p><p class="contact">联系方式:372342890</p></a></li><li style="margin-top: 0px;"><a href="http://www.indiegames.cn/match/index.php?id=316" target="_blank"><p class="img">&nbsp;</p><p class="name">叉子:</p><p class="intro_a">想做超级鸡马like的手机游戏的瞬间入伙经历过mmorpg，横版对推..&nbsp;</p><p class="contact">联系方式:580343477</p></a></li></ul>
+	
+</div>
+<script>
+		(function (win){ 
+	var callboarTimer; 
+	var callboard = $('#match_carousel'); 
+	var callboardUl = callboard.find('ul'); 
+	var callboardLi = callboard.find('li'); 
+	var liLen = callboard.find('li').length; 
+	var initHeight = callboardLi.first().outerHeight(true); 
+	win.autoAnimation = function (){ 
+	if (liLen <= 1) return; 
+	var self = arguments.callee; 
+	var callboardLiFirst = callboard.find('li').first(); 
+	callboardLiFirst.animate({ 
+	marginTop:-initHeight 
+	}, 500, function (){ 
+	clearTimeout(callboarTimer); 
+	callboardLiFirst.appendTo(callboardUl).css({marginTop:0}); 
+	callboarTimer = setTimeout(self, 5000); 
+	}); 
+	} 
+	callboard.mouseenter( 
+	function (){ 
+	clearTimeout(callboarTimer); 
+	}).mouseleave(function (){ 
+	callboarTimer = setTimeout(win.autoAnimation, 5000); 
+	}); 
+	}(window)); 
+	setTimeout(window.autoAnimation, 5000); 
+</script>
+
+<!--组队信息轮播展示 end-->
+
+            <h2 class="lastest"></h2>
+
+            <div class="articles">
+
+                
+<article class="posts post-1 cf">
+    <div class="info cf">
+      <div class="topic left">
+      	<span><a href="http://www.indiegames.cn/foreign-games" class="breaking" target="_blank">国外游戏 </a> / foreign-games</span>      </div>
+      <div class="postmeta right"><a href="http://www.indiegames.cn/author/determine" class="uname" data-name="" target="_blank">Determine</a> </div>
+    </div>
+  <div class="left left-col">
+
+
+    <div class="image feature-img thumb-180"><a href="http://www.indiegames.cn/foreign-games/7996.html" title="一款有着独特美术的快节奏日式ARPG游戏——《五剑》（GOKEN）"><img src="../public/home/img/body/ss_09dc9e84a5b1326227af53b25e1e8a156345af30.600x338.jpg" srcset="http://source.indiegames.cn/wp-content/uploads/2017/10/ss_09dc9e84a5b1326227af53b25e1e8a156345af30.600x338.jpg?imageView2/1/w/360/h/240 2x" alt="一款有着独特美术的快节奏日式ARPG游戏——《五剑》（GOKEN）" class="wp-post-image" width="180" height="120"></a></div>
+  </div>
+  <div class="right-col">
+    <h1><a href="http://www.indiegames.cn/foreign-games/7996.html" data-no-turbolink="true" onclick="javascript:_gaq.push([&#39;_trackPageview&#39;, &#39;/click/index_newtab/&#39;]);" target="_blank" title="一款有着独特美术的快节奏日式ARPG游戏——《五剑》（GOKEN）">一款有着独特美术的快节奏日式ARPG游戏——《五剑》（GOKEN）</a></h1>
+    <p>《五剑》（GOKEN）是一款俯视视角的日式ARPG游戏，在这款游戏-GOKEN中，你被命令去寻找五千年前上帝制作失败的五把剑，这可不是一件容易的事情。这一路上，你会遇到无穷无尽的敌人，但是，一些耀眼的纹章将会赐予你力量，让你得以生存。GOKEN的战斗系...</p>
+  </div>
+</article>
+
+<article class="posts post-1 cf">
+    <div class="info cf">
+      <div class="topic left">
+      	<span><a href="http://www.indiegames.cn/foreign-games" class="breaking" target="_blank">国外游戏 </a> / foreign-games</span>      </div>
+      <div class="postmeta right"><a href="http://www.indiegames.cn/author/determine" class="uname" data-name="" target="_blank">Determine</a> </div>
+    </div>
+  <div class="left left-col">
+
+
+    <div class="image feature-img thumb-180"><a href="http://www.indiegames.cn/foreign-games/7993.html" title="【游戏推荐】Road Redemption——暴力摩托精神续作！"><img src="../public/home/img/body/ss_fb7e9560308126e83af509c1db3e56f57ac4a00c.600x338.jpg" srcset="http://source.indiegames.cn/wp-content/uploads/2017/10/ss_fb7e9560308126e83af509c1db3e56f57ac4a00c.600x338.jpg?imageView2/1/w/360/h/240 2x" alt="【游戏推荐】Road Redemption——暴力摩托精神续作！" class="wp-post-image" width="180" height="120"></a></div>
+  </div>
+  <div class="right-col">
+    <h1><a href="http://www.indiegames.cn/foreign-games/7993.html" data-no-turbolink="true" onclick="javascript:_gaq.push([&#39;_trackPageview&#39;, &#39;/click/index_newtab/&#39;]);" target="_blank" title="【游戏推荐】Road Redemption——暴力摩托精神续作！">【游戏推荐】Road Redemption——暴力摩托精神续作！</a></h1>
+    <p>Road Redemption是一個競速遊戲，您可以帶領您的摩托車隊來場史詩般的旅程，在全國各地進行史詩般的冒險戰鬥。一路上，透過完成競速比賽、暗殺，搶劫和其他挑戰來賺取金錢。收集到戰利品時，您的角色、摩托車、以及武器都會升級。一生只活一次以 100 ...</p>
+  </div>
+</article>
+
+<article class="posts post-1 cf">
+    <div class="info cf">
+      <div class="topic left">
+      	<span><a href="http://www.indiegames.cn/news" class="breaking" target="_blank">独游资讯 </a> / news</span>      </div>
+      <div class="postmeta right"><a href="http://www.indiegames.cn/author/determine" class="uname" data-name="" target="_blank">Determine</a> </div>
+    </div>
+  <div class="left left-col">
+
+
+    <div class="image feature-img thumb-180"><a href="http://www.indiegames.cn/news/7987.html" title="[视频]《以太战争》（Rival of Aether）又出新角色！战士Clairen参上！"><img src="../public/home/img/body/QQ截图20171007125259.png" srcset="http://source.indiegames.cn/wp-content/uploads/2017/10/QQ截图20171007125259.png?imageView2/1/w/360/h/240 2x" alt="[视频]《以太战争》（Rival of Aether）又出新角色！战士Clairen参上！" class="wp-post-image" width="180" height="120"></a></div>
+  </div>
+  <div class="right-col">
+    <h1><a href="http://www.indiegames.cn/news/7987.html" data-no-turbolink="true" onclick="javascript:_gaq.push([&#39;_trackPageview&#39;, &#39;/click/index_newtab/&#39;]);" target="_blank" title="[视频]《以太战争》（Rival of Aether）又出新角色！战士Clairen参上！">[视频]《以太战争》（Rival of Aether）又出新角色！战士Clairen参上！</a></h1>
+    <p>Ori已经加入到了游戏中，不知大家是否乐在其中？继上次的新角色-青蛙Ranno公布后，《以太战争》又公布了一位新角色。这次的宣传片有些不同，前半部分是一段介绍角色背景故事的动画短片。" _src="http://v.youku.com/v_show/id_XMzA2OTY4NTA3Ng==.html...</p>
+  </div>
+</article>
+
+<article class="posts post-1 cf">
+    <div class="info cf">
+      <div class="topic left">
+      	<span><a href="http://www.indiegames.cn/foreign-games" class="breaking" target="_blank">国外游戏 </a> / foreign-games</span>      </div>
+      <div class="postmeta right"><a href="http://www.indiegames.cn/author/determine" class="uname" data-name="" target="_blank">Determine</a></div>
+    </div>
+  <div class="left left-col">
+
+
+    <div class="image feature-img thumb-180"><a href="http://www.indiegames.cn/foreign-games/7984.html" title="【游戏推荐】地下城争夺战（War for the Overworld）——对入侵地下城感到烦厌了吗？是时候建立你的了！"><img src="../public/home/img/body/QQ截图20171006200614.png" srcset="http://source.indiegames.cn/wp-content/uploads/2017/10/QQ截图20171006200614.png?imageView2/1/w/360/h/240 2x" alt="【游戏推荐】地下城争夺战（War for the Overworld）——对入侵地下城感到烦厌了吗？是时候建立你的了！" class="wp-post-image" width="180" height="120"></a></div>
+  </div>
+  <div class="right-col">
+    <h1><a href="http://www.indiegames.cn/foreign-games/7984.html" data-no-turbolink="true" onclick="javascript:_gaq.push([&#39;_trackPageview&#39;, &#39;/click/index_newtab/&#39;]);" target="_blank" title="【游戏推荐】地下城争夺战（War for the Overworld）——对入侵地下城感到烦厌了吗？是时候建立你的了！">【游戏推荐】地下城争夺战（War for the Overworld）——对入侵地下城感到烦厌了吗？是时候建立你的了！</a></h1>
+    <p>对入侵地下城感到烦厌了吗？是时候建立你的了！你是否觉得自己在大倒退呢?在永无止境的任务中，单调地重复将邪恶的家伙开膛破肚，不过都是为了黄金和一对不过好一点点的靴子吗？你开始想……当英雄是否真的是你的召命呢？欢迎来到地面争夺霸战！你将扮...</p>
+  </div>
+</article>
+
+<article class="posts post-1 cf">
+    <div class="info cf">
+      <div class="topic left">
+      	<span><a href="http://www.indiegames.cn/foreign-games" class="breaking" target="_blank">国外游戏 </a> / foreign-games</span>      </div>
+      <div class="postmeta right"><a href="http://www.indiegames.cn/author/determine" class="uname" data-name="" target="_blank">Determine</a> </div>
+    </div>
+  <div class="left left-col">
+
+
+    <div class="image feature-img thumb-180"><a href="http://www.indiegames.cn/foreign-games/7982.html" title="Four Horsemen——四个来自不同地域的青年用多种方式来体验所面临的挑战"><img src="../public/home/img/body/vLlglc-thumb-480x360-25128.png" srcset="http://source.indiegames.cn/wp-content/uploads/2017/10/vLlglc-thumb-480x360-25128.png?imageView2/1/w/360/h/240 2x" alt="Four Horsemen——四个来自不同地域的青年用多种方式来体验所面临的挑战" class="wp-post-image" width="180" height="120"></a></div>
+  </div>
+  <div class="right-col">
+    <h1><a href="http://www.indiegames.cn/foreign-games/7982.html" data-no-turbolink="true" onclick="javascript:_gaq.push([&#39;_trackPageview&#39;, &#39;/click/index_newtab/&#39;]);" target="_blank" title="Four Horsemen——四个来自不同地域的青年用多种方式来体验所面临的挑战">Four Horsemen——四个来自不同地域的青年用多种方式来体验所面临的挑战</a></h1>
+    <p>Four Horsemen是一款独特的文字探索游戏。在游戏中，主视角在同住一间房的四位青年身上，你需要适应这里的生活，发现这陌生之地的细微差别。去处理不必要的冲突，或者，去做你想要做的，成为梦想中的自己。四个十几岁的青年待在一个二战的地堡中，谁...</p>
+  </div>
+</article>
+
+<article class="posts post-1 cf">
+    <div class="info cf">
+      <div class="topic left">
+      	<span><a href="http://www.indiegames.cn/foreign-games" class="breaking" target="_blank">国外游戏 </a> / foreign-games</span>      </div>
+      <div class="postmeta right"><a href="http://www.indiegames.cn/author/determine" class="uname" data-name="" target="_blank">Determine</a> </div>
+    </div>
+  <div class="left left-col">
+
+
+    <div class="image feature-img thumb-180"><a href="http://www.indiegames.cn/foreign-games/7980.html" title="经典漫改RPG游戏《战斗驱逐者》（Battle Chasers: Nightwar）正式上架Steam！"><img src="../public/home/img/body/ss_60e5b48361f2e1a7520d5f1fc052f6cc8c935cfc.600x338.jpg" srcset="http://source.indiegames.cn/wp-content/uploads/2017/10/ss_60e5b48361f2e1a7520d5f1fc052f6cc8c935cfc.600x338.jpg?imageView2/1/w/360/h/240 2x" alt="经典漫改RPG游戏《战斗驱逐者》（Battle Chasers: Nightwar）正式上架Steam！" class="wp-post-image" width="180" height="120"></a></div>
+  </div>
+  <div class="right-col">
+    <h1><a href="http://www.indiegames.cn/foreign-games/7980.html" data-no-turbolink="true" onclick="javascript:_gaq.push([&#39;_trackPageview&#39;, &#39;/click/index_newtab/&#39;]);" target="_blank" title="经典漫改RPG游戏《战斗驱逐者》（Battle Chasers: Nightwar）正式上架Steam！">经典漫改RPG游戏《战斗驱逐者》（Battle Chasers: Nightwar）正式上架Steam！</a></h1>
+    <p>Battle Chasers: Nightwar是一款回合制，改编自一部老系列漫画的RPG游戏。游戏在视觉上的感官体验非常棒，色彩运用得当，使画面看上去清晰、舒服。并且通过一款电子游戏让过去15年已经死亡的漫画再度复苏，是一件很有趣的事情，如果他真的成功了，那...</p>
+  </div>
+</article>
+
+<article class="posts post-1 cf">
+    <div class="info cf">
+      <div class="topic left">
+      	<span><a href="http://www.indiegames.cn/news" class="breaking" target="_blank">独游资讯 </a> / news</span>      </div>
+      <div class="postmeta right"><a href="http://www.indiegames.cn/author/determine" class="uname" data-name="" target="_blank">Determine</a> </div>
+    </div>
+  <div class="left left-col">
+
+
+    <div class="image feature-img thumb-180"><a href="http://www.indiegames.cn/news/7974.html" title="Team17宣布首次和中国研发团队合作，代理发行《波西亚时光》"><img src="../public/home/img/body/3.jpg" srcset="http://source.indiegames.cn/wp-content/uploads/2017/10/3.jpg?imageView2/1/w/360/h/240 2x" alt="Team17宣布首次和中国研发团队合作，代理发行《波西亚时光》" class="wp-post-image" width="180" height="120"></a></div>
+  </div>
+  <div class="right-col">
+    <h1><a href="http://www.indiegames.cn/news/7974.html" data-no-turbolink="true" onclick="javascript:_gaq.push([&#39;_trackPageview&#39;, &#39;/click/index_newtab/&#39;]);" target="_blank" title="Team17宣布首次和中国研发团队合作，代理发行《波西亚时光》">Team17宣布首次和中国研发团队合作，代理发行《波西亚时光》</a></h1>
+    <p>英国著名游戏发行商，发行过著名的“百战天虫”系列游戏的Team17日前宣布，将和中国研发商帕斯亚科技合作，代理模拟经营RPG游戏《波西亚时光》的PC版本和主机版本在海外所有国家和地区的发行。这也是TEAM17首次与中国游戏公司的合作。《波西亚时光》的...</p>
+  </div>
+</article>
+
+<article class="posts post-1 cf">
+    <div class="info cf">
+      <div class="topic left">
+      	<span><a href="http://www.indiegames.cn/chinese-games" class="breaking" target="_blank">国人游戏 </a> / chinese-games</span>      </div>
+      <div class="postmeta right"><a href="http://www.indiegames.cn/author/determine" class="uname" data-name="" target="_blank">Determine</a> </div>
+    </div>
+  <div class="left left-col">
+
+
+    <div class="image feature-img thumb-180"><a href="http://www.indiegames.cn/chinese-games/7971.html" title="国内大学在校生自制手游《刃心》带你闯荡忍者的世界！"><img src="../public/home/img/body/QQ截图20171002102454.png" srcset="http://source.indiegames.cn/wp-content/uploads/2017/10/QQ截图20171002102454.png?imageView2/1/w/360/h/240 2x" alt="国内大学在校生自制手游《刃心》带你闯荡忍者的世界！" class="wp-post-image" width="180" height="120"></a></div>
+  </div>
+  <div class="right-col">
+    <h1><a href="http://www.indiegames.cn/chinese-games/7971.html" data-no-turbolink="true" onclick="javascript:_gaq.push([&#39;_trackPageview&#39;, &#39;/click/index_newtab/&#39;]);" target="_blank" title="国内大学在校生自制手游《刃心》带你闯荡忍者的世界！">国内大学在校生自制手游《刃心》带你闯荡忍者的世界！</a></h1>
+    <p>开发者自述这是作为大学在校生的我，第一款完整的手游。第一次，很美、很纯、很执着，就是想让《刃心》更加完美。经过大量时间的打磨以及和美术大大的讨论，最终它诞生了，它不仅是一款需要你耐心研究游戏，它更像是我的孩子一样，带着那种真真切切的...</p>
+  </div>
+</article>
+
+<article class="posts post-1 cf">
+    <div class="info cf">
+      <div class="topic left">
+      	<span><a href="http://www.indiegames.cn/news" class="breaking" target="_blank">独游资讯 </a> / news</span>      </div>
+      <div class="postmeta right"><a href="http://www.indiegames.cn/author/determine" class="uname" data-name="" target="_blank">Determine</a> </div>
+    </div>
+  <div class="left left-col">
+
+
+    <div class="image feature-img thumb-180"><a href="http://www.indiegames.cn/news/7968.html" title="简约而不简单；格斗游戏《幻想冲击》（Fantasy Strike）上线Steam开启EA"><img src="../public/home/img/body/ss_33608cccc19c77952f396d2ff27826608986c87c.600x338.jpg" srcset="http://source.indiegames.cn/wp-content/uploads/2017/10/ss_33608cccc19c77952f396d2ff27826608986c87c.600x338.jpg?imageView2/1/w/360/h/240 2x" alt="简约而不简单；格斗游戏《幻想冲击》（Fantasy Strike）上线Steam开启EA" class="wp-post-image" width="180" height="120"></a></div>
+  </div>
+  <div class="right-col">
+    <h1><a href="http://www.indiegames.cn/news/7968.html" data-no-turbolink="true" onclick="javascript:_gaq.push([&#39;_trackPageview&#39;, &#39;/click/index_newtab/&#39;]);" target="_blank" title="简约而不简单；格斗游戏《幻想冲击》（Fantasy Strike）上线Steam开启EA">简约而不简单；格斗游戏《幻想冲击》（Fantasy Strike）上线Steam开启EA</a></h1>
+    <p>如果你足够关注格斗游戏的圈子，那David Sirlin这名字你可能会有点眼熟。他曾经是《街头霸王2HD》的开发人员之一，并多次参加国际格斗游戏赛事EVO，获得过进入8强的好成绩。他对格斗游戏已足够热衷，现在，他带领着他的团队，开发了他们的独特的格斗...</p>
+  </div>
+</article>
+
+<article class="posts post-1 cf">
+    <div class="info cf">
+      <div class="topic left">
+      	<span><a href="http://www.indiegames.cn/news" class="breaking" target="_blank">独游资讯 </a> / news</span>      </div>
+      <div class="postmeta right"><a href="http://www.indiegames.cn/author/determine" class="uname" data-name="" target="_blank">Determine</a> </div>
+    </div>
+  <div class="left left-col">
+
+
+    <div class="image feature-img thumb-180"><a href="http://www.indiegames.cn/news/7965.html" title="《茶杯头》（CUPHEAD）正式发售！30年代老动画画风；好评如潮！"><img src="../public/home/img/body/QQ截图20170612113544.png" srcset="http://source.indiegames.cn/wp-content/uploads/2017/09/QQ截图20170612113544.png?imageView2/1/w/360/h/240 2x" alt="《茶杯头》（CUPHEAD）正式发售！30年代老动画画风；好评如潮！" class="wp-post-image" width="180" height="120"></a></div>
+  </div>
+  <div class="right-col">
+    <h1><a href="http://www.indiegames.cn/news/7965.html" data-no-turbolink="true" onclick="javascript:_gaq.push([&#39;_trackPageview&#39;, &#39;/click/index_newtab/&#39;]);" target="_blank" title="《茶杯头》（CUPHEAD）正式发售！30年代老动画画风；好评如潮！">《茶杯头》（CUPHEAD）正式发售！30年代老动画画风；好评如潮！</a></h1>
+    <p>《茶杯头》（CUPHEAD）是今年备受瞩目的游戏之一！曾在E3等多个游戏展上亮相。这是一款BOSS rush的横版射击游戏，可双人同屏游玩。但最吸引人的，还属他的画面风格了！《茶杯头》让你乍一眼看上去就像一部30年代的老动画！但实际上它却是一款可以操作...</p>
+  </div>
+</article>
+
+<article class="posts post-1 cf">
+    <div class="info cf">
+      <div class="topic left">
+      	<span><a href="http://www.indiegames.cn/news" class="breaking" target="_blank">独游资讯 </a> / news</span>      </div>
+      <div class="postmeta right"><a href="http://www.indiegames.cn/author/determine" class="uname" data-name="" target="_blank">Determine</a></div>
+    </div>
+  <div class="left left-col">
+
+
+    <div class="image feature-img thumb-180"><a href="http://www.indiegames.cn/news/7949.html" title="2017 CiGA开发者大会演讲嘉宾大揭秘！"><img src="../public/home/img/body/P12.jpg" srcset="http://source.indiegames.cn/wp-content/uploads/2017/09/P12.jpg?imageView2/1/w/360/h/240 2x" alt="2017 CiGA开发者大会演讲嘉宾大揭秘！" class="wp-post-image" width="180" height="120"></a></div>
+  </div>
+  <div class="right-col">
+    <h1><a href="http://www.indiegames.cn/news/7949.html" data-no-turbolink="true" onclick="javascript:_gaq.push([&#39;_trackPageview&#39;, &#39;/click/index_newtab/&#39;]);" target="_blank" title="2017 CiGA开发者大会演讲嘉宾大揭秘！">2017 CiGA开发者大会演讲嘉宾大揭秘！</a></h1>
+    <p>2017年10月27日，由CiGA独立游戏联盟精心打造的“2017 CiGA开发者大会”将在上海光大酒店二层宴会厅举办。从游戏本质出发，网罗最精彩的干货分享。在10月27日的CiGA开发者大会中，将有国内外多位游戏大师分享私家干货。如《巫师》系列和《地平线》的剧...</p>
+  </div>
+</article>
+
+<article class="posts post-1 cf">
+    <div class="info cf">
+      <div class="topic left">
+      	<span><a href="http://www.indiegames.cn/news" class="breaking" target="_blank">独游资讯 </a> / news</span>      </div>
+      <div class="postmeta right"><a href="http://www.indiegames.cn/author/determine" class="uname" data-name="" target="_blank">Determine</a> </div>
+    </div>
+  <div class="left left-col">
+
+
+    <div class="image feature-img thumb-180"><a href="http://www.indiegames.cn/news/7946.html" title="曾经的口碑佳作《堡垒》（Bastion）终于有了官方中文！"><img src="../public/home/img/body/QQ截图20170929124308.png" srcset="http://source.indiegames.cn/wp-content/uploads/2017/09/QQ截图20170929124308.png?imageView2/1/w/360/h/240 2x" alt="曾经的口碑佳作《堡垒》（Bastion）终于有了官方中文！" class="wp-post-image" width="180" height="120"></a></div>
+  </div>
+  <div class="right-col">
+    <h1><a href="http://www.indiegames.cn/news/7946.html" data-no-turbolink="true" onclick="javascript:_gaq.push([&#39;_trackPageview&#39;, &#39;/click/index_newtab/&#39;]);" target="_blank" title="曾经的口碑佳作《堡垒》（Bastion）终于有了官方中文！">曾经的口碑佳作《堡垒》（Bastion）终于有了官方中文！</a></h1>
+    <p>《堡垒》（Bastion）是一款经典的ARPG佳作，由《晶体管》（Transistor）的开发商制作，是曾经的一代口碑佳作。于近日，《堡垒》的Steam页面上惊人的出现了简体中文：游戏支持语言中添加了简体中文。并且添加折扣，打折后只要7元。还不赶紧剁手？游戏...</p>
+  </div>
+</article>
+
+<article class="posts post-1 cf">
+    <div class="info cf">
+      <div class="topic left">
+      	<span><a href="http://www.indiegames.cn/foreign-games" class="breaking" target="_blank">国外游戏 </a> / foreign-games</span>      </div>
+      <div class="postmeta right"><a href="http://www.indiegames.cn/author/determine" class="uname" data-name="" target="_blank">Determine</a> </div>
+    </div>
+  <div class="left left-col">
+
+
+    <div class="image feature-img thumb-180"><a href="http://www.indiegames.cn/foreign-games/7942.html" title="【游戏推荐】生态位 – 遗传学生存游戏（Niche – a genetics survival game）——根据真正的遗传学来塑造你自己的动物种类"><img src="../public/home/img/body/QQ截图20170928162534.png" srcset="http://source.indiegames.cn/wp-content/uploads/2017/09/QQ截图20170928162534.png?imageView2/1/w/360/h/240 2x" alt="【游戏推荐】生态位 – 遗传学生存游戏（Niche – a genetics survival game）——根据真正的遗传学来塑造你自己的动物种类" class="wp-post-image" width="180" height="120"></a></div>
+  </div>
+  <div class="right-col">
+    <h1><a href="http://www.indiegames.cn/foreign-games/7942.html" data-no-turbolink="true" onclick="javascript:_gaq.push([&#39;_trackPageview&#39;, &#39;/click/index_newtab/&#39;]);" target="_blank" title="【游戏推荐】生态位 – 遗传学生存游戏（Niche – a genetics survival game）——根据真正的遗传学来塑造你自己的动物种类">【游戏推荐】生态位 – 遗传学生存游戏（Niche – a genetics survival game）——根据真正的遗传学来塑造你自己的动物种类</a></h1>
+    <p>Niche - 融合了新式回合制和流氓般的模拟要素的基因生存游戏。运用真实的基因模拟来定制你的猫、狐、狸、熊、狗之类的动物。在各种情况下保证他们的存活，凶猛的野兽，气候变化，以及传染疾病。如果你的种类绝种了的话游戏将无法继续，你需要重新开始...</p>
+  </div>
+</article>
+
+<article class="posts post-1 cf">
+    <div class="info cf">
+      <div class="topic left">
+      	<span><a href="http://www.indiegames.cn/news" class="breaking" target="_blank">独游资讯 </a> / news</span>      </div>
+      <div class="postmeta right"><a href="http://www.indiegames.cn/author/determine" class="uname" data-name="" target="_blank">Determine</a></div>
+    </div>
+  <div class="left left-col">
+
+
+    <div class="image feature-img thumb-180"><a href="http://www.indiegames.cn/news/7939.html" title="The Mummy Demastered；Wayforward做这种游戏总是信手拈来"><img src="../public/home/img/body/DKl6FPNVAAIsFnU.jpg" srcset="http://source.indiegames.cn/wp-content/uploads/2017/09/DKl6FPNVAAIsFnU.jpg?imageView2/1/w/360/h/240 2x" alt="The Mummy Demastered；Wayforward做这种游戏总是信手拈来" class="wp-post-image" width="180" height="120"></a></div>
+  </div>
+  <div class="right-col">
+    <h1><a href="http://www.indiegames.cn/news/7939.html" data-no-turbolink="true" onclick="javascript:_gaq.push([&#39;_trackPageview&#39;, &#39;/click/index_newtab/&#39;]);" target="_blank" title="The Mummy Demastered；Wayforward做这种游戏总是信手拈来">The Mummy Demastered；Wayforward做这种游戏总是信手拈来</a></h1>
+    <p>在此之前，Wayforward公布了他们正在制作中的新游戏，是一款像素风的平台动作游戏。近日正式公布，这是与好莱坞电影《新木乃伊》合作制作的一款2D像素风平台动作游戏，将于今年秋季登录Steam/PS4/XboxOne/Switch平台。其名为《木乃伊Demastered》（Th...</p>
+  </div>
+</article>
+
+<article class="posts post-1 cf">
+    <div class="info cf">
+      <div class="topic left">
+      	<span><a href="http://www.indiegames.cn/igd/zhihu" class="breaking" target="_blank">来源知乎 </a> / zhihu</span>      </div>
+      <div class="postmeta right"><a href="http://www.indiegames.cn/author/determine" class="uname" data-name="" target="_blank">Determine</a> </div>
+    </div>
+  <div class="left left-col">
+
+
+    <div class="image feature-img thumb-180"><a href="http://www.indiegames.cn/igd/zhihu/7937.html" title="TobyFox | 是谁做出了《Undertale》？"><img src="../public/home/img/body/v2-fd064bf8ff907bcfcfd159049e71c68b_r.jpg" srcset="http://source.indiegames.cn/wp-content/uploads/2017/09/v2-fd064bf8ff907bcfcfd159049e71c68b_r.jpg?imageView2/1/w/360/h/240 2x" alt="TobyFox | 是谁做出了《Undertale》？" class="wp-post-image" width="180" height="120"></a></div>
+  </div>
+  <div class="right-col">
+    <h1><a href="http://www.indiegames.cn/igd/zhihu/7937.html" data-no-turbolink="true" onclick="javascript:_gaq.push([&#39;_trackPageview&#39;, &#39;/click/index_newtab/&#39;]);" target="_blank" title="TobyFox | 是谁做出了《Undertale》？">TobyFox | 是谁做出了《Undertale》？</a></h1>
+    <p>简介Toby Fox（于1991年10月11日出生）是一名游戏制作人和作曲者，网络常用名为“Radiation”。他因开发了极受玩家喜爱的游戏《传说之下》（Undertale）闻名。他的另一个成就是为网络漫画《Homestuck》（也许应该翻译成《思乡病》？）创作了几段音乐。...</p>
+  </div>
+</article>
+
+<article class="posts post-1 cf">
+    <div class="info cf">
+      <div class="topic left">
+      	<span><a href="http://www.indiegames.cn/foreign-games" class="breaking" target="_blank">国外游戏 </a> / foreign-games</span>      </div>
+      <div class="postmeta right"><a href="http://www.indiegames.cn/author/determine" class="uname" data-name="" target="_blank">Determine</a> </div>
+    </div>
+  <div class="left left-col">
+
+
+    <div class="image feature-img thumb-180"><a href="http://www.indiegames.cn/foreign-games/7935.html" title="【游戏推荐】安息，死亡！（Peace, Death!）——替死神工作，将客户分配到天堂、地狱或炼狱"><img src="../public/home/img/body/QQ截图20170925214351.png" srcset="http://source.indiegames.cn/wp-content/uploads/2017/09/QQ截图20170925214351.png?imageView2/1/w/360/h/240 2x" alt="【游戏推荐】安息，死亡！（Peace, Death!）——替死神工作，将客户分配到天堂、地狱或炼狱" class="wp-post-image" width="180" height="120"></a></div>
+  </div>
+  <div class="right-col">
+    <h1><a href="http://www.indiegames.cn/foreign-games/7935.html" data-no-turbolink="true" onclick="javascript:_gaq.push([&#39;_trackPageview&#39;, &#39;/click/index_newtab/&#39;]);" target="_blank" title="【游戏推荐】安息，死亡！（Peace, Death!）——替死神工作，将客户分配到天堂、地狱或炼狱">【游戏推荐】安息，死亡！（Peace, Death!）——替死神工作，将客户分配到天堂、地狱或炼狱</a></h1>
+    <p>Peace, Death! (安息，死亡!)&nbsp;——是一款复杂的"街机模拟风格"游戏, 游戏中你将扮演在Apocalypse公司替死神工作的收割者，将客户分配到天堂、地狱和炼狱。你将面临一个复杂难题：通过为期七周的试用期，获得正式工作并帮助你的雇主——死...</p>
+  </div>
+</article>
+
+<article class="posts post-1 cf">
+    <div class="info cf">
+      <div class="topic left">
+      	<span><a href="http://www.indiegames.cn/news" class="breaking" target="_blank">独游资讯 </a> / news</span>      </div>
+      <div class="postmeta right"><a href="http://www.indiegames.cn/author/determine" class="uname" data-name="" target="_blank">Determine</a> </div>
+    </div>
+  <div class="left left-col">
+
+
+    <div class="image feature-img thumb-180"><a href="http://www.indiegames.cn/news/7931.html" title="《香缇：半精灵英雄》（Shantae:Half-Genie Hero）将推出Switch实体版，包含所有DLC。"><img src="../public/home/img/body/QQ截图20170921165004.png" srcset="http://source.indiegames.cn/wp-content/uploads/2017/09/QQ截图20170921165004.png?imageView2/1/w/360/h/240 2x" alt="《香缇：半精灵英雄》（Shantae:Half-Genie Hero）将推出Switch实体版，包含所有DLC。" class="wp-post-image" width="180" height="120"></a></div>
+  </div>
+  <div class="right-col">
+    <h1><a href="http://www.indiegames.cn/news/7931.html" data-no-turbolink="true" onclick="javascript:_gaq.push([&#39;_trackPageview&#39;, &#39;/click/index_newtab/&#39;]);" target="_blank" title="《香缇：半精灵英雄》（Shantae:Half-Genie Hero）将推出Switch实体版，包含所有DLC。">《香缇：半精灵英雄》（Shantae:Half-Genie Hero）将推出Switch实体版，包含所有DLC。</a></h1>
+    <p>《香缇：半精灵英雄》（Shantae:Half-Genie Hero）是由Wayforward工作室制作的“香缇（Shantae）”系列最新作，目前已在多平台登录，并推出了最新DLC-“海盗女王的信条（Pirate Queen's Quest）”。独游网曾有这款游戏的安利于评测，如果感兴趣，不妨...</p>
+  </div>
+</article>
+
+<article class="posts post-1 cf">
+    <div class="info cf">
+      <div class="topic left">
+      	<span><a href="http://www.indiegames.cn/news" class="breaking" target="_blank">独游资讯 </a> / news</span>      </div>
+      <div class="postmeta right"><a href="http://www.indiegames.cn/author/determine" class="uname" data-name="" target="_blank">Determine</a> </div>
+    </div>
+  <div class="left left-col">
+
+
+    <div class="image feature-img thumb-180"><a href="http://www.indiegames.cn/news/7929.html" title="[视频]《形影不离》（Indivisible）公布新战斗演示视频和一些游戏改动"><img src="../public/home/img/body/Thumbnail-1.jpg" srcset="http://source.indiegames.cn/wp-content/uploads/2017/09/Thumbnail-1.jpg?imageView2/1/w/360/h/240 2x" alt="[视频]《形影不离》（Indivisible）公布新战斗演示视频和一些游戏改动" class="wp-post-image" width="180" height="120"></a></div>
+  </div>
+  <div class="right-col">
+    <h1><a href="http://www.indiegames.cn/news/7929.html" data-no-turbolink="true" onclick="javascript:_gaq.push([&#39;_trackPageview&#39;, &#39;/click/index_newtab/&#39;]);" target="_blank" title="[视频]《形影不离》（Indivisible）公布新战斗演示视频和一些游戏改动">[视频]《形影不离》（Indivisible）公布新战斗演示视频和一些游戏改动</a></h1>
+    <p>《形影不离》是一款横版ARPG，战斗系统上结合了一些动作元素的半即时回合制，类似《北欧女神传》。是《骷髅女孩》（SkullGirls）开发商Lab Zero正在开发中的最新作品。女主角Ajna从小和父亲修行武术,直到有一天她们生活的小镇被一支邪恶的地方军阀势...</p>
+  </div>
+</article>
+
+<article class="posts post-1 cf">
+    <div class="info cf">
+      <div class="topic left">
+      	<span><a href="http://www.indiegames.cn/foreign-games" class="breaking" target="_blank">国外游戏 </a> / foreign-games</span>      </div>
+      <div class="postmeta right"><a href="http://www.indiegames.cn/author/determine" class="uname" data-name="" target="_blank">Determine</a></div>
+    </div>
+  <div class="left left-col">
+
+
+    <div class="image feature-img thumb-180"><a href="http://www.indiegames.cn/foreign-games/7924.html" title="【游戏推荐】City of Brass——成为黄铜之城内的无畏窃贼"><img src="../public/home/img/body/header.jpg" srcset="http://source.indiegames.cn/wp-content/uploads/2017/09/header.jpg?imageView2/1/w/360/h/240 2x" alt="【游戏推荐】City of Brass——成为黄铜之城内的无畏窃贼" class="wp-post-image" width="180" height="120"></a></div>
+  </div>
+  <div class="right-col">
+    <h1><a href="http://www.indiegames.cn/foreign-games/7924.html" data-no-turbolink="true" onclick="javascript:_gaq.push([&#39;_trackPageview&#39;, &#39;/click/index_newtab/&#39;]);" target="_blank" title="【游戏推荐】City of Brass——成为黄铜之城内的无畏窃贼">【游戏推荐】City of Brass——成为黄铜之城内的无畏窃贼</a></h1>
+    <p>成为黄铜之城内的无畏窃贼，以第一人称视角，展开一段充满阿拉伯风情的历险。玩家手持弯刀和长鞭，抢夺，远行，缴械，击晕，粉碎，挥舞，努力抽打和砍杀，历经诱饵和陷阱，穿过成群的不死人，在沙漏时间耗尽前抵达每一关的出口，一路收集宝藏和战利品...</p>
+  </div>
+</article>
+
+<article class="posts post-1 cf">
+    <div class="info cf">
+      <div class="topic left">
+      	<span><a href="http://www.indiegames.cn/news" class="breaking" target="_blank">独游资讯 </a> / news</span>      </div>
+      <div class="postmeta right"><a href="http://www.indiegames.cn/author/determine" class="uname" data-name="" target="_blank">Determine</a> </div>
+    </div>
+  <div class="left left-col">
+
+
+    <div class="image feature-img thumb-180"><a href="http://www.indiegames.cn/news/7918.html" title="2017 WePlay：我们打算承包你2017年10月的后几天"><img src="../public/home/img/body/2065043082(1).jpg" srcset="http://source.indiegames.cn/wp-content/uploads/2017/09/2065043082.jpg?imageView2/1/w/360/h/240 2x" alt="2017 WePlay：我们打算承包你2017年10月的后几天" class="wp-post-image" width="180" height="120"></a></div>
+  </div>
+  <div class="right-col">
+    <h1><a href="http://www.indiegames.cn/news/7918.html" data-no-turbolink="true" onclick="javascript:_gaq.push([&#39;_trackPageview&#39;, &#39;/click/index_newtab/&#39;]);" target="_blank" title="2017 WePlay：我们打算承包你2017年10月的后几天">2017 WePlay：我们打算承包你2017年10月的后几天</a></h1>
+    <p>2017年10月底，我们打算像平常一样，做点不平常的事。这个事情已经想了很久，终于在今天可以去尝试实现。一直觉得，属于游戏的线下体验活动应该是：有着非常多的新鲜游戏可以了解和体验；有着激烈的游戏对抗可以现场参与或观看；有着耳熟能详的游戏制...</p>
+  </div>
+</article>
+<article class="posts post-1 cf">
+      <div class="image feature-img">
+        <a href="http://www.indiegames.cn/topic/%e7%ac%ac%e5%8d%81%e5%b1%8a%e7%8b%ac%e7%ab%8b%e6%b8%b8%e6%88%8f%e5%bc%80%e5%8f%91%e8%80%85%e5%a4%a7%e8%b5%9b%e5%bc%80%e5%90%af%e6%8a%a5%e5%90%8d" class="center-post" target="_blank"><img src="../public/home/img/body/timthumb.php" alt="将于GMGC成都2017大会期间隆重举行，现已开启报名！">
+        <div class="image-overlay small"></div>
+        <h1>将于GMGC成都2017大会期间隆重举行，现已开启报名！</h1>
+        </a>
+      </div>
+</article>
+
+            </div>
+
+            <div class="pagination pagination-list cf"><ul><li class="prev-page"></li><li class="active disabled"><span><a href="http://www.indiegames.cn/#">1</a></span></li><li><a href="http://www.indiegames.cn/page/2">2</a></li><li><a href="http://www.indiegames.cn/page/3">3</a></li><li class="disabled"><span><a href="http://www.indiegames.cn/#">···</a></span></li><li class="next-page"><a href="http://www.indiegames.cn/page/2">下一页</a></li></ul></div> 
+
+        </div>
+
+    </div>
+
+				
+    	</div>
+
+    <div class="sidebar">
+<section class="sidebar-tab"><ul class="sidebar-tab__tabs cf tabs">
+					<li class="tab-new"><a data-target="#tab-new" title="">最新资讯</a></li>
+					<li class="tab-hot"><a data-target="#tab-hot" title="">热点话题</a></li>
+					<li class="tab-rand" style="width:92px"><a class="active" data-target="#tab-rand" title="">随机推荐</a></li>
+				</ul><div id="tabs-content" class="sidebar-tab__wrapper"><div id="tab-new" class="sidebar-tab__new tabs-pane">
+<ul>
+<li><h2><a href="http://www.indiegames.cn/foreign-games/7996.html" target="_blank">一款有着独特美术的快节奏日式ARPG游戏——《五剑》（GOKEN）</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/foreign-games/7993.html" target="_blank">【游戏推荐】Road Redemption——暴力摩托精神续作！</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/news/7987.html" target="_blank">[视频]《以太战争》（Rival of Aether）又出新角色！战士Clairen参上！</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/foreign-games/7984.html" target="_blank">【游戏推荐】地下城争夺战（War for the Overworld）——对入侵地下城感到烦厌了吗？是时候建立你的了！</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/foreign-games/7982.html" target="_blank">Four Horsemen——四个来自不同地域的青年用多种方式来体验所面临的挑战</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/foreign-games/7980.html" target="_blank">经典漫改RPG游戏《战斗驱逐者》（Battle Chasers: Nightwar）正式上架Steam！</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/news/7974.html" target="_blank">Team17宣布首次和中国研发团队合作，代理发行《波西亚时光》</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/chinese-games/7971.html" target="_blank">国内大学在校生自制手游《刃心》带你闯荡忍者的世界！</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/news/7968.html" target="_blank">简约而不简单；格斗游戏《幻想冲击》（Fantasy Strike）上线Steam开启EA</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/news/7965.html" target="_blank">《茶杯头》（CUPHEAD）正式发售！30年代老动画画风；好评如潮！</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/news/7949.html" target="_blank">2017 CiGA开发者大会演讲嘉宾大揭秘！</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/news/7946.html" target="_blank">曾经的口碑佳作《堡垒》（Bastion）终于有了官方中文！</a></h2></li>
+</ul>
+</div>
+<div id="tab-hot" class="sidebar-tab__hot tabs-pane">
+<ul>
+<li><h2><a href="http://www.indiegames.cn/news/4536.html" target="_blank">16岁少年自学虚幻4打造独立游戏《森林之路》</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/igd/6618.html" target="_blank">现实与梦想的距离</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/news/7337.html" target="_blank">《我的世界》最大PC服务器Hypixel入驻中国！国服双端将于暑假开测！</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/news/5599.html" target="_blank">一人独自开发的次时代画面游戏《云端擒妖记》带你领略巴蜀文明</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/news/5812.html" target="_blank">狂霸酷拽的FPS足球游戏《狂野绿茵》登陆Steam绿光</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/news/5743.html" target="_blank">[Steam]《星球探险家》抢先版便售出了27万份，我们与这个来自重庆的团队聊了聊</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/indielook/2521.html" target="_blank">全球市场中那些随机性成功究竟意味为何？</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/igd/zhihu/4100.html" target="_blank">单隽的困惑 中国独立游戏人</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/igd/5611.html" target="_blank">《永无止境》：云南游戏梦开始的地方</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/news/4829.html" target="_blank">国产恐怖独立游戏《过阴人》通过绿光！</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/indielook/4980.html" target="_blank">纵观独立游戏那点事——商业模式值得深挖，2016年将迎来春天</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/chinese-games/3511.html" target="_blank">[iOS]国人虐心可爱风独立跑酷手游《跳跃吧莱西》迎来重大版本更新！</a></h2></li>
+</ul>
+</div>
+<div id="tab-rand" class="sidebar-tab__rand tabs-pane active">
+<ul>
+<li><h2><a href="http://www.indiegames.cn/news/3360.html" target="_blank">国人游戏又被青睐，独立游戏《灵魂编制（SOUL FORMATTER）》16天通过绿光</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/foreign-games/6639.html" target="_blank">【游戏推荐】屠龙骑士，史上第一个无休止的动作RPG</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/indielook/551.html" target="_blank">如何设计一个回合制游戏中的AI？Shadowrun实例（下）</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/game-industry/2321.html" target="_blank">游戏触觉变革：虚拟VR手套的诞生！</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/indielook/3975.html" target="_blank">从网易《花语月》看游戏如何把握自己的“艺术范”</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/news/2374.html" target="_blank">独立游戏开发商吐槽Steam退款新规</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/foreign-games/6097.html" target="_blank">Kickstarter上众筹游戏 Warbands: Bushido 发布抢先体验版</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/news/7485.html" target="_blank">Nintendo Switch《洞窟物语+》正式发售！</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/game-industry/5475.html" target="_blank">微软停产Xbox360原因:还没独立游戏《我的世界》赚钱</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/news/7446.html" target="_blank">那个看起来像老卡通片的CUPHEAD宣布9月29日发售</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/game-industry/2973.html" target="_blank">任天堂为何不去碰触如此火爆的VR？</a></h2></li>
+<li><h2><a href="http://www.indiegames.cn/igd/development-experience/6527.html" target="_blank">给独立游戏开发者的五个提高生产力的窍门（二）</a></h2></li>
+</ul>
+</div>
+</div></section><section class="widget monews_tag"><h3>热门标签</h3><div class="sidebar-tags__list"><a href="http://www.indiegames.cn/tag/%e7%8b%ac%e7%ab%8b%e6%b8%b8%e6%88%8f">独立游戏</a><a href="http://www.indiegames.cn/tag/%e8%a1%8c%e4%b8%9a%e8%b5%84%e8%ae%af">行业资讯</a><a href="http://www.indiegames.cn/tag/steam">steam</a><a href="http://www.indiegames.cn/tag/ios%e6%b8%b8%e6%88%8f">ios游戏</a><a href="http://www.indiegames.cn/tag/%e6%96%b0%e6%b8%b8%e6%88%8f">新游戏</a><a href="http://www.indiegames.cn/tag/theorystudy">独游研究</a><a href="http://www.indiegames.cn/tag/%e5%bc%80%e5%8f%91%e8%80%85%e6%95%85%e4%ba%8b">开发者故事</a><a href="http://www.indiegames.cn/tag/%e5%9b%bd%e5%a4%96%e4%bc%98%e7%a7%80%e7%8b%ac%e7%ab%8b%e6%b8%b8%e6%88%8f">国外优秀独立游戏</a><a href="http://www.indiegames.cn/tag/%e5%9b%bd%e5%a4%96%e5%bc%80%e5%8f%91%e8%80%85%e7%bb%8f%e9%aa%8c%e8%b0%88">国外开发者经验谈</a><a href="http://www.indiegames.cn/tag/%e7%8b%ac%e6%b8%b8%e8%a7%82%e7%82%b9">独游观点</a><a href="http://www.indiegames.cn/tag/%e7%8b%ac%e6%b8%b8%e5%8f%91%e7%8e%b0">独游发现</a><a href="http://www.indiegames.cn/tag/%e4%b8%93%e8%ae%bf">专访</a><a href="http://www.indiegames.cn/tag/%e6%b8%b8%e6%88%8f%e4%bc%97%e7%ad%b9">游戏众筹</a><a href="http://www.indiegames.cn/tag/%e5%bc%80%e5%8f%91%e8%80%85%e8%af%b4">开发者说</a><a href="http://www.indiegames.cn/tag/recommends">独游推荐</a><a href="http://www.indiegames.cn/tag/%e6%b8%b8%e6%88%8f%e5%88%9b%e6%84%8f">游戏创意</a><a href="http://www.indiegames.cn/tag/%e9%9d%92%e7%9d%90%e4%b9%8b%e5%85%89">青睐之光</a><a href="http://www.indiegames.cn/tag/pc%e6%b8%b8%e6%88%8f">PC游戏</a><a href="http://www.indiegames.cn/tag/%e5%bc%80%e5%8f%91%e8%80%85%e5%a4%a7%e8%b5%9b">开发者大赛</a><a href="http://www.indiegames.cn/tag/android">Android</a></div></section><section class="widget widget_huge_it_widget">
+
+
+
+
+
+	
+	
+<script>
+	var data_2 = [];      
+	var event_stack_2 = [];
+	video_is_playing_2=false;
+	data_2["0"]=[];data_2["0"]["id"]="0";data_2["0"]["image_url"]="http://source.indiegames.cn/wp-content/uploads/2016/09/4.png";data_2["0"]["description"]="";data_2["0"]["alt"]="";data_2["1"]=[];data_2["1"]["id"]="1";data_2["1"]["image_url"]="http://source.indiegames.cn/wp-content/uploads/2016/09/2.png";data_2["1"]["description"]="";data_2["1"]["alt"]="";data_2["2"]=[];data_2["2"]["id"]="2";data_2["2"]["image_url"]="http://source.indiegames.cn/wp-content/uploads/2016/09/3.png";data_2["2"]["description"]="";data_2["2"]["alt"]="";	
+	
+
+      var huge_it_trans_in_progress_2 = false;
+      var huge_it_transition_duration_2 = 1000;
+      var huge_it_playInterval_2;
+      // Stop autoplay.
+      window.clearInterval(huge_it_playInterval_2);
+	  
+     var huge_it_current_key_2 = '';
+	 function huge_it_move_dots_2() {
+        var image_left = jQuery(".huge_it_slideshow_dots_active_2").position().left;
+        var image_right = jQuery(".huge_it_slideshow_dots_active_2").position().left + jQuery(".huge_it_slideshow_dots_active_2").outerWidth(true);
+       
+      }
+      function huge_it_testBrowser_cssTransitions_2() {
+        return huge_it_testDom_2('Transition');
+      }
+      function huge_it_testBrowser_cssTransforms3d_2() {
+        return huge_it_testDom_2('Perspective');
+      }
+      function huge_it_testDom_2(prop) {
+        // Browser vendor CSS prefixes.
+        var browserVendors = ['', '-webkit-', '-moz-', '-ms-', '-o-', '-khtml-'];
+        // Browser vendor DOM prefixes.
+        var domPrefixes = ['', 'Webkit', 'Moz', 'ms', 'O', 'Khtml'];
+        var i = domPrefixes.length;
+        while (i--) {
+          if (typeof document.body.style[domPrefixes[i] + prop] !== 'undefined') {
+            return true;
+          }
+        }
+        return false;
+      }
+		function huge_it_cube_2(tz, ntx, nty, nrx, nry, wrx, wry, current_image_class, next_image_class, direction) {
+		
+        /* If browser does not support 3d transforms/CSS transitions.*/
+        if (!huge_it_testBrowser_cssTransitions_2()) {
+			jQuery(".huge_it_slideshow_dots_2").removeClass("huge_it_slideshow_dots_active_2").addClass("huge_it_slideshow_dots_deactive_2");
+        jQuery("#huge_it_dots_" + huge_it_current_key_2 + "_2").removeClass("huge_it_slideshow_dots_deactive_2").addClass("huge_it_slideshow_dots_active_2");
+          return huge_it_fallback_2(current_image_class, next_image_class, direction);
+        }
+        if (!huge_it_testBrowser_cssTransforms3d_2()) {
+          return huge_it_fallback3d_2(current_image_class, next_image_class, direction);
+        }
+			//alert(current_image_class+' '+next_image_class);
+		  jQuery(current_image_class).css({'z-index': 'none'});
+          jQuery(next_image_class).css({'z-index' : 2});
+        huge_it_trans_in_progress_2 = true;
+        /* Set active thumbnail.*/
+		jQuery(".huge_it_slideshow_dots_2").removeClass("huge_it_slideshow_dots_active_2").addClass("huge_it_slideshow_dots_deactive_2");  
+		jQuery("#huge_it_dots_" + huge_it_current_key_2 + "_2").removeClass("huge_it_slideshow_dots_deactive_2").addClass("huge_it_slideshow_dots_active_2");
+        jQuery(".huge_it_slide_bg_2").css('perspective', 1000);
+        jQuery(current_image_class).css({
+          transform : 'translateZ(' + tz + 'px)',
+          backfaceVisibility : 'hidden'
+        });
+		
+		 jQuery(".huge_it_slideshow_image_wrap_2,.huge_it_slide_bg_2,.huge_it_slideshow_image_item_2,.huge_it_slideshow_image_second_item_2 ").css('overflow', 'visible');
+		
+        jQuery(next_image_class).css({
+          opacity : 1,
+          filter: 'Alpha(opacity=100)',
+          backfaceVisibility : 'hidden',
+          transform : 'translateY(' + nty + 'px) translateX(' + ntx + 'px) rotateY('+ nry +'deg) rotateX('+ nrx +'deg)'
+        });
+        jQuery(".huge_it_slider_2").css({
+          transform: 'translateZ(-' + tz + 'px)',
+          transformStyle: 'preserve-3d'
+        });
+        /* Execution steps.*/
+        setTimeout(function () {
+          jQuery(".huge_it_slider_2").css({
+            transition: 'all ' + huge_it_transition_duration_2 + 'ms ease-in-out',
+            transform: 'translateZ(-' + tz + 'px) rotateX('+ wrx +'deg) rotateY('+ wry +'deg)'
+          });
+        }, 20);
+        /* After transition.*/
+        jQuery(".huge_it_slider_2").one('webkitTransitionEnd transitionend otransitionend oTransitionEnd mstransitionend', jQuery.proxy(huge_it_after_trans));
+        function huge_it_after_trans() {
+          /*if (huge_it_from_focus_2) {
+            huge_it_from_focus_2 = false;
+            return;
+          }*/
+		  jQuery(".huge_it_slide_bg_2,.huge_it_slideshow_image_item_2,.huge_it_slideshow_image_second_item_2 ").css('overflow', 'hidden');
+		  jQuery(".huge_it_slide_bg_2").removeAttr('style');
+          jQuery(current_image_class).removeAttr('style');
+          jQuery(next_image_class).removeAttr('style');
+          jQuery(".huge_it_slider_2").removeAttr('style');
+		 // alert(current_image_class+' '+next_image_class);
+          jQuery(current_image_class).css({'opacity' : 0, filter: 'Alpha(opacity=0)', 'z-index': 1});
+          jQuery(next_image_class).css({'opacity' : 1, filter: 'Alpha(opacity=100)', 'z-index' : 2});
+         // huge_it_change_watermark_container_2();
+          huge_it_trans_in_progress_2 = false;
+          if (typeof event_stack_2 !== 'undefined' && event_stack_2.length > 0) {
+            key = event_stack_2[0].split("-");
+            event_stack_2.shift();
+            huge_it_change_image_2(key[0], key[1], data_2, true,false);
+          }
+        }
+      }
+      function huge_it_cubeH_2(current_image_class, next_image_class, direction) {
+        /* Set to half of image width.*/
+        var dimension = jQuery(current_image_class).width() / 2;
+        if (direction == 'right') {
+          huge_it_cube_2(dimension, dimension, 0, 0, 90, 0, -90, current_image_class, next_image_class, direction);
+        }
+        else if (direction == 'left') {
+          huge_it_cube_2(dimension, -dimension, 0, 0, -90, 0, 90, current_image_class, next_image_class, direction);
+        }
+      }
+      function huge_it_cubeV_2(current_image_class, next_image_class, direction) {
+        /* Set to half of image height.*/
+        var dimension = jQuery(current_image_class).height() / 2;
+        /* If next slide.*/
+        if (direction == 'right') {
+          huge_it_cube_2(dimension, 0, -dimension, 90, 0, -90, 0, current_image_class, next_image_class, direction);
+        }
+        else if (direction == 'left') {
+          huge_it_cube_2(dimension, 0, dimension, -90, 0, 90, 0, current_image_class, next_image_class, direction);
+        }
+      }
+      /* For browsers that does not support transitions.*/
+      function huge_it_fallback_2(current_image_class, next_image_class, direction) {
+        huge_it_fade_2(current_image_class, next_image_class, direction);
+      }
+      /* For browsers that support transitions, but not 3d transforms (only used if primary transition makes use of 3d-transforms).*/
+      function huge_it_fallback3d_2(current_image_class, next_image_class, direction) {
+        huge_it_sliceV_2(current_image_class, next_image_class, direction);
+      }
+      function huge_it_none_2(current_image_class, next_image_class, direction) {
+        jQuery(current_image_class).css({'opacity' : 0, 'z-index': 1});
+        jQuery(next_image_class).css({'opacity' : 1, 'z-index' : 2});
+
+        /* Set active thumbnail.*/
+        jQuery(".huge_it_slideshow_dots_2").removeClass("huge_it_slideshow_dots_active_2").addClass("huge_it_slideshow_dots_deactive_2");
+        jQuery("#huge_it_dots_" + huge_it_current_key_2 + "_2").removeClass("huge_it_slideshow_dots_deactive_2").addClass("huge_it_slideshow_dots_active_2");
+      }
+      function huge_it_fade_2(current_image_class, next_image_class, direction) {
+		if (huge_it_testBrowser_cssTransitions_2()) {
+			
+          jQuery(next_image_class).css('transition', 'opacity ' + huge_it_transition_duration_2 + 'ms linear');
+		  jQuery(current_image_class).css('transition', 'opacity ' + huge_it_transition_duration_2 + 'ms linear');
+          jQuery(current_image_class).css({'opacity' : 0, 'z-index': 1});
+          jQuery(next_image_class).css({'opacity' : 1, 'z-index' : 2});
+        }
+        else {
+		
+          jQuery(current_image_class).animate({'opacity' : 0, 'z-index' : 1}, huge_it_transition_duration_2);
+          jQuery(next_image_class).animate({
+              'opacity' : 1,
+              'z-index': 2
+            }, {
+              duration: huge_it_transition_duration_2,
+              complete: function () {return false;}
+            });
+          // For IE.
+          jQuery(current_image_class).fadeTo(huge_it_transition_duration_2, 0);
+          jQuery(next_image_class).fadeTo(huge_it_transition_duration_2, 1);
+        }
+
+		jQuery(".huge_it_slideshow_dots_2").removeClass("huge_it_slideshow_dots_active_2").addClass("huge_it_slideshow_dots_deactive_2");
+		jQuery("#huge_it_dots_" + huge_it_current_key_2 + "_2").removeClass("huge_it_slideshow_dots_deactive_2").addClass("huge_it_slideshow_dots_active_2");
+      }
+      function huge_it_grid_2(cols, rows, ro, tx, ty, sc, op, current_image_class, next_image_class, direction) {
+        /* If browser does not support CSS transitions.*/
+        if (!huge_it_testBrowser_cssTransitions_2()) {
+			jQuery(".huge_it_slideshow_dots_2").removeClass("huge_it_slideshow_dots_active_2").addClass("huge_it_slideshow_dots_deactive_2");
+        jQuery("#huge_it_dots_" + huge_it_current_key_2 + "_2").removeClass("huge_it_slideshow_dots_deactive_2").addClass("huge_it_slideshow_dots_active_2");
+          return huge_it_fallback_2(current_image_class, next_image_class, direction);
+		  
+        }
+        huge_it_trans_in_progress_2 = true;
+        /* Set active thumbnail.*/
+		jQuery(".huge_it_slideshow_dots_2").removeClass("huge_it_slideshow_dots_active_2").addClass("huge_it_slideshow_dots_deactive_2");
+        jQuery("#huge_it_dots_" + huge_it_current_key_2 + "_2").removeClass("huge_it_slideshow_dots_deactive_2").addClass("huge_it_slideshow_dots_active_2");
+        /* The time (in ms) added to/subtracted from the delay total for each new gridlet.*/
+        var count = (huge_it_transition_duration_2) / (cols + rows);
+        /* Gridlet creator (divisions of the image grid, positioned with background-images to replicate the look of an entire slide image when assembled)*/
+        function huge_it_gridlet(width, height, top, img_top, left, img_left, src, imgWidth, imgHeight, c, r) {
+          var delay = (c + r) * count;
+          /* Return a gridlet elem with styles for specific transition.*/
+          return jQuery('<div class="huge_it_gridlet_2" />').css({
+            width : width,
+            height : height,
+            top : top,
+            left : left,
+            backgroundImage : 'url("' + src + '")',
+            backgroundColor: jQuery(".huge_it_slideshow_image_wrap_2").css("background-color"),
+            /*backgroundColor: rgba(0, 0, 0, 0),*/
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition : img_left + 'px ' + img_top + 'px',
+            backgroundSize : imgWidth + 'px ' + imgHeight + 'px',
+            transition : 'all ' + huge_it_transition_duration_2 + 'ms ease-in-out ' + delay + 'ms',
+            transform : 'none'
+          });
+        }
+        /* Get the current slide's image.*/
+        var cur_img = jQuery(current_image_class).find('img');
+        /* Create a grid to hold the gridlets.*/
+        var grid = jQuery('<div />').addClass('huge_it_grid_2');
+        /* Prepend the grid to the next slide (i.e. so it's above the slide image).*/
+        jQuery(current_image_class).prepend(grid);
+        /* vars to calculate positioning/size of gridlets*/
+        var cont = jQuery(".huge_it_slide_bg_2");
+        var imgWidth = cur_img.width();
+        var imgHeight = cur_img.height();
+        var contWidth = cont.width(),
+            contHeight = cont.height(),
+            imgSrc = cur_img.attr('src'),/*.replace('/thumb', ''),*/
+            colWidth = Math.floor(contWidth / cols),
+            rowHeight = Math.floor(contHeight / rows),
+            colRemainder = contWidth - (cols * colWidth),
+            colAdd = Math.ceil(colRemainder / cols),
+            rowRemainder = contHeight - (rows * rowHeight),
+            rowAdd = Math.ceil(rowRemainder / rows),
+            leftDist = 0,
+            img_leftDist = (jQuery(".huge_it_slide_bg_2").width() - cur_img.width()) / 2;
+        /* tx/ty args can be passed as 'auto'/'min-auto' (meaning use slide width/height or negative slide width/height).*/
+        tx = tx === 'auto' ? contWidth : tx;
+        tx = tx === 'min-auto' ? - contWidth : tx;
+        ty = ty === 'auto' ? contHeight : ty;
+        ty = ty === 'min-auto' ? - contHeight : ty;
+        /* Loop through cols*/
+        for (var i = 0; i < cols; i++) {
+          var topDist = 0,
+              img_topDst = (jQuery(".huge_it_slide_bg_2").height() - cur_img.height()) / 2,
+              newColWidth = colWidth;
+          /* If imgWidth (px) does not divide cleanly into the specified number of cols, adjust individual col widths to create correct total.*/
+          if (colRemainder > 0) {
+            var add = colRemainder >= colAdd ? colAdd : colRemainder;
+            newColWidth += add;
+            colRemainder -= add;
+          }
+          /* Nested loop to create row gridlets for each col.*/
+          for (var j = 0; j < rows; j++)  {
+            var newRowHeight = rowHeight,
+                newRowRemainder = rowRemainder;
+            /* If contHeight (px) does not divide cleanly into the specified number of rows, adjust individual row heights to create correct total.*/
+            if (newRowRemainder > 0) {
+              add = newRowRemainder >= rowAdd ? rowAdd : rowRemainder;
+              newRowHeight += add;
+              newRowRemainder -= add;
+            }
+            /* Create & append gridlet to grid.*/
+            grid.append(huge_it_gridlet(newColWidth, newRowHeight, topDist, img_topDst, leftDist, img_leftDist, imgSrc, imgWidth, imgHeight, i, j));
+            topDist += newRowHeight;
+            img_topDst -= newRowHeight;
+          }
+          img_leftDist -= newColWidth;
+          leftDist += newColWidth;
+        }
+        /* Set event listener on last gridlet to finish transitioning.*/
+        var last_gridlet = grid.children().last();
+        /* Show grid & hide the image it replaces.*/
+        grid.show();
+        cur_img.css('opacity', 0);
+        /* Add identifying classes to corner gridlets (useful if applying border radius).*/
+        grid.children().first().addClass('rs-top-left');
+        grid.children().last().addClass('rs-bottom-right');
+        grid.children().eq(rows - 1).addClass('rs-bottom-left');
+        grid.children().eq(- rows).addClass('rs-top-right');
+        /* Execution steps.*/
+        setTimeout(function () {
+          grid.children().css({
+            opacity: op,
+            transform: 'rotate('+ ro +'deg) translateX('+ tx +'px) translateY('+ ty +'px) scale('+ sc +')'
+          });
+        }, 1);
+        jQuery(next_image_class).css('opacity', 1);
+        /* After transition.*/
+        jQuery(last_gridlet).one('webkitTransitionEnd transitionend otransitionend oTransitionEnd mstransitionend', jQuery.proxy(huge_it_after_trans));
+        function huge_it_after_trans() {
+          jQuery(current_image_class).css({'opacity' : 0, 'z-index': 1});
+          jQuery(next_image_class).css({'opacity' : 1, 'z-index' : 2});
+          cur_img.css('opacity', 1);
+          grid.remove();
+          huge_it_trans_in_progress_2 = false;
+          if (typeof event_stack_2 !== 'undefined' && event_stack_2.length > 0) {
+            key = event_stack_2[0].split("-");
+            event_stack_2.shift();
+            huge_it_change_image_2(key[0], key[1], data_2, true,false);
+          }
+        }
+      }
+      function huge_it_sliceH_2(current_image_class, next_image_class, direction) {
+        if (direction == 'right') {
+          var translateX = 'min-auto';
+        }
+        else if (direction == 'left') {
+          var translateX = 'auto';
+        }
+        huge_it_grid_2(1, 8, 0, translateX, 0, 1, 0, current_image_class, next_image_class, direction);
+      }
+      function huge_it_sliceV_2(current_image_class, next_image_class, direction) {
+        if (direction == 'right') {
+          var translateY = 'min-auto';
+        }
+        else if (direction == 'left') {
+          var translateY = 'auto';
+        }
+        huge_it_grid_2(10, 1, 0, 0, translateY, 1, 0, current_image_class, next_image_class, direction);
+      }
+      function huge_it_slideV_2(current_image_class, next_image_class, direction) {
+        if (direction == 'right') {
+          var translateY = 'auto';
+        }
+        else if (direction == 'left') {
+          var translateY = 'min-auto';
+        }
+        huge_it_grid_2(1, 1, 0, 0, translateY, 1, 1, current_image_class, next_image_class, direction);
+      }
+      function huge_it_slideH_2(current_image_class, next_image_class, direction) {
+        if (direction == 'right') {
+          var translateX = 'min-auto';
+        }
+        else if (direction == 'left') {
+          var translateX = 'auto';
+        }
+        huge_it_grid_2(1, 1, 0, translateX, 0, 1, 1, current_image_class, next_image_class, direction);
+      }
+      function huge_it_scaleOut_2(current_image_class, next_image_class, direction) {
+        huge_it_grid_2(1, 1, 0, 0, 0, 1.5, 0, current_image_class, next_image_class, direction);
+      }
+      function huge_it_scaleIn_2(current_image_class, next_image_class, direction) {
+        huge_it_grid_2(1, 1, 0, 0, 0, 0.5, 0, current_image_class, next_image_class, direction);
+      }
+      function huge_it_blockScale_2(current_image_class, next_image_class, direction) {
+        huge_it_grid_2(8, 6, 0, 0, 0, .6, 0, current_image_class, next_image_class, direction);
+      }
+      function huge_it_kaleidoscope_2(current_image_class, next_image_class, direction) {
+        huge_it_grid_2(10, 8, 0, 0, 0, 1, 0, current_image_class, next_image_class, direction);
+      }
+      function huge_it_fan_2(current_image_class, next_image_class, direction) {
+        if (direction == 'right') {
+          var rotate = 45;
+          var translateX = 100;
+        }
+        else if (direction == 'left') {
+          var rotate = -45;
+          var translateX = -100;
+        }
+        huge_it_grid_2(1, 10, rotate, translateX, 0, 1, 0, current_image_class, next_image_class, direction);
+      }
+      function huge_it_blindV_2(current_image_class, next_image_class, direction) {
+        huge_it_grid_2(1, 8, 0, 0, 0, .7, 0, current_image_class, next_image_class);
+      }
+      function huge_it_blindH_2(current_image_class, next_image_class, direction) {
+        huge_it_grid_2(10, 1, 0, 0, 0, .7, 0, current_image_class, next_image_class);
+      }
+      function huge_it_random_2(current_image_class, next_image_class, direction) {
+        var anims = ['sliceH', 'sliceV', 'slideH', 'slideV', 'scaleOut', 'scaleIn', 'blockScale', 'kaleidoscope', 'fan', 'blindH', 'blindV'];
+        /* Pick a random transition from the anims array.*/
+        this["huge_it_" + anims[Math.floor(Math.random() * anims.length)] + "_2"](current_image_class, next_image_class, direction);
+      }
+      
+      function iterator_2() {
+        var iterator = 1;
+
+        return iterator;
+     }
+	 
+     function huge_it_change_image_2(current_key, key, data_2, from_effect,clicked) {
+		
+        if (data_2[key]) {
+		
+			if(video_is_playing_2 && !clicked){
+				return false;
+			}
+         
+		 
+		 
+          if (!from_effect) {
+            // Change image key.
+            jQuery("#huge_it_current_image_key_2").val(key);
+             // if (current_key == '-2') { /* Dots.*/
+				current_key = jQuery(".huge_it_slideshow_dots_active_2").attr("data-image_key");
+			//  }
+          }
+
+          if (huge_it_trans_in_progress_2) {
+			//errorlogjQuery(".huge_it_slideshow_image_wrap_2").after(" --IN TRANSACTION-- <br />");
+            event_stack_2.push(current_key + '-' + key);
+            return;
+          }
+		  
+          var direction = 'right';
+          if (huge_it_current_key_2 > key) {
+            var direction = 'left';
+          }
+          else if (huge_it_current_key_2 == key) {
+            return false;
+          }
+         
+          // Set active thumbnail position.
+      
+          huge_it_current_key_2 = key;
+          //Change image id, title, description.
+          jQuery("#huge_it_slideshow_image_2").attr('data-image_id', data_2[key]["id"]);
+		  
+		  
+		  jQuery(".huge_it_slideshow_title_text_2").html(data_2[key]["alt"]);
+          jQuery(".huge_it_slideshow_description_text_2").html(data_2[key]["description"]);
+        
+		  var current_image_class = "#image_id_2_" + data_2[current_key]["id"];
+          var next_image_class = "#image_id_2_" + data_2[key]["id"];
+          
+		  
+		
+		 if(jQuery(current_image_class).find('.huge_it_video_frame_2').length>0) {
+			var streffect='random';
+			if(streffect=="cubeV" || streffect=="cubeH" || streffect=="none" || streffect=="fade"){
+				huge_it_random_2(current_image_class, next_image_class, direction);
+			}else{	
+				huge_it_fade_2(current_image_class, next_image_class, direction);
+			}	
+		  }else{	
+				huge_it_random_2(current_image_class, next_image_class, direction);
+		  }	
+		  
+		  
+		jQuery('.huge_it_slideshow_title_text_2').removeClass('none');
+		if(jQuery('.huge_it_slideshow_title_text_2').html()==""){jQuery('.huge_it_slideshow_title_text_2').addClass('none');}
+
+		jQuery('.huge_it_slideshow_description_text_2').removeClass('none');
+		if(jQuery('.huge_it_slideshow_description_text_2').html()==""){jQuery('.huge_it_slideshow_description_text_2').addClass('none');}
+	  
+		  
+		  
+		  jQuery(current_image_class).find('.huge_it_slideshow_title_text_2').addClass('none');
+		  jQuery(current_image_class).find('.huge_it_slideshow_description_text_2').addClass('none');
+		
+		
+
+		  
+		  //errorlogjQuery(".huge_it_slideshow_image_wrap_2").after("--cur-key="+current_key+" --cur-img-class="+current_image_class+" nxt-img-class="+next_image_class+"--");
+			 huge_it_move_dots_2();
+						window.clearInterval(huge_it_playInterval_2);
+			play_2();
+        }
+
+      }
+	  
+      function huge_it_popup_resize_2() {
+
+		var staticsliderwidth=280;
+		var sliderwidth=280;
+		
+		var bodyWidth=jQuery(window).width();
+        var parentWidth = jQuery(".huge_it_slideshow_image_wrap_2").parent().width();
+		//if responsive js late responsive.js @  take body size and not parent div
+		if(sliderwidth>parentWidth){sliderwidth=parentWidth;}
+		if(sliderwidth>bodyWidth){sliderwidth=bodyWidth;}
+		
+		var str=(157/staticsliderwidth);
+		
+		jQuery(".huge_it_slideshow_image_wrap_2").css({width: (sliderwidth)});
+		jQuery(".huge_it_slideshow_image_wrap_2").css({height: ((sliderwidth) * str)});
+		jQuery(".huge_it_slideshow_image_container_2").css({width: (sliderwidth)});
+		jQuery(".huge_it_slideshow_image_container_2").css({height: ((sliderwidth) * str)});
+			
+		if("middle"=="middle"){var titlemargintopminus=jQuery(".huge_it_slideshow_title_text_2").outerHeight()/2;}		
+		if("right"=="center"){var titlemarginleftminus=jQuery(".huge_it_slideshow_title_text_2").outerWidth()/2;}		
+		jQuery(".huge_it_slideshow_title_text_2").css({cssText: "margin-top:-" + titlemargintopminus + "px; margin-left:-"+titlemarginleftminus+"px;"});
+		
+		if("bottom"=="middle"){var descriptionmargintopminus=jQuery(".huge_it_slideshow_description_text_2").outerHeight()/2;}	
+		if("right"=="center"){var descriptionmarginleftminus=jQuery(".huge_it_slideshow_description_text_2").outerWidth()/2;}
+		jQuery(".huge_it_slideshow_description_text_2").css({cssText: "margin-top:-" + descriptionmargintopminus + "px; margin-left:-"+descriptionmarginleftminus+"px;"});
+		        jQuery("#huge_it_loading_image_2").css({display: "none"});
+                jQuery(".huge_it_slideshow_image_wrap1_2").css({display: "block"});
+				jQuery(".huge_it_slideshow_image_wrap_2").removeClass("nocolor");
+
+		
+		
+		if("resize"=="resize"){
+			jQuery(".huge_it_slideshow_image_2,  .huge_it_slideshow_image_container_2 img").css({
+				cssText: "width:" + sliderwidth + "px; height:" + ((sliderwidth) * str)	+"px;"
+			});
+		}else {
+			jQuery(".huge_it_slideshow_image_2,.huge_it_slideshow_image_item2_2").css({
+			cssText: "max-width: " + sliderwidth + "px !important; max-height: " + (sliderwidth * str) + "px !important;"
+		  });
+		}
+		
+		jQuery('.huge_it_video_frame_2').each(function (e) {
+          jQuery(this).width(sliderwidth);
+          jQuery(this).height(sliderwidth * str);
+        });
+      }
+      
+      jQuery(window).load(function () {
+		jQuery(window).resize(function() {
+			huge_it_popup_resize_2();
+		});
+		
+		jQuery('#huge_it_slideshow_left_2').on('click',function(){
+			huge_it_change_image_2(parseInt(jQuery('#huge_it_current_image_key_2').val()), (parseInt(jQuery('#huge_it_current_image_key_2').val()) - iterator_2()) >= 0 ? (parseInt(jQuery('#huge_it_current_image_key_2').val()) - iterator_2()) % data_2.length : data_2.length - 1, data_2,false,true);
+			return false;
+		});
+		
+		jQuery('#huge_it_slideshow_right_2').on('click',function(){
+			huge_it_change_image_2(parseInt(jQuery('#huge_it_current_image_key_2').val()), (parseInt(jQuery('#huge_it_current_image_key_2').val()) + iterator_2()) % data_2.length, data_2,false,true);
+			return false;
+		});
+		
+		huge_it_popup_resize_2();
+        /* Disable right click.*/
+        jQuery('div[id^="huge_it_container"]').bind("contextmenu", function () {
+          return false;
+        });
+        			
+		/*HOVER SLIDESHOW*/
+		jQuery("#huge_it_slideshow_image_container_2, .huge_it_slideshow_image_container_2, .huge_it_slideshow_dots_container_2,#huge_it_slideshow_right_2,#huge_it_slideshow_left_2").hover(function(){
+			//errorlogjQuery(".huge_it_slideshow_image_wrap_2").after(" -- hover -- <br /> ");
+			jQuery("#huge_it_slideshow_right_2").css({'display':'inline'});
+			jQuery("#huge_it_slideshow_left_2").css({'display':'inline'});
+		},function(){
+			jQuery("#huge_it_slideshow_right_2").css({'display':'none'});
+			jQuery("#huge_it_slideshow_left_2").css({'display':'none'});
+		});
+		var pausehover="on";
+		if(pausehover=="on"){
+			jQuery("#huge_it_slideshow_image_container_2, .huge_it_slideshow_image_container_2, .huge_it_slideshow_dots_container_2,#huge_it_slideshow_right_2,#huge_it_slideshow_left_2").hover(function(){
+				window.clearInterval(huge_it_playInterval_2);
+			},function(){
+				window.clearInterval(huge_it_playInterval_2);
+				play_2();
+			});		
+		}	
+          play_2();        
+      });
+
+      function play_2() {	   
+        /* Play.*/
+		//errorlogjQuery(".huge_it_slideshow_image_wrap_2").after(" -- paly  ---- ");
+        huge_it_playInterval_2 = setInterval(function () {
+			//errorlogjQuery(".huge_it_slideshow_image_wrap_2").after(" -- time left ---- ");
+          var iterator = 1;
+          huge_it_change_image_2(parseInt(jQuery('#huge_it_current_image_key_2').val()), (parseInt(jQuery('#huge_it_current_image_key_2').val()) + iterator) % data_2.length, data_2,false,false);
+        }, '4000');
+      }
+	  
+      jQuery(window).focus(function() {
+       /*event_stack_2 = [];*/
+        var i_2 = 0;
+        jQuery(".huge_it_slider_2").children("div").each(function () {
+          if (jQuery(this).css('opacity') == 1) {
+            jQuery("#huge_it_current_image_key_2").val(i_2);
+          }
+          i_2++;
+        });
+      });
+      jQuery(window).blur(function() {
+        event_stack_2 = [];
+        window.clearInterval(huge_it_playInterval_2);
+      });      
+    </script>
+
+	<div class="huge_it_slideshow_image_wrap_2" style="width: 280px; height: 157px;">
+			<div id="huge_it_loading_image_2" class="display" style="display: none;">
+			<img src="../public/home/img/body/loading5.gif" alt=""> </div>
+		<div class="huge_it_slideshow_image_wrap1_2 nodisplay" style="display: block;">
+	      		<!-- ##########################DOTS######################### -->
+        <div class="huge_it_slideshow_dots_container_2">
+			  <div class="huge_it_slideshow_dots_thumbnails_2">
+												<div id="huge_it_dots_0_2" class="huge_it_slideshow_dots_2 huge_it_slideshow_dots_deactive_2" onclick="if(jQuery(this).hasClass(&#39;huge_it_slideshow_dots_active_2&#39;)) { return false; } huge_it_change_image_2(parseInt(jQuery(&#39;#huge_it_current_image_key_2&#39;).val()), &#39;0&#39;, data_2,false,true);return false;" data-image_id="77" data-image_key="0"></div>
+															<div id="huge_it_dots_1_2" class="huge_it_slideshow_dots_2 huge_it_slideshow_dots_deactive_2" onclick="if(jQuery(this).hasClass(&#39;huge_it_slideshow_dots_active_2&#39;)) { return false; } huge_it_change_image_2(parseInt(jQuery(&#39;#huge_it_current_image_key_2&#39;).val()), &#39;1&#39;, data_2,false,true);return false;" data-image_id="75" data-image_key="1"></div>
+															<div id="huge_it_dots_2_2" class="huge_it_slideshow_dots_2 huge_it_slideshow_dots_active_2" onclick="if(jQuery(this).hasClass(&#39;huge_it_slideshow_dots_active_2&#39;)) { return false; } huge_it_change_image_2(parseInt(jQuery(&#39;#huge_it_current_image_key_2&#39;).val()), &#39;2&#39;, data_2,false,true);return false;" data-image_id="76" data-image_key="2"></div>
+										  </div>
+			
+					</div>
+	  <!-- ##########################IMAGES######################### -->
+
+      <div id="huge_it_slideshow_image_container_2" class="huge_it_slideshow_image_container_2" style="width: 280px; height: 157px;">        
+        <div class="huge_it_slide_container_2">
+          <div class="huge_it_slide_bg_2">
+            <ul class="huge_it_slider_2">
+			  					  <li class="huge_it_slideshow_image_item_2" id="image_id_2_0" style="opacity: 0; z-index: 1;">      
+						<a href="http://bbs.indiegames.cn/article" target="_blank" class="external">						<img id="huge_it_slideshow_image_2_0" class="huge_it_slideshow_image_2" src="../public/home/img/body/.png" alt="" data-image_id="77" style="width: 280px; height: 157px;">
+						</a>		
+						<div class="huge_it_slideshow_title_text_2 none" style="margin-top: -5.5px;"></div>
+						<div class="huge_it_slideshow_description_text_2 none" style=""></div>
+					  </li>
+					  					  <li class="huge_it_slideshow_image_second_item_2" id="image_id_2_1" style="opacity: 0; z-index: 1;">      
+						<a href="http://bbs.indiegames.cn/vr" target="_blank" class="external">						<img id="huge_it_slideshow_image_2_1" class="huge_it_slideshow_image_2" src="../public/home/img/body/2(1).png" alt="" data-image_id="75" style="width: 280px; height: 157px;">
+						</a>		
+						<div class="huge_it_slideshow_title_text_2 none" style="margin-top: -5.5px;"></div>
+						<div class="huge_it_slideshow_description_text_2 none" style=""></div>
+					  </li>
+					  					  <li class="huge_it_slideshow_image_second_item_2" id="image_id_2_2" style="opacity: 1; z-index: 2;">      
+						<a href="http://bbs.indiegames.cn/recruitment" target="_blank" class="external">						<img id="huge_it_slideshow_image_2_2" class="huge_it_slideshow_image_2" src="../public/home/img/body/3.png" alt="" data-image_id="76" style="width: 280px; height: 157px;">
+						</a>		
+						<div class="huge_it_slideshow_title_text_2 none" style="margin-top: -5.5px;"></div>
+						<div class="huge_it_slideshow_description_text_2 none" style=""></div>
+					  </li>
+					              </ul>
+          </div>
+		  <input type="hidden" id="huge_it_current_image_key_2" value="2">
+        </div>
+      </div>
+	</div>
+</div>
+	  </section><section class="widget monews_post"><h3>精彩独立游戏</h3><div class="sidebar-popular__list">
+<article class="sidebar-sponsored__posts cf">
+    <div class="meta"></div>
+	    <div class="image thumb-60 left"><img src="../public/home/img/body/ss_09dc9e84a5b1326227af53b25e1e8a156345af30.600x338(1).jpg" alt="一款有着独特美术的快节奏日式ARPG游戏——《五剑》（GOKEN）"></div>
+    <h1><a href="http://www.indiegames.cn/foreign-games/7996.html" class="external" target="_blank">一款有着独特美术的快节奏日式ARPG游戏——《五剑》（GOKEN）</a></h1>
+	  </article>
+
+<article class="sidebar-sponsored__posts cf">
+    <div class="meta"></div>
+	    <div class="image thumb-60 left"><img src="../public/home/img/body/ss_fb7e9560308126e83af509c1db3e56f57ac4a00c.600x338(1).jpg" alt="【游戏推荐】Road Redemption——暴力摩托精神续作！"></div>
+    <h1><a href="http://www.indiegames.cn/foreign-games/7993.html" class="external" target="_blank">【游戏推荐】Road Redemption——暴力摩托精神续作！</a></h1>
+	  </article>
+
+<article class="sidebar-sponsored__posts cf">
+    <div class="meta"></div>
+	    <div class="image thumb-60 left"><img src="../public/home/img/body/QQ截图20171006200614(1).png" alt="【游戏推荐】地下城争夺战（War for the Overworld）——对入侵地下城感到烦厌了吗？是时候建立你的了！"></div>
+    <h1><a href="http://www.indiegames.cn/foreign-games/7984.html" class="external" target="_blank">【游戏推荐】地下城争夺战（War for the Overworld）——对入侵地下城感到烦厌了吗？是时候建立你的了！</a></h1>
+	  </article>
+
+<article class="sidebar-sponsored__posts cf">
+    <div class="meta"></div>
+	    <div class="image thumb-60 left"><img src="../public/home/img/body/vLlglc-thumb-480x360-25128(1).png" alt="Four Horsemen——四个来自不同地域的青年用多种方式来体验所面临的挑战"></div>
+    <h1><a href="http://www.indiegames.cn/foreign-games/7982.html" class="external" target="_blank">Four Horsemen——四个来自不同地域的青年用多种方式来体验所面临的挑战</a></h1>
+	  </article>
+
+<article class="sidebar-sponsored__posts cf">
+    <div class="meta"></div>
+	    <div class="image thumb-60 left"><img src="../public/home/img/body/ss_60e5b48361f2e1a7520d5f1fc052f6cc8c935cfc.600x338(1).jpg" alt="经典漫改RPG游戏《战斗驱逐者》（Battle Chasers: Nightwar）正式上架Steam！"></div>
+    <h1><a href="http://www.indiegames.cn/foreign-games/7980.html" class="external" target="_blank">经典漫改RPG游戏《战斗驱逐者》（Battle Chasers: Nightwar）正式上架Steam！</a></h1>
+	  </article>
+
+<article class="sidebar-sponsored__posts cf">
+    <div class="meta"></div>
+	    <div class="image thumb-60 left"><img src="../public/home/img/body/QQ截图20171002102454(1).png" alt="国内大学在校生自制手游《刃心》带你闯荡忍者的世界！"></div>
+    <h1><a href="http://www.indiegames.cn/chinese-games/7971.html" class="external" target="_blank">国内大学在校生自制手游《刃心》带你闯荡忍者的世界！</a></h1>
+	  </article>
+
+<article class="sidebar-sponsored__posts cf">
+    <div class="meta"></div>
+	    <div class="image thumb-60 left"><img src="../public/home/img/body/QQ截图20170928162534(1).png" alt="【游戏推荐】生态位 – 遗传学生存游戏（Niche – a genetics survival game）——根据真正的遗传学来塑造你自己的动物种类"></div>
+    <h1><a href="http://www.indiegames.cn/foreign-games/7942.html" class="external" target="_blank">【游戏推荐】生态位 – 遗传学生存游戏（Niche – a genetics survival game）——根据真正的遗传学来塑造你自己的动物种类</a></h1>
+	  </article>
+
+<article class="sidebar-sponsored__posts cf">
+    <div class="meta"></div>
+	    <div class="image thumb-60 left"><img src="../public/home/img/body/QQ截图20170925214351(1).png" alt="【游戏推荐】安息，死亡！（Peace, Death!）——替死神工作，将客户分配到天堂、地狱或炼狱"></div>
+    <h1><a href="http://www.indiegames.cn/foreign-games/7935.html" class="external" target="_blank">【游戏推荐】安息，死亡！（Peace, Death!）——替死神工作，将客户分配到天堂、地狱或炼狱</a></h1>
+	  </article>
+
+<article class="sidebar-sponsored__posts cf">
+    <div class="meta"></div>
+	    <div class="image thumb-60 left"><img src="../public/home/img/body/header(1).jpg" alt="【游戏推荐】City of Brass——成为黄铜之城内的无畏窃贼"></div>
+    <h1><a href="http://www.indiegames.cn/foreign-games/7924.html" class="external" target="_blank">【游戏推荐】City of Brass——成为黄铜之城内的无畏窃贼</a></h1>
+	  </article>
+
+<article class="sidebar-sponsored__posts cf">
+    <div class="meta"></div>
+	    <div class="image thumb-60 left"><img src="../public/home/img/body/QQ截图20170917104302.png" alt="【游戏推荐】The First Tree——一段令人回味又简短的旅程"></div>
+    <h1><a href="http://www.indiegames.cn/foreign-games/7909.html" class="external" target="_blank">【游戏推荐】The First Tree——一段令人回味又简短的旅程</a></h1>
+	  </article>
+</div>
+		  <div class="aside-social__social">
+            <ul>
+                <li class="aside-social__items">
+                    <a href="http://weibo.com/indiegamescn" class="icons-weibo external" target="_blank">Weibo</a>
+                    <span class="aside-social__count">微博</span>
+                </li>
+                <li class="aside-social__items">
+                    <a href="http://jq.qq.com/?_wv=1027&amp;k=art7Pf" class="icons-twitter external" target="_blank">Twitter</a>
+                    <span class="aside-social__count">官方QQ群</span>
+                </li>
+                <li class="aside-social__items">
+                    <a href="http://www.douban.com/group/545608" class="icons-facebook external" target="_blank">Facebook</a>
+                    <span class="aside-social__count">豆瓣小组</span>
+                </li>
+                <li class="aside-social__items"><a target="_blank" href="http://www.indiegames.cn/feed" class="icons-rss">RSS</a><span class="aside-social__count" style="margin-top:42px;">订阅</span>
+                </li>
+            </ul>
+        </div></section><div style="width: 280px; height: 303px; float: none; display: none;"></div></div>
+</div>
+<div class="cf post-ad">
+</div>
+<div class="cf post-ad-m">
+</div>
+<script src="../public/home/js/main.js.下载" type="text/javascript"></script>
+<script src="../public/home/js/topic.js.下载" type="text/javascript"></script>
+<div class="actGotop" style="display: none;"><a href="javascript:;" title="返回顶部"></a></div>
+<div class="moanalysis">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?d4c4290067761d11712abe4cb9d5ce5b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</div>
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
 	</div>
 </body>
 <script type="text/javascript" src="js/home.js"></script>

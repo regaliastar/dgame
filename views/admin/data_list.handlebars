@@ -1,0 +1,94 @@
+{{> admin-outer-1}}
+
+<div id="center-column" style="margin-left:5px">
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+
+            <div class="">
+                <table id="userTable" class="table " style="margin-top:20px">
+                    <caption>用户列表</caption>
+                    <thead>
+                        <tr>
+                            <th>用户名</th>
+                            <th>电话</th>
+                            <th>日期</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="twhiteTable">
+                        <tr class="bt1">
+                            <td id="bt1">kiana </td>
+                            <td id="bt1">13881853166</td>
+                            <td id="bt1">2017-10-10T12:20:1Z</td>
+                            <td><a href="#" style="color:blue;display:inline-block;margin-left:20px">删除</a></td>
+                        </tr>
+                        <tr class="bt2">
+                            <td id="bt2">himiko</td>
+                            <td id="bt2">15208171708</td>
+                            <td id="bt2">2017-10-14T16:12:55Z</td>
+                            <td><a href="#" style="color:blue;display:inline-block;margin-left:20px">删除</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="width:250px">
+                <button href="#myModal" id="insertUser" style="float:left" class="btn btn-success" ><span>新增用户 </span></button>
+            </div>
+        </section>
+    </section>
+    <!--main content end-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title" id="myModalLabel">新增</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label for="txt_departmentname">用户名</label>
+                        <input type="text" name="txt_departmentname" class="form-control" id="txt_username" placeholder="input">
+                    </div>
+                    <div class="form-group">
+                        <label for="txt_parentdepartment">电话</label>
+                        <input type="text" name="txt_parentdepartment" class="form-control" id="txt_tele" placeholder="input">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>
+                    <button type="button" id="insert_user_submit" class="btn btn-primary" data-dismiss="modal"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+function getFormatDate(){
+        let nowDate = new Date();
+        var dd = {};
+        dd.year = nowDate.getFullYear();
+        dd.month = nowDate.getMonth();
+        dd.day = nowDate.getDate();
+        dd.hours = nowDate.getHours();
+        dd.minutes = nowDate.getMinutes();
+        dd.seconds = nowDate.getSeconds();
+
+        return dd.year+'-'+dd.month+'-'+dd.day+'T'+dd.hours+':'+dd.minutes+':'+dd.seconds+'Z';
+      }
+$('#insertUser').on('click',function(){
+    $('#myModal').modal();
+});
+$('#insert_user_submit').on('click',function(){
+    let txt_username = $('#txt_username').val().trim();
+    let txt_tele = $('#txt_tele').val().trim();
+    let txt_date = getFormatDate();
+    let str = '<tr class='+"bt2"+'><td id='+"bt2"+'>'+txt_username+'</td><td id='+"bt2"+'>'+txt_tele+'</td><td id='+"bt2"+'>'+txt_date+'</td></tr>';
+    $('#userTable').append(str);
+})
+</script>
+
+{{> admin-outer-2}}

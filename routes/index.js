@@ -4,7 +4,7 @@ module.exports = function (app) {
   });
   //主页
   app.use('/home',require('./home'));
-  
+
   //注册
   app.use('/signup', require('./signup'));
   //登录
@@ -23,7 +23,8 @@ module.exports = function (app) {
   app.use('/news',require('./news'));
   //聊天室请求
   app.use('/chatroom',require('./chatroom'));
-
+  //管理员
+  app.use('/admin',require('./admin'));
   // 404 page
   app.use(function (req, res) {
     if (!res.headersSent) {

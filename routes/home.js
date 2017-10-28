@@ -11,15 +11,15 @@ router.get('/',function(req,res,next){
 	}else{
 		res.render('home');
 	}
-	
-})
+
+});
 
 /*
  *测试专用
  */
 router.get('/test',function(req,res,next){
 	res.render('test');
-})
+});
 
 /*
  *该路由用来测试还未完成的功能
@@ -64,7 +64,7 @@ if(req.body.imgData){
 	console.log('req.body.imgData进入了');
 	 var avatar = req.body.imgData.replace(/^data:image\/\w+;base64,/,'');
 	 var newName = './public/img/face/' + Date.now()+'_'+ '.jpg';
-	
+
      var newBuff = new Buffer(avatar, 'base64');
         fs.writeFile(newName, newBuff, 'binary', function (err) {
             if (err){
