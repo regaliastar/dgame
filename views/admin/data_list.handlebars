@@ -17,7 +17,7 @@
                         </tr>
                     </thead>
                     <tbody id="twhiteTable">
-                        <tr class="bt1">
+                        <!-- <tr class="bt1">
                             <td id="bt1">kiana </td>
                             <td id="bt1">13881853166</td>
                             <td id="bt1">2017-10-10T12:20:1Z</td>
@@ -28,12 +28,20 @@
                             <td id="bt2">15208171708</td>
                             <td id="bt2">2017-10-14T16:12:55Z</td>
                             <td><a href="#" style="color:blue;display:inline-block;margin-left:20px">详细 | 删除</a></td>
+                        </tr> -->
+                        {{#each users}}
+                        <tr class="bt1">
+                            <td id="bt1">{{username}} </td>
+                            <td id="bt1">{{tel}}</td>
+                            <td id="bt1">{{date}}</td>
+                            <td><a href="detailUser?tel={{tel}}" style="color:blue;display:inline-block;margin-left:20px">详细</a><a href="deleteUser?tel={{tel}}" style="color:blue;display:inline-block;margin-left:20px">删除</a></td>
                         </tr>
+                        {{/each}}
                     </tbody>
                 </table>
             </div>
 
-            <div style="width:250px">
+            <div style="width:250px;margin-bottom:200px">
                 <button href="#myModal" id="insertUser" style="float:left" class="btn btn-success" ><span>新增用户 </span></button>
             </div>
         </section>
@@ -50,11 +58,11 @@
 
                     <div class="form-group">
                         <label for="txt_departmentname">用户名</label>
-                        <input type="text" name="txt_departmentname" class="form-control" id="txt_username" placeholder="input">
+                        <input type="text" name="txt_username" class="form-control" id="txt_username" placeholder="input">
                     </div>
                     <div class="form-group">
                         <label for="txt_parentdepartment">电话</label>
-                        <input type="text" name="txt_parentdepartment" class="form-control" id="txt_tele" placeholder="input">
+                        <input type="text" name="txt_tele" class="form-control" id="txt_tele" placeholder="input">
                     </div>
 
                 </div>
@@ -82,22 +90,39 @@ function getFormatDate(){
 $('#insertUser').on('click',function(){
     $('#myModal').modal();
 });
+
+function isTel(Tel){
+	var re= /^1\d{10}$/;
+
+	if(re.test(Tel)){
+		return true;
+	}else{
+		return false;
+	}
+}
+
 $('#insert_user_submit').on('click',function(){
     let txt_username = $('#txt_username').val().trim();
     let txt_tele = $('#txt_tele').val().trim();
+
+    if(!isTel(txt_tele)){
+        alert('手机号格式错误');
+        return;
+    }
+
     let txt_date = getFormatDate();
-    let str = '<tr class='+"bt2"+'><td id='+"bt2"+'>'+txt_username+'</td><td id='+"bt2"+'>'+txt_tele+'</td><td id='+"bt2"+'>'+txt_date+'</td></tr>';
-    $('#userTable').append(str);
+    //let str = '<tr class='+"bt2"+'><td id='+"bt2"+'>'+txt_username+'</td><td id='+"bt2"+'>'+txt_tele+'</td><td id='+"bt2"+'>'+txt_date+'</td></tr>';
+    //$('#userTable').append(str);
 
     $.ajax({
         type:'post',
         url:'/admin/insertUser',
         data:{
             tel:txt_tele,
-            password:txt_username
+            username:txt_username
         },
         success:function(data){
-
+            alert('插入成功，请刷新页面');
         },
         error:function(err){
             console.log("error...");

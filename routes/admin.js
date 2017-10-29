@@ -17,7 +17,69 @@ router.post('/signin',function(req,res,next){
 });
 
 router.get('/data_list',function(req,res,next){
-    res.render('admin/data_list');
+    User.find({},function(err,users){
+        if(!err){
+            //console.log(JSON.stringify(users));
+            //console.log(Object.prototype.toString.call(users));
+            res.render('admin/data_list',{'users':users});
+            return;
+        }else {
+            console.log("something wrong in router.get /data_list!");
+        }
+        //res.render('admin/data_list');
+    });
+
+});
+
+router.get('/detailUser',function(req,res,next){
+    console.log(req.query.tel);
+    User.find({tel:req.query.tel},function(err,users){
+        if(!err){
+            //console.log(JSON.stringify(users));
+            //console.log(Object.prototype.toString.call(users));
+            res.send(users);
+            return;
+        }else {
+            console.log("something wrong in router.get /data_list!");
+        }
+
+        res.send('null');
+    });
+
+});
+
+router.get('/deleteUser',function(req,res,next){
+    User.find({tel:req.query.tel},function(err,users){
+        if(!err){
+            users.map(function(user){
+                console.log("用户 "+user.tel+"删除成功");
+                user.remove();
+            });
+        }else{
+            console.log("something wrong in removeUserBytel!");
+            return handleError(err);
+        }
+
+        res.redirect('data_list');
+    });
+});
+
+router.post('/insertUser',function(req,res,next){
+    User.create({
+		username:req.body.username,
+		tel:req.body.tel,
+		date:Date.now()
+	},function(err){
+        if(err){
+            console.log(err);
+            res.send('null');
+        }else {
+            console.log('插入成功');
+            res.redirect('data_list');
+        }
+
+    });
+
 });
 
 router.get('/submit_list',function(req,res,next){

@@ -18,7 +18,7 @@ var removeUserBytel = function(tel){
 			users.map(function(user){
 				console.log("用户 "+user.tel+"删除成功");
 				user.remove();
-			})
+			});
 
 		}else{
 			console.log("something wrong in removeUserBytel!");
@@ -59,14 +59,14 @@ var updateUser = function(id,req){
 			User.findOne({_id:id},function(err,user){
 				//console.log('updateUser id:'+id);
 				//console.log('updateUser user:'+user);
-				
+
 				req.session.user = user;
 				req.session.sign = true;
 				req.session.save();
 				//console.log("session.user:"+req.session.user);
 				//console.log("用户"+user.tel+"信息更新成功");
-					
-				
+
+
 			});
 		}
 		//console.log('The number of updated documents was %d', numberAffected);
