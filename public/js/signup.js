@@ -2,24 +2,24 @@ $(document).ready(function(){
 
 	var tele;
 	//设置验证码倒计时
-	var countdown=60; 
-	function settime(obj) { 
-		
-		if (countdown === 0) { 
-			obj.removeAttribute("disabled");    
-			//obj.value="免费获取验证码"; 
+	var countdown=60;
+	function settime(obj) {
+
+		if (countdown === 0) {
+			obj.removeAttribute("disabled");
+			//obj.value="免费获取验证码";
 			obj.innerHTML = "免费获取验证码";
-			countdown = 60; 
+			countdown = 60;
 			return;
-		} else { 
-			obj.setAttribute("disabled", 'true'); 
-			//obj.value="重新发送(" + countdown + ")"; 
+		} else {
+			obj.setAttribute("disabled", 'true');
+			//obj.value="重新发送(" + countdown + ")";
 			obj.innerHTML = "重新发送(" + countdown + ")";
 			countdown--;
-		} 
-		setTimeout(function() { 
+		}
+		setTimeout(function() {
 			settime(obj) }
-			,1000) 
+			,1000)
 	}
 
 	function showWrongMsg(msg){
@@ -42,7 +42,7 @@ $(document).ready(function(){
 			return true;
 		}else{
 			return false;
-		}          
+		}
 	}
 
 	function isPassword(password){
@@ -100,10 +100,10 @@ $(document).ready(function(){
 			showWrongMsg('密码由6-16位之间的数字或字母组成');
 			return;
 		}
-		
+
 
 	    //验证码检测
-	    var code = $('.identify').val().trim(); 
+	    var code = $('.identify').val().trim();
 	    if(code === ''){
 	    	evt.preventDefault();
 	    	//$('#iden-wrong').slideDown();
@@ -137,7 +137,7 @@ $(document).ready(function(){
 	    				//$('#waiting').slideDown();
 	    				showWrongMsg('发送成功，请等待');
 	    				console.log(data+"---验证码已成功发送到服务器~");
-	    				location.href = 'http://localhost:2017/home';
+	    				location.href = DEFAULT.route+'/home';
 	    				break;
 	    			case 'username':
 	    				//$('#un-wrong').slideDown();
@@ -170,7 +170,7 @@ $(document).ready(function(){
 	    	}
 
 	    })
-		
+
 
 	})
 
