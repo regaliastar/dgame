@@ -8,12 +8,13 @@ router.get('/',function(req,res,next){
 
 
 router.post('/',function(req,res,next){
+	console.log('submit username: '+req.session.username);
 	if(!req.session.sign){	//若未登陆
 		res.end('404');
 	}else {
 		Article.create({
-			username:req.session.username,
-			tel:req.session.tel,
+			username:req.session.user.username,
+			tel:req.session.user.tel,
 			uid:req.session._id,
 			title:req.body.title,
 			categories:req.body.categories,

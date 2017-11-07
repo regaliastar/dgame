@@ -15,7 +15,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <!-- <tr>
                             <td style="float:left;display:inline-block">pp  </td>
                             <td>10000</td>
                             <td id="bt1">2017-10-10T12:20:1Z</td>
@@ -32,7 +32,15 @@
                             <td>10002</td>
                             <td id="bt2">2017-10-14T16:12:55Z</td>
                             <td><a href="#" style="color:blue;display:inline-block;margin-left:20px">详细 | 删除</a></td>
+                        </tr> -->
+                        {{#each articles}}
+                        <tr>
+                            <td style="float:left;display:inline-block">{{username}}</td>
+                            <td>{{_id}}</td>
+                            <td>{{date}}</td>
+                            <td><a href="detailArticle?_id={{_id}}" style="color:blue;display:inline-block;margin-left:20px">详细</a><a href="deleteArticle?_id={{_id}}" style="color:blue;display:inline-block;margin-left:20px">删除</a></td>
                         </tr>
+                        {{/each}}
                     </tbody>
                 </table>
         </section>

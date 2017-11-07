@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var User = require('./../lib/mongo').User;
+var Article = require('./../lib/mongo').Article;
 var Functions = require('./../models/functions');
 
 router.get('/',function(req,res,next){
@@ -83,7 +84,43 @@ router.post('/insertUser',function(req,res,next){
 });
 
 router.get('/submit_list',function(req,res,next){
-    res.render('admin/submit_list');
+    Article.find({},function(err,articles){
+        if(err){
+            console.log('error happened in /submit_list');
+        }else {
+            res.render('admin/submit_list',{'articles':articles});
+        }
+    });
+
+});
+
+router.get('/detailArticle',function(req,res,next){
+    console.log(req.query.tel);
+    Article.find({_id:req.query._id},function(err,article){
+        if(!err){
+            res.send(article);
+            return;
+        }else {
+            console.log("something wrong in router.get /detailArticle!");
+        }
+
+        res.send('null');
+    });
+});
+
+router.get('/deleteArticle',function(req,res,next){
+    Article.find({_id:req.query._id},function(err,articles){
+        if(!err){
+            articles.map(function(article){
+                article.remove();
+                console.log('Article '+req.query._id+' 删除成功');
+            });
+        }else {
+            console.log("something wrong in router.get /detailArticle!");
+        }
+
+        res.redirect('submit_list');
+    });
 });
 
 router.get('/admin_password',function(req,res,next){

@@ -78,7 +78,7 @@ router.post('/',function(req,res,next){
 			 	res.end('success');
 					//console.log("用户"+req.body.tel+"登录成功");
 			});
-			},1000)
+		},1000);
 
 		}],function(err,data){
 			if(err){
