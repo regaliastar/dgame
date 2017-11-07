@@ -21,8 +21,8 @@ module.exports = function (app) {
   app.use('/search',require('./search'));
   //新闻公告等官方资讯
   app.use('/news',require('./news'));
-  //聊天室请求
-  app.use('/chatroom',require('./chatroom'));
+  //私信
+  app.use('/msg',require('./msg'));
   //管理员
   app.use('/admin',require('./admin'));
   // 404 page
