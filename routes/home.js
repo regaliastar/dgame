@@ -3,11 +3,25 @@ var router = express.Router();
 var multiparty = require('multiparty');
 var util = require('util');
 var fs = require('fs');
+var Msg = require('./../lib/mongo').Msg;
 
 router.get('/',function(req,res,next){
 	if(req.session.sign){
 		var user = req.session.user;
-		res.render('home',{sign:true,user:user});
+		var target_id = null;
+		Msg.find({target_id:req.session.user._id},function(err,msgs){
+			var x;
+			var filter_msgs = msgs.filter(function(msg){
+				return msg.is_new;
+			});
+
+			if(filter_msgs.length > 0){
+				res.render('home',{sign:true,user:user,target_id:filter_msgs[0].u_id});
+			}else {
+				res.render('home',{sign:true,user:user,target_id:null});
+			}
+		});
+
 	}else{
 		res.render('home');
 	}

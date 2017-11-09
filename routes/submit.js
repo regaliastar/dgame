@@ -15,7 +15,7 @@ router.post('/',function(req,res,next){
 		Article.create({
 			username:req.session.user.username,
 			tel:req.session.user.tel,
-			uid:req.session._id,
+			uid:req.session.user._id,
 			title:req.body.title,
 			categories:req.body.categories,
 			content:req.body.content,

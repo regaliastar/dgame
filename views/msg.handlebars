@@ -1,8 +1,19 @@
 {{>header}}
 
 <link rel="stylesheet" href="/css/msg.css" />
-
+<style media="screen">
+    .space-left .space-right{
+        min-height: 1500px !important
+    }
+    .container{
+        min-height: 1500px !important
+    }
+</style>
 <div data-v-a92e485c="" class="container">
+
+    <div class="save_target" avatar="{{target.avatar}}" id="{{target._id}}"></div>
+    <div class="save_me" avatar="{{user.avatar}}"></div>
+
     <div data-v-a92e485c="" class="space-left">
         <div data-v-4efeaf35="" data-v-a92e485c="" class="side-bar">
             <div data-v-4efeaf35="" class="title">
@@ -26,33 +37,28 @@
             </div>
         </div>
         <div data-v-a92e485c="" class="space-right-bottom ps ps--theme_default" data-ps-id="c34da49c-86d1-142a-29f2-23c9e78494df">
-            <div data-v-a92e485c="" class="router-view">
-                <div data-v-6eb953f2="" data-v-40646282="" data-v-a92e485c="" class="card whisper">
+            <div data-v-a92e485c="" class="router-view" >
+                <div data-v-6eb953f2="" data-v-40646282="" data-v-a92e485c="" class=" whisper">
                     <div data-v-40646282="" data-v-6eb953f2="" class="list">
                         <div data-v-40646282="" data-v-6eb953f2="" class="list-title">
-                            历史私信
+                            近期消息
                         </div>
                         <div data-v-40646282="" data-v-6eb953f2="" class="list-content ps ps--theme_default" data-ps-id="11994c1a-1281-ebdd-1840-7602abfaad19">
                             <div data-v-40646282="" class="list-content-child" data-v-6eb953f2="">
                                 <a data-v-37410629="" data-v-40646282="" href="#/archive/ridd07cc0bbc6215b0238bbc8dc48c89030" class="list-item" title="xm787269">
+
+                                    {{#if target.avatar}}
+                                    <div data-v-37410629="" class="avatar" style="background-image: url(&quot;/img/face/{{target.avatar}}&quot;);"></div>
+                                    {{else}}
                                     <div data-v-37410629="" class="avatar" style="background-image: url(&quot;/img/face/default.jpg&quot;);"></div>
+                                    {{/if}}
+
                                     <div data-v-37410629="" class="name-box">
                                         <div data-v-37410629="" class="name">
-                                            xm787269
+                                            {{target.username}}
                                         </div>
                                         <div data-v-37410629="" class="last-word">
-                                            Nullchou，1111111111111111
-                                        </div>
-                                    </div>
-                                </a>
-                                <a data-v-37410629="" data-v-40646282="" href="#/archive/rid7e0ae99e8b75d7a023d20dd0a27016eb" class="list-item" title="丿二师兄i">
-                                    <div data-v-37410629="" class="avatar" style="background-image: url(&quot;/img/face/default.jpg&quot;);"></div>
-                                    <div data-v-37410629="" class="name-box">
-                                        <div data-v-37410629="" class="name">
-                                            丿二师兄i
-                                        </div>
-                                        <div data-v-37410629="" class="last-word">
-                                            Nullchou，156156321361236
+                                            {{target.description}}
                                         </div>
                                     </div>
                                 </a>
@@ -69,45 +75,41 @@
                     <div data-v-40646282="" data-v-6eb953f2="" class="dialog">
                         <div data-v-366d4c91="" data-v-40646282="" class="dialog" data-v-6eb953f2="">
                             <div data-v-366d4c91="" class="title">
-                                <span data-v-366d4c91="">格子君ik</span>
+                                <span data-v-366d4c91="">{{target.username}}</span>
                             </div>
-                            <div data-v-4b06b973="" data-v-366d4c91="" class="message-list ps ps--theme_default" data-ps-id="fbd7335d-0f94-cf2c-b080-78cc3e8999cb">
+                            <div data-v-4b06b973="" data-v-366d4c91="" class=" " data-ps-id="fbd7335d-0f94-cf2c-b080-78cc3e8999cb">
                                 <div data-v-4b06b973="" class="message-list-content">
 
-                                    <div data-v-00aa3dd0="" data-v-4b06b973="" class="msg-more">
+                                    <div data-v-00aa3dd0="" data-v-4b06b973="" style="margin-bottom:20px" class="msg-more">
                                         <span data-v-00aa3dd0="" class="load-more" style=""><span data-v-00aa3dd0="" class="icon"></span>查看以往消息</span>
                                         <span data-v-00aa3dd0="" class="no-more" style="display: none;">没有更多消息了～</span>
                                         <span data-v-00aa3dd0="" class="loading" style="display: none;"><span data-v-00aa3dd0="" class="icon"></span>加载中...</span>
                                     </div>
 
-                                    <div data-v-52e711d6="" data-v-4b06b973="" class="msg-item not-me">
-                                        <a data-v-52e711d6="" href="//space.bilibili.com/10631436" title="格子君ik" target="_blank" class="avatar" style="background-image: url(&quot;/img/face/default.jpg&quot;);"></a>
-                                        <div data-v-52e711d6="" class="message">
-                                            &nbsp;(｀・ω・&acute;)打扰了
-                                        </div>
-                                    </div>
-
-                                    <div data-v-de3506e0="" data-v-4b06b973="" class="msg-time">
-                                        <span data-v-3cf12ee3="" data-v-de3506e0="" class="time">2017年9月15日 上午01:41</span>
-                                    </div>
-
-                                    <div data-v-52e711d6="" data-v-4b06b973="" class="msg-item not-me">
-                                        <a data-v-52e711d6="" href="//space.bilibili.com/10631436" title="格子君ik" target="_blank" class="avatar" style="background-image: url(&quot;/img/face/default.jpg&quot;);"></a>
-                                        <div data-v-52e711d6="" class="message">
-                                            (｀・ω・&acute;)补发
-                                        </div>
-                                    </div>
-
-                                    <div class="msg-item is-me" data-v-52e711d6="" data-v-4b06b973="">
-                                        <a data-v-52e711d6="" href="//space.bilibili.com/1937867" title="Nullchou" target="_blank" class="avatar" style="background-image: url(&quot;/img/face/default.jpg&quot;);"></a>
-                                        <div data-v-52e711d6="" class="message">
-                                            (￣3￣)
-                                        </div>
-                                    </div>
-
                                 </div>
-
                             </div>
+
+                            <div class="new-message-tip" data-v-6d1a0351="">
+                                <div data-v-6d1a0351=""><div data-v-6d1a0351="" class="text" style="display: none;">您有 0 条新消息</div></div>
+                            </div>
+
+                            <div class="send-box" data-v-126e1ccf="" data-v-6d1a0351="">
+                             <div data-v-126e1ccf="" class="row">
+
+                             </div>
+                             <div data-v-124f56e1="" data-v-126e1ccf="" class="input-box">
+                              <textarea data-v-124f56e1="" placeholder="回复一下吧~" maxlength="500" class="textarea" style="height: 60px;"></textarea>
+                              <div data-v-124f56e1="" class="indicator" style="bottom: -30px; right: 100px;">
+                               <span data-v-124f56e1="" class="">0</span>/
+                               <span data-v-124f56e1="">500</span>
+                              </div>
+                             </div>
+                             <div data-v-126e1ccf="" class="row right">
+                              <button data-v-149997b3="" data-v-126e1ccf="" class="btn-box send-btn">发送</button>
+                             </div>
+                            </div>
+
+
                         </div>
                     </div>
                 </div>
@@ -117,5 +119,135 @@
     </div>
 </div>
 
+<script type="text/javascript">
+    function appendMyMsg(content){
+        let avatar = $('.save_me').attr('avatar').trim() || 'default.jpg';
+        avatar = '/img/face/'+avatar;
+        let str = '<div class="msg-item is-me" data-v-52e711d6="" data-v-4b06b973="">'+
+            '<a data-v-52e711d6="" target="_blank" class="avatar" style="background-image: url(&quot;'+
+            avatar+
+            '&quot;);"></a>'+
+            '<div data-v-52e711d6="" class="message">'+
+                content+
+            '</div>'+
+            '</div>';
+        $('.message-list-content').append(str);
+    }
+
+    function appendTargetMsg(content){
+        let avatar = $('.save_target').attr('avatar').trim() || 'default.jpg';
+        avatar = '/img/face/'+avatar;
+        let str = '<div data-v-52e711d6="" data-v-4b06b973="" class="msg-item not-me">'+
+            '<a data-v-52e711d6="" target="_blank" class="avatar" style="background-image: url(&quot;'+
+            avatar+
+            '&quot;);"></a>'+
+            '<div data-v-52e711d6="" class="message">'+
+                content+
+            '</div>'+
+            '</div>';
+
+        $('.message-list-content').append(str);
+    }
+
+    function prependTargetMsg(content){
+        let avatar = $('.save_target').attr('avatar').trim() || 'default.jpg';
+        avatar = '/img/face/'+avatar;
+        let str = '<div data-v-52e711d6="" data-v-4b06b973="" class="msg-item not-me">'+
+            '<a data-v-52e711d6="" target="_blank" class="avatar" style="background-image: url(&quot;'+
+            avatar+
+            '&quot;);"></a>'+
+            '<div data-v-52e711d6="" class="message">'+
+                content+
+            '</div>'+
+            '</div>';
+
+        $('.message-list-content').prepend(str);
+    }
+
+    function prependTimeLine(time){
+        var str = '<div data-v-de3506e0="" data-v-4b06b973="" class="msg-time">'+
+                    '<span data-v-3cf12ee3="" data-v-de3506e0="" class="time">'+time
+                    +'</span>'+
+                    '</div>';
+        $('.message-list-content').prepend(str);
+    }
+
+    function appendHistoryMsg(count,second,start){
+        $.ajax({
+            type:'get',
+            url:'/msg/getHistoryMsg?count='+count+'&time='+second+'&start='+start,
+            success:function(data){
+                if(Object.prototype.toString.call(data) === '[object Array]'){
+                    prependTimeLine((data[data.length-1].date));
+                    var j;
+                    for( j in data){
+                        prependTargetMsg(data[j].content);
+                    }
+
+                }
+
+            },
+            error:function(){}
+        })
+    }
+
+    var start = 1;
+    $('.load-more').on('click',function(){
+        appendHistoryMsg(5,600,start);
+        start += 5;
+    })
+
+    function getMsg(){
+        $.ajax({
+            type:'get',
+            url:'/msg/getMsg',
+            success:function(data){
+                if(Object.prototype.toString.call(data) === '[object Array]'){
+                    let i;
+                    for(i in data){
+                        appendTargetMsg(data[i].content);
+                    }
+                }
+
+            }
+        })
+    }
+
+    //for test
+    function test(){
+        for(let i = 0;i<20;i++){
+            appendTargetMsg(i);
+        }
+    }
+
+    //每隔 500ms 访问服务器得到新消息，模拟实时消息
+    setInterval(getMsg,500);
+
+    $('.emoji-btn-box').on('click',function(){
+        $(".emoji-box").is(":hidden") ? $(".emoji-box").slideDown() : document.getElementById('.emoji-box').style.display='none';
+    });
+
+    $('.send-btn').on('click',function(){
+        let content = $('.textarea').val();
+        let target_id = $('.save_target').attr('id');
+        let target_avatar = $('.save_target').attr('avatar').trim() || 'default.jpg';
+        $('.textarea').val('');
+        $.ajax({
+            type:'post',
+            url:'/msg/whisper',
+            data:{
+                content:content,
+                target_id:target_id,
+                target_avatar:target_avatar
+            },
+            success:function(data){
+                appendMyMsg(content);
+            },
+            error:function(){
+                console.log("error...");
+            }
+         })
+    })
+</script>
 
 {{footer}}

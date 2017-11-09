@@ -33,7 +33,23 @@
 	color: #fff;
 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAAwBAMAAACyDnR9AAAAMFBMVEXUUnzWUn3WUn3VUnzVUnzVUn3UUnzUUnzaU4DfVYTuW4zxXI3VUn3qWYjmWIfkV4UXsS1iAAAACHRSTlMB99aQK5W8mPW6JqwAAACVSURBVDjLxcuhDUJBEEXRa2gAhcVRABKHRVAIghZAISgAFH4mNDArIQRBBSSUAC3wfwG7z2x+9uxmzM0jKe2qR0qe/06K5B6RvYG5hXn/LHMxYch6VXibeHyUqvpV0NufUlX/SlU9K1wUvW1WDwonRW+b1afCREx3zI5lexavshsrUe+MRF3DphgfIMZbgOU028Zz6AD+Td5T0E5DWAAAAABJRU5ErkJggg==);
 }
+.num {
+    height: 12px;
+    line-height: 12px;
+    color: #fff;
+    background-color: #f25d8e;
+    border-radius: 10px;
+    position: absolute;
+    padding: 1px 2px;
+    font-size: 12px;
+    top: 1px;
+    right: -4px;
+    min-width: 16px;
+    z-index: 30;
+    text-align: center;
+}
 </style>
+
 <body>
 	<div class="z_top_container">
 		<div class="z_top b-header-blur b-header-blur-black">
@@ -68,8 +84,8 @@
 
 						<li id="i_menu_community_msg_btn" class="u-i" guest="no" i_menu="community_msg" style="display: list-item;">
 
-							<a id="i-msg" class="i-link" href="/msg" target="_blank">消息</a>
-							<div id="message_num_total" class="num" style="display: none;">0</div>
+							<a id="i-msg" class="i-link" href="/msg/whisper?target_id={{target_id}}" target="_blank">消息</a>
+							<div id="message_num_total" class="num">0</div>
 
 							<div id="community_msg" class="dyn_wnd" style="top: 42px; left: -29px; display: none;">
 								<div class="dyn_arrow"></div>

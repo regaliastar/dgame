@@ -19,8 +19,10 @@ router.post('/',function(req,res,next){
 
 	User.findOne({tel:req.body.tel},function(err,user){
 		if(Functions.isEmptyObject(user)){
+			console.log('登录用户不存在');
 			res.send('pw-wrong');
 		}else if(user.password != req.body.password){
+			console.log('登录用户密码不正确');
 			res.send('pw-wrong');
 		}else{
 			req.session.user = user;
