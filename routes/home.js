@@ -16,7 +16,7 @@ router.get('/',function(req,res,next){
 			});
 
 			if(filter_msgs.length > 0){
-				res.render('home',{sign:true,user:user,target_id:filter_msgs[0].u_id});
+				res.render('home',{sign:true,user:user,target_id:filter_msgs[0].u_id,msg_count:filter_msgs.length});
 			}else {
 				res.render('home',{sign:true,user:user,target_id:null});
 			}

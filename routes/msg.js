@@ -14,6 +14,7 @@ router.get('/',function(req,res,next){
 	}
 });
 
+// route: /whisper?target_id=xxx
 router.get('/whisper',function(req,res,next){
 	if(req.session.sign){
 		var user = req.session.user;
