@@ -20,26 +20,45 @@ router.get('/whisper',function(req,res,next){
 		var user = req.session.user;
 		//console.log(req.query._id);
 
-		User.findOne({_id:req.query.target_id},function(err,target){
-			if(err){
+		User.findOne({_id:req.query.target_id},function(p_err,p_target){
 
 				//找不到数据
-				Msg.findOne({target_id:req.session.user._id},function(err,msg){
-					if(err){
-
+				Msg.find({target_id:req.session.user._id},function(err,msgs){
+					if(err){	//新注册账号，无任何消息记录
 						res.render('msg',{sign:true,user:user});
 						return;
 					}
+					var x;
+					var r_users = [];
+					for(x in msgs){
+						if( r_users.indexOf(msgs[x].u_id) >= 0){
+							//
+						}else {
+							r_users.push(msgs[x].u_id);
+						}
+					}
+					var count_users = r_users.length;
+					var history_target = [];
 
-					User.findOne({_id:msg.u_id},function(err,target){
-						res.render('msg',{sign:true,user:user,target:target});
+					r_users.map(function(item){
+						User.findOne({_id:item},function(err,target){
+							history_target.push(target);
+							count_users--;
+							if(!count_users){
+								//console.log(JSON.stringify(history_target));
+								if(!p_err){
+									//若目标明确存在
+									console.log('To u_id: '+p_target._id);
+									res.render('msg',{sign:true,user:user,target:p_target,history_target:history_target});
+								}else {
+									res.render('msg',{sign:true,user:user,target:history_target[0],history_target:history_target});
+								}
+
+							}
+						});
 					});
 
 				});
-
-			}else {
-				res.render('msg',{sign:true,user:user,target:target});
-			}
 
 		});
 

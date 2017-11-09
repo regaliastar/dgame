@@ -45,30 +45,25 @@
                         </div>
                         <div data-v-40646282="" data-v-6eb953f2="" class="list-content ps ps--theme_default" data-ps-id="11994c1a-1281-ebdd-1840-7602abfaad19">
                             <div data-v-40646282="" class="list-content-child" data-v-6eb953f2="">
-                                <a data-v-37410629="" data-v-40646282="" href="#/archive/ridd07cc0bbc6215b0238bbc8dc48c89030" class="list-item" title="xm787269">
 
-                                    {{#if target.avatar}}
-                                    <div data-v-37410629="" class="avatar" style="background-image: url(&quot;/img/face/{{target.avatar}}&quot;);"></div>
+                                {{#each history_target}}
+                                <a data-v-37410629="" data-v-40646282="" href="/msg/whisper?target_id={{_id}}" class="list-item" title="xm787269">
+                                    {{#if avatar}}
+                                    <div data-v-37410629="" class="avatar" style="background-image: url(&quot;/img/face/{{avatar}}&quot;);"></div>
                                     {{else}}
                                     <div data-v-37410629="" class="avatar" style="background-image: url(&quot;/img/face/default.jpg&quot;);"></div>
                                     {{/if}}
-
                                     <div data-v-37410629="" class="name-box">
                                         <div data-v-37410629="" class="name">
-                                            {{target.username}}
+                                            {{username}}
                                         </div>
                                         <div data-v-37410629="" class="last-word">
-                                            {{target.description}}
+                                            {{description}}
                                         </div>
                                     </div>
                                 </a>
+                                {{/each}}
 
-                            </div>
-                            <div class="ps__scrollbar-x-rail" style="left: 0px; bottom: 0px;">
-                                <div class="ps__scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div>
-                            </div>
-                            <div class="ps__scrollbar-y-rail" style="top: 0px; right: 0px;">
-                                <div class="ps__scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div>
                             </div>
                         </div>
                     </div>
