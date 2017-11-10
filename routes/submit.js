@@ -3,13 +3,14 @@ var router = express.Router();
 var Article = require('./../lib/mongo').Article;
 
 router.get('/',function(req,res,next){
-	res.render('addArticle');
+	res.render('addArticle',{sign:true,user:req.session.user});
 });
 
 
 router.post('/',function(req,res,next){
-	console.log('submit username: '+req.session.username);
+	console.log('submit username: '+req.session.user.username);
 	if(!req.session.sign){	//若未登陆
+		console.log(404);
 		res.end('404');
 	}else {
 		Article.create({

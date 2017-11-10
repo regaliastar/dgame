@@ -25,6 +25,8 @@ module.exports = function (app) {
   app.use('/msg',require('./msg'));
   //管理员
   app.use('/admin',require('./admin'));
+  //文章区
+  app.use('/article',require('./article'));
   // 404 page
   app.use(function (req, res) {
     if (!res.headersSent) {
