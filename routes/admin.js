@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var User = require('./../lib/mongo').User;
 var Article = require('./../lib/mongo').Article;
+var Group = require('./../lib/mongo').Group;
 var Functions = require('./../models/functions');
 
 router.get('/',function(req,res,next){
@@ -158,6 +159,44 @@ router.post('/insertUser',function(req,res,next){
         }
     });
 
+});
+
+router.get('/group_list',function(req,res,next){
+    Group.find({},function(err,groups){
+        if(err){
+            console.log('error happened in /submit_list');
+        }else {
+            res.render('admin/group_list',{'groups':groups});
+        }
+    });
+});
+
+router.get('/detailGroup',function(req,res,next){
+    Group.find({_id:req.query._id},function(err,group){
+        if(!err){
+            res.send(group);
+            return;
+        }else {
+            console.log("something wrong in router.get /detailGroup!");
+        }
+
+        res.send('null');
+    });
+});
+
+router.get('/deleteGroup',function(req,res,next){
+    Group.find({_id:req.query._id},function(err,articles){
+        if(!err){
+            articles.map(function(article){
+                article.remove();
+                console.log('Group '+req.query._id+' 删除成功');
+            });
+        }else {
+            console.log("something wrong in router.get /detailArticle!");
+        }
+
+        res.redirect('group_list');
+    });
 });
 
 module.exports = router;

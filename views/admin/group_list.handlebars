@@ -1,0 +1,32 @@
+{{> admin-outer-1}}
+
+<div id="center-column" style="margin-left:5px">
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+                <table id="userManagerTable" class="table" >
+                    <caption>上传列表</caption>
+                    <thead>
+                        <tr>
+                            <th>队伍</th>
+                            <th>描述</th>
+                            <th>日期</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each groups}}
+                        <tr>
+                            <td style="float:left;display:inline-block">{{username}}</td>
+                            <td>{{intro_a}}</td>
+                            <td>{{date}}</td>
+                            <td><a href="detailGroup?_id={{_id}}" style="color:blue;display:inline-block;margin-left:20px">详细</a><a href="deleteGroup?_id={{_id}}" style="color:blue;display:inline-block;margin-left:20px">删除</a></td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+        </section>
+    </section>
+</div>
+
+{{> admin-outer-2}}

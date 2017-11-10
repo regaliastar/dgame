@@ -1,0 +1,309 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,input,textarea,p,main{
+	margin: 0px;
+	padding:0px;
+	font-family: "Microsoft YaHei",微软雅黑,"Microsoft JhengHei",华文细黑,STHeiti,MingLiu;
+}
+
+table{
+	margin-top:20px;
+}
+textarea {
+	resize: none;
+}
+
+.textbox{
+	font-size: 16px;
+	margin-left:5px;
+	border:#D5D5D5 solid 1px;
+	border-radius: 5px;
+	padding: 5px;
+}
+.textbox:focus{
+	outline: none;
+	border:#4684CF solid 1px;
+}
+.file{
+	margin-left:5px;
+	
+	
+}
+.lf{
+	float: left;
+}
+.rf{
+	float:right;
+}
+.clear{
+	float:clear;
+}
+body{
+
+	overflow: hidden;
+}
+/*logo*/
+#logo{
+	position: relative;
+	height: 50px;
+	background: #3498db;
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	z-index: 100;
+
+}
+#logo .mianze{
+	display: inline;
+	margin-right:10px;
+	color: white;
+	font-size:14px;
+	text-decoration: none
+}
+#logo .mianze:hover{
+	color: aquamarine;
+
+}
+.publish_btn{
+	margin-left: -5px;
+	font-size: 18px;
+	padding-left: 15px;
+	padding-right: 15px;
+	height:50px;
+	background: #2ecc71;
+	border: none;
+	color: white;
+	transition:all 0.2s;
+	-moz-transition:all 0.2s -moz-transform 0.2s; /* Firefox 4 */
+	-webkit-transition:all 0.2s -webkit-transform 0.2s; /* Safari and Chrome */
+	-o-transition:all 0.2s -o-transform 0.2s; /* Opera */
+}
+.publish_btn:hover{
+	background:#52E390;
+}
+.publish_btn:active{
+	background:#33CF76;
+}
+.publish_btn_ok{
+	margin-left: -5px;
+	font-size: 18px;
+	padding-left: 15px;
+	padding-right: 15px;
+	height:50px;
+	background: #2ecc71;
+	border: none;
+	color: white;
+	transition:all 0.2s;
+	-moz-transition:all 0.2s -moz-transform 0.2s; /* Firefox 4 */
+	-webkit-transition:all 0.2s -webkit-transform 0.2s; /* Safari and Chrome */
+	-o-transition:all 0.2s -o-transform 0.2s; /* Opera */
+}
+.publish_btn_ok:hover{
+	background:#52E390;
+}
+.publish_btn_ok:active{
+	background:#33CF76;
+}
+/*地图*/
+#map{
+	
+	width: 100%;
+	height: 100%;
+	background: gray;
+	margin: 0 auto;
+	
+	
+}
+#map_body{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	float: left;
+
+}
+
+/*附近的人-列表*/
+#list{
+	width:240px;
+	height:100%;
+	background:rgba(0,0,0,0.70);
+	position: absolute;
+	
+}
+/*附近的人列表-tab选项卡*/
+#list .tab{
+	list-style:none;
+	
+}
+#list .tab li a{
+	text-decoration:none;	
+	color: white;
+	padding: 20px;
+}
+#list .tab li{
+	
+	font-size: 12px;
+	float: left;
+	width: 80px;
+	heigh: 35px;
+	line-height: 35px;
+	text-align: center;
+	border-bottom: 3px solid #424242;
+	
+	transition:all 0.2s;
+	-moz-transition:all 0.2s -moz-transform 0.2s; /* Firefox 4 */
+	-webkit-transition:all 0.2s -webkit-transform 0.2s; /* Safari and Chrome */
+	-o-transition:all 0.2s -o-transform 0.2s; /* Opera */
+}
+#list .tab li:hover{
+	background: #3C9ED4;
+}
+#list .tab li.active{
+	border-bottom: 3px solid #3C9ED4;
+}
+#list .user_list li a{
+	text-decoration:none;	
+	color:white;
+}
+/*附近的人-列表内容-ul*/
+#list .user_list{
+
+	height:100%;
+	overflow-x:hidden;
+	overflow-y:scroll;
+	margin-top: 40px;
+	list-style:none;
+	
+}
+/*附近的人-列表内容-li*/
+#list .user_list li{
+	height: 40px;
+	border-bottom: 1px solid #5F5F5F;
+	transition:all 0.2s;
+	-moz-transition:all 0.2s -moz-transform 0.2s; /* Firefox 4 */
+	-webkit-transition:all 0.2s -webkit-transform 0.2s; /* Safari and Chrome */
+	-o-transition:all 0.2s -o-transform 0.2s; /* Opera */
+}
+#list .user_list li:hover{
+	background: #3C9ED4;
+}
+#list .user_list li img{
+	width:40px;
+	height:40px;
+	float: left;
+
+}
+#list .user_list li .user_name{
+	font-size: 12px;
+	margin-left:5px;
+
+	float: left;
+}
+#list .user_list li .km{
+	font-size: 10px;
+	color:deepskyblue;
+	
+}
+#list .user_list li .user_intro{
+	color: hsla(0,0%,100%,0.6);
+	font-size: 12px;
+	
+	margin-left: 45px;
+	margin-top: 5px;
+	width: 200px;
+	height:16px;
+}
+/*滚动条样式*/
+::-webkit-scrollbar  
+{  
+
+    width: 5px;  
+    height: 5px;  
+     visibility: hidden;
+}  
+  
+/*定义滚动条轨道 内阴影+圆角*/  
+::-webkit-scrollbar-track  
+{  
+    visibility: hidden;
+}  
+  
+/*定义滑块 内阴影+圆角*/  
+::-webkit-scrollbar-thumb  
+{  
+    border-radius: 10px;  
+    background-color:  rgba(255,255,255,0.70);  
+}  
+
+/*消息发布盒子*/
+#publish_box,#location_tip_box{
+	position: absolute;
+	background-color: rgba(0,0,0,0.60);
+	width: 100%;
+	height: 100%;
+}
+#publish_box .form{
+	border-radius: 8px;
+	background-color: white;
+	-webkit-box-shadow: 0 0 20px rgba(0,0,0,0.85);
+	box-shadow: 0 0 20px rgba(0,0,0,0.85);
+	
+	width: 600px;
+	height:600px;
+	
+	margin-left:-300px;
+	margin-top:-300px;
+	
+	position: absolute;
+	left: 50%;
+	top:50%;
+	overflow: hidden;
+}
+#publish_box .title{
+	border-bottom: 1px solid rgba(224,224,224,1.00);
+	padding:10px;
+}
+#publish_box .title_txt{
+	display: inline;
+}
+#publish_box .close_btn{
+	position: relative;
+	font-size: 24px;
+
+	top:-5px;
+	
+}
+#publish_box .close_btn a{
+	display: block;
+	text-align: center;
+	border-radius:50px;
+	text-decoration: none;
+	color: black;
+	width:30px;
+	
+	
+	transition:all 0.2s;
+	-moz-transition:all 0.2s -moz-transform 0.2s; /* Firefox 4 */
+	-webkit-transition:all 0.2s -webkit-transform 0.2s; /* Safari and Chrome */
+	-o-transition:all 0.2s -o-transform 0.2s; /* Opera */
+}
+#publish_box .close_btn a:hover{
+	color: white;
+	background-color: #e74c3c;
+}
+.small{
+	margin-left: 5px;
+
+	font-size: 12px;
+	color:red;
+}
+/*定位提示文本*/
+#location_tip_box p{
+	display: block;
+	font-size: 24px;
+	color:white;
+	position: relative;
+	top:50%;
+	left:50%;
+	margin-left: -80px;
+	margin-top: -24px;
+}
