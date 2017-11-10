@@ -21,14 +21,13 @@ router.get('/a',function(req,res,next){
         if(!err){
             //一次查询执行了两次函数，故每次+0.5，很奇怪
             var count_view = article.view+0.5;
-            console.log('count:'+count_view);
             Article.update({_id:article._id},{view:count_view},{mutil:false},function(){
                 //
             });
             res.render('article',{sign:true,user:req.session.user,article:article});
 
         }else {
-            console.log("something wrong in router.get /detailArticle!");
+            console.log("something wrong in router.get /a!");
             res.send('null');
         }
 
