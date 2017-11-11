@@ -1,0 +1,209 @@
+{{>header}}
+
+<link id="css" rel="stylesheet" type="text/css" href="/css/zclc2.css">
+
+<div class="top_bg">
+	<div class="mytop"></div>
+</div>
+
+<div class="security_content">
+
+	<div class="security-left">
+		<ul class="security-list">
+			<li class="f-list" style="cursor: default;">
+				<a class="first-level"  style="color: #99a2aa;cursor: default;">个人中心</a>
+				<ul class="child-list">
+
+					<li style="display: none;">
+						<span id="selected-li">setting</span>
+					</li>
+					<li>
+						<a id="setting" class="bg-blue">
+							<span>{{u.username}}的信息</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+<style type="text/css">
+	.sr-t {
+		border-bottom: 1px solid #ddd;
+		height: 43px !important;
+		padding-left: 30px;
+	}
+  .transparent.header {
+    background: #333;
+  }
+  section[role="main"] {
+    background: #333;
+    color: #fff;
+  }
+  section[role="main"] h1 {
+    color: #fff;
+  }
+  section[role="main"] h2 {
+    color: #fff;
+  }
+  section[role="main"] h3 {
+    color: #fff;
+  }
+  .button {
+    margin-right: 0.5em;
+    border-radius: 4px;
+  }
+  ol {
+    margin-left: 2em;
+  }
+  div#sidebarAd.cleanslate {
+    background: #444 !important;
+    color: #fff !important;
+  }
+  div#sidebarAd.cleanslate .ad-sponsor {
+    color: #ccc !important;
+  }
+  .zurb-footer-top {
+    background: #222;
+  }
+
+  @-webkit-keyframes bigAssButtonPulse {
+	  from { background-color: #749a02; -webkit-box-shadow: 0 0 25px #333; }
+	  50% { background-color: #91bd09; -webkit-box-shadow: 0 0 50px #91bd09; }
+	  to { background-color: #749a02; -webkit-box-shadow: 0 0 25px #333; }
+	}
+
+	@-webkit-keyframes greenPulse {
+	  from { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+	  50% { background-color: #91bd09; -webkit-box-shadow: 0 0 18px #91bd09; }
+	  to { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+	}
+
+	@-webkit-keyframes bluePulse {
+	  from { background-color: #007d9a; -webkit-box-shadow: 0 0 9px #333; }
+	  50% { background-color: #2daebf; -webkit-box-shadow: 0 0 18px #2daebf; }
+	  to { background-color: #007d9a; -webkit-box-shadow: 0 0 9px #333; }
+	}
+
+	@-webkit-keyframes redPulse {
+	  from { background-color: #bc330d; -webkit-box-shadow: 0 0 9px #333; }
+	  50% { background-color: #e33100; -webkit-box-shadow: 0 0 18px #e33100; }
+	  to { background-color: #bc330d; -webkit-box-shadow: 0 0 9px #333; }
+	}
+
+	@-webkit-keyframes magentaPulse {
+	  from { background-color: #630030; -webkit-box-shadow: 0 0 9px #333; }
+	  50% { background-color: #a9014b; -webkit-box-shadow: 0 0 18px #a9014b; }
+	  to { background-color: #630030; -webkit-box-shadow: 0 0 9px #333; }
+	}
+
+	@-webkit-keyframes orangePulse {
+	  from { background-color: #d45500; -webkit-box-shadow: 0 0 9px #333; }
+	  50% { background-color: #ff5c00; -webkit-box-shadow: 0 0 18px #ff5c00; }
+	  to { background-color: #d45500; -webkit-box-shadow: 0 0 9px #333; }
+	}
+
+	@-webkit-keyframes orangellowPulse {
+	  from { background-color: #fc9200; -webkit-box-shadow: 0 0 9px #333; }
+	  50% { background-color: #ffb515; -webkit-box-shadow: 0 0 18px #ffb515; }
+	  to { background-color: #fc9200; -webkit-box-shadow: 0 0 9px #333; }
+	}
+
+	a.button {
+		-webkit-animation-duration: 2s;
+		-webkit-animation-iteration-count: infinite;
+	}
+
+	.green.button { -webkit-animation-name: greenPulse; -webkit-animation-duration: 3s; }
+	.blue.button { -webkit-animation-name: bluePulse; -webkit-animation-duration: 4s; }
+	.red.button { -webkit-animation-name: redPulse; -webkit-animation-duration: 1s; }
+	.magenta.button { -webkit-animation-name: magentaPulse; -webkit-animation-duration: 2s; }
+	.orange.button { -webkit-animation-name: orangePulse; -webkit-animation-duration: 3s; }
+	.orangellow.button { -webkit-animation-name: orangellowPulse; -webkit-animation-duration: 5s; }
+
+	.wall-of-buttons { text-align: center; margin-top: 2em; margin-bottom: 2em; }
+</style>
+<form onsubmit="return false;">
+	<div class="security-right">
+		<div class="sr-t">
+			<span class="tit-b"></span>
+			<span class="acc-sec">{{u.username}}的信息</span>
+		</div>
+
+ 	   <div id="wrapper">
+    	  <span id="status" style="position:absolute;left:350px;top:10px;width:100px;"></span>
+    	  <div id="previewContainer" style="display:block;width:100%;padding-top:10px;padding-left: 50px" >
+    	    <img src="/img/face/{{u.avatar}}" >
+    		</div>
+    		<div>
+    	    <span style="display:block;width:100%;padding-top:10px;padding-left: 60px">{{u.username}}的头像</span>
+    	    <a href="/msg/whisper?target_id={{u._id}}" class="blue button" style="position: absolute;right:40px;color: white">&nbsp &nbsp 私 &nbsp 信 &nbsp &nbsp</a>
+    	  </div>
+  	  </div>
+  	  <div class="sb-line"></div>
+
+		<div class="sr-b">
+			<ul>
+				<li>
+					<div class="sb-info">
+						<p class="sbi-l" id="username">昵称：</p>
+						<div class="sbi-m">
+							<span >{{u.username}}</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="sb-info">
+						<p class="sbi-l">年级：</p>
+						<div class="sbi-m">
+							<div class="sbi-m">
+							<span >{{u.grade}}</span>
+						</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="sb-info">
+						<p class="sbi-l">所在学院：</p>
+						<div class="sbi-m">
+						<span >{{u.college}}</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="sb-info">
+						<p class="sbi-l" id="description">我的签名：</p>
+						<div class="sbi-m">
+							<span >{{u.description}}</span>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="sb-info">
+						<p class="sbi-l" id="sex">性别：</p>
+						<span class="hidden" id="user-sex"></span>
+						<div class="sbi-m">
+							<span id="">{{u.sex}}</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="sb-info">
+						<p class="sbi-l">交友目的：</p>
+						<div class="sbi-m">
+							<span id="aimContent">{{u.aim}}</span>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</form>
+</div>
+
+<script src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.js"></script>
+<script src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.js"></script>
+<script src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.js"></script>
+<script src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.js"></script>
+
+{{>footer}}

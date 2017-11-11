@@ -11,7 +11,7 @@ router.get('/',function(req,res,next){
         if(err){
             res.render('article_list',{user:req.session.user});
         }else {
-            res.render('article_list',{sign:true,user:user,article_list:resultSet});
+            res.render('article_list',{sign:req.session.sign,user:user,article_list:resultSet});
         }
     });
 });
@@ -24,7 +24,7 @@ router.get('/a',function(req,res,next){
             Article.update({_id:article._id},{view:count_view},{mutil:false},function(){
                 //
             });
-            res.render('article',{sign:true,user:req.session.user,article:article});
+            res.render('article',{sign:req.session.sign,user:req.session.user,article:article});
 
         }else {
             console.log("something wrong in router.get /a!");

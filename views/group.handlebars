@@ -2,7 +2,7 @@
 <!-- saved from url=(0032)http://www.indiegames.cn/match/# -->
 {{>header}}
 
-    <div class="save_me" avatar="{{user.avatar}}",id="{{user._id}}"></div>
+    <div class="save_me" avatar="{{user.avatar}}" id="{{user._id}}"></div>
 
   <link href="/group/style.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="/group/api"></script>
@@ -81,7 +81,7 @@
      <ul class="user_list" style="height: 551px;">
          {{#each groups}}
          <li >
-             <a href="#"> <img src="/img/face/{{avatar}}" />
+             <a href="/user?_id={{u_id}}"> <img src="/img/face/{{avatar}}" />
                  <p class="user_name">{{username}}</p> <p class="km">&nbsp;&nbsp;{{local}}</p>
                  <p class="user_intro">{{intro_a}}</p>
 
