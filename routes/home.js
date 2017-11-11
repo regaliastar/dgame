@@ -17,9 +17,13 @@ router.get('/',function(req,res,next){
 		}
 		var news1 = resultSet[0];
 		var news2 = resultSet[1];
-		news1.content = news1.content.substring(0,90)+'...';
-		news2.content = news2.content.substring(0,90)+'...';
-
+		if(news1){
+			news1.content = news1.content.substring(0,90)+'...';
+		}
+		if(news2){
+			news2.content = news2.content.substring(0,90)+'...';
+		}
+		
 		if(req.session.sign){
 			var user = req.session.user;
 			var target_id = null;

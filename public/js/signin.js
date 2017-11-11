@@ -33,7 +33,7 @@ $(document).ready(function(){
 						console.log("success~");
 						$('#waiting').slideDown();
 						setTimeout(function(){
-							location.href = 'http://localhost:2017/home';
+							location.href = DEFAULT.route+'/home';
 						},800);
 
 						break;
