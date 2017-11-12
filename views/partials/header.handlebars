@@ -7,6 +7,7 @@
 <meta name="keywords" content="dependence game">
 <meta name="renderer" content="webkit">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
 <link rel="short icon" type="image/x-icon" href="img/logo/Favicon.ico">
 
 <link rel="stylesheet" href="//static.hdslb.com/images/jquery-ui/custom/jquery-ui.css" type="text/css">
@@ -87,7 +88,7 @@
 					<ul id="user_list" class="menu">
 						{{#if sign}}
 						<li id="i_menu_profile_btn" class="u-i i_user" guest="no" i_menu="#i_menu_profile" style="display: list-item;">
-							<a class="i-link" href="/user" target="_blank">
+							<a class="i-link" href="/user?_id={{user._id}}" target="_blank">
 								<img class="i_face" src="../img/face/{{user.avatar}}">
 								<span id="user-avatar" style="display: none;">{{user.avatar}}</span>
 							</a>
