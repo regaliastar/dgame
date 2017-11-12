@@ -2,7 +2,7 @@
 <!-- saved from url=(0032)http://www.indiegames.cn/match/# -->
 {{>header}}
 
-    <div class="save_me" avatar="{{user.avatar}}",id="{{user._id}}"></div>
+    <div style="display:none" class="save_me" avatar="{{user.avatar}}",uu_id="{{user._id}}">{{user._id}}</div>
 
   <link href="/group/style.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="/group/api"></script>
@@ -290,7 +290,7 @@
 				var my_intro_b=$('#intro_b').val();
 				var my_contact=$('#contact').val();
 				var my_local=$('#location_city_txt').text();
-                var u_id = $('.save_me').attr('id');
+                var u_id = $('.save_me').text().trim();
 
                 $.ajax({
                     type:'post',
