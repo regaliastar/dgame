@@ -19,6 +19,10 @@ router.get('/whisper',function(req,res,next){
 	if(req.session.sign){
 		var user = req.session.user;
 		//console.log(req.query._id);
+		if(req.query.target_id === user._id){
+			res.render('msg',{sign:true,user:user});
+			return;
+		}
 
 		User.findOne({_id:req.query.target_id},function(p_err,p_target){
 
