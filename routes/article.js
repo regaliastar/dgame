@@ -9,7 +9,7 @@ router.get('/',function(req,res,next){
     query.sort({view:-1});
     query.exec(function(err,resultSet){
         if(err){
-            res.render('article_list',{user:req.session.user});
+            res.render('article_list',{sign:req.session.sign,user:req.session.user});
         }else {
             res.render('article_list',{sign:req.session.sign,user:user,article_list:resultSet});
         }
