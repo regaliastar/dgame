@@ -96,17 +96,4 @@
 3. At root directory, `npm install`, then `node app`
 4. Server set up at http://127.0.0.1:2017/
 
-## How to study
-1. 学习JavaScript，推荐《JavaScript高级编程》，讲解的很全面，可以当字典来用
-2. 学习jQuery，只学会基本用法就好，如：操作元素的增删，简单的渐隐渐出的动画
-3. 学习ajax(!improtant)，知道客户端与服务器如何异步操作，使用jQuery来实现
-4. 当前三点都基本掌握后，就可以进行nodejs的学习了，推荐入门教材：http://www.nodebeginner.org/index-zh-cn.html
-5. 学习Mongodb
-6. OK，现在已经可以独立搭建一个中小型网站了~
-
-## Fin and tips
-1. 建议学习一下GitHub基本用法，写好的代码的话希望利用Git提交到这个库，这样比较高端
-2. 天气比较冷，尽量每周更新吧...
-
-
 > If you have any problem, please contact 1183080130@qq.com (ﾉﾟ▽ﾟ)ﾉ
