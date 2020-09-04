@@ -20,7 +20,7 @@
     "express-session": "^1.14.2",
     "express3-handlebars": "^0.5.2",
     "handlebars": "4.0.6",
-    "mongodb": "^2.2.16",
+    "mongodb": "^3.6.1",
     "mongoose": "^4.7.4",
     "socket.io": "1.6.0",
     "supervisor": "0.12.0",
